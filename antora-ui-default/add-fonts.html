@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Add Fonts :: Antora Docs</title>
+    <link rel="canonical" href="https://docs.antora.org/antora-ui-default/add-fonts.html">
+    <link rel="prev" href="stylesheets.html">
+    <link rel="next" href="style-guide.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/site-extra.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="https://antora.org">Antora</a>
+        <span class="separator">//</span>
+        <a href="https://docs.antora.org">Docs</a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Projects</div>
+          <div class="navbar-dropdown">
+            <div class="navbar-item"><strong>Core</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <div class="navbar-item"><strong>Default UI</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/blob/main/contributing.adoc">Contributing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Community</div>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="https://antora.zulipchat.com">Chat (Zulip)</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://twitter.com/antoraproject">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#57aaee" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora-ui-default" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Antora Default UI</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="prerequisites.html">UI Development Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="set-up-project.html">Set up a UI Project</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="build-preview-ui.html">Build and Preview the UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="development-workflow.html">UI Development Workflow</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="templates.html">Work with the Handlebars Templates</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="stylesheets.html">Work with the CSS Stylesheets</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="add-fonts.html">Add Fonts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="style-guide.html">UI Element Styles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="inline-text-styles.html">Inline Text</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="admonition-styles.html">Admonitions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="list-styles.html">Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sidebar-styles.html">Sidebars</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui-macro-styles.html">UI Macros</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora Default UI</span>
+    <span class="version">default</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../antora/latest/index.html">Antora</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../antora/latest/index.html">3.0</a>
+        </li>
+        <li class="version">
+          <a href="../antora/2.3/index.html">2.3</a>
+        </li>
+        <li class="version">
+          <a href="../antora/2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../antora/2.1/index.html">2.1</a>
+        </li>
+        <li class="version">
+          <a href="../antora/2.0/index.html">2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Antora Default UI</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">default</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../antora/latest/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Antora Default UI</a></li>
+    <li><a href="stylesheets.html">Work with the CSS Stylesheets</a></li>
+    <li><a href="add-fonts.html">Add Fonts</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://gitlab.com/antora/antora-ui-default/edit/master/docs/modules/ROOT/pages/add-fonts.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Add Fonts</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page explains how to add new fonts to your UI.
+These instructions assume you&#8217;ve forked the default UI and are able to customize it.</p>
+</div>
+<div class="paragraph">
+<p>There are three steps involved:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add the font to your UI project</p>
+</li>
+<li>
+<p>Add a font-face declaration to your stylesheet</p>
+</li>
+<li>
+<p>Use the new font in your stylesheet</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>How you reference the font file in the font-face declaration depends on how you decide to manage it.
+You can manage the font with npm or download it manually and add it directly to your UI project.
+The following sections describe each approach in turn.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="npm-managed"><a class="anchor" href="#npm-managed"></a>npm managed</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can use npm (or Yarn) to manage the font.
+This approach saves you from having to store the font file directly in your UI project.
+Here are the steps involved.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Use npm (or Yarn) to install the font files from a package (e.g., <a href="https://www.npmjs.com/package/typeface-open-sans">typeface-open-sans</a>)</p>
+<div class="literalblock">
+<div class="content">
+<pre>$ npm install --save typeface-open-sans</pre>
+</div>
+</div>
+</li>
+<li>
+<p>In <em class="path">src/css</em>, add a corresponding CSS file (e.g., <em class="path">typeface-open-sans.css</em>)</p>
+</li>
+<li>
+<p>In that file, declare the font face:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("Open Sans"),
+    local("Open Sans-Regular"),
+    url(~typeface-open-sans/files/open-sans-latin-400.woff) format("woff")
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The Gulp build recognizes the <code>~</code> URL prefix and copies the font from the npm package to the build folder (and hence bundle).</p>
+</div>
+<div class="paragraph">
+<p>You must define one @font-face for each font weight and style combination (e.g., <code>font-weight: 500</code> + <code>font-style: italic</code>) from the font that you want to use in your stylesheet.</p>
+</div>
+</li>
+<li>
+<p>Import the typeface CSS file you just created into the main stylesheet, <em class="path">src/css/site.css</em> (adjacent to the other typeface imports):</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">@import "typeface-open-sans.css";</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Repeat the previous steps for each font style and weight you want to use from that package.</p>
+</li>
+<li>
+<p>Change the CSS to use your newly imported font:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">html {
+  font-family: "Open Sans", sans;
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If you&#8217;re building on the default UI, you may instead want to define or update the font family using a variable defined in <em class="path">src/css/vars.css</em>.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Test the new font by previewing your UI:</p>
+<div class="literalblock">
+<div class="content">
+<pre>$ gulp preview</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If you see the new font, you&#8217;ve now successfully added it to your UI.
+If you aren&#8217;t sure, look for the <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Edit_fonts">All fonts on page</a> section in your browser&#8217;s developer tools to see whether the font was loaded.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="manual"><a class="anchor" href="#manual"></a>Manual</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A simpler approach to adding fonts is to store them directly in your project.
+Here are the steps involved.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Download the font files and add them to the <em class="path">src/font</em> folder.
+Create this folder if it does not exist.</p>
+</li>
+<li>
+<p>In <em class="path">src/css</em>, add a corresponding CSS file (e.g., <em class="path">typeface-open-sans.css</em>)</p>
+</li>
+<li>
+<p>In that file, declare the font face:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("Open Sans"),
+    local("Open Sans-Regular"),
+    url(../font/open-sans-latin-400.woff) format("woff")
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that the path is a relative path starting from the <em class="path">src/css</em> folder to the <em class="path">src/font</em> folder.</p>
+</div>
+<div class="paragraph">
+<p>You must define one @font-face for each font weight and style combination (e.g., <code>font-weight: 500</code> + <code>font-style: italic</code>) from the font that you want to use in your stylesheet.</p>
+</div>
+</li>
+<li>
+<p>Import the typeface CSS file you just created into the main stylesheet, <em class="path">src/css/site.css</em> (adjacent to the other typeface imports):</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">@import "typeface-open-sans.css";</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Repeat the previous steps for each font style and weight you want to use.</p>
+</li>
+<li>
+<p>Change the CSS to use your newly imported font:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">html {
+  font-family: "Open Sans", sans;
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If you&#8217;re building on the default UI, you may instead want to define or update the font family using a variable defined in <em class="path">src/css/vars.css</em>.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Test the new font by previewing your UI:</p>
+<div class="literalblock">
+<div class="content">
+<pre>$ gulp preview</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If you see the new font, you&#8217;ve now successfully added it to your UI.
+If you aren&#8217;t sure, look for the <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Edit_fonts">All fonts on page</a> section in your browser&#8217;s developer tools to see whether the font was loaded.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="stylesheets.html">Work with the CSS Stylesheets</a></span>
+  <span class="next"><a href="style-guide.html">UI Element Styles</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright © <a href="https://opendevise.com">OpenDevise Inc.</a> and individual contributors to <a href="https://antora.org">Antora</a>.</p>
+  <p>Except where otherwise noted, docs.antora.org, Antora, and the Antora UI, are licensed under the <a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License Version 2.0</a> (MPL-2.0).</p>
+  <p>AsciiDoc® is a trademark of the Eclipse Foundation, Inc.</p>
+</footer>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>How Antora Can Help You and Your Team :: Antora Docs</title>
+    <link rel="canonical" href="https://docs.antora.org/antora/latest/features.html">
+    <link rel="prev" href="whats-new.html">
+    <link rel="next" href="how-antora-works.html">
+    <meta name="keywords" content="Docs as Code, content management system, product team, documentation administration, documentation management, agile documentation, DocOps, documentation operations">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/site-extra.css">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="https://antora.org">Antora</a>
+        <span class="separator">//</span>
+        <a href="https://docs.antora.org">Docs</a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Projects</div>
+          <div class="navbar-dropdown">
+            <div class="navbar-item"><strong>Core</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <div class="navbar-item"><strong>Default UI</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/blob/main/contributing.adoc">Contributing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Community</div>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="https://antora.zulipchat.com">Chat (Zulip)</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://twitter.com/antoraproject">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#57aaee" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora" data-version="2.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Antora</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="whats-new.html">What&#8217;s New in Antora 2.3</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="features.html">How Antora Can Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="how-antora-works.html">How Antora Works</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install-and-run-quickstart.html">Install and Run Antora Quickstart</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Antora</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install/linux-requirements.html">Linux Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install/macos-requirements.html">macOS Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install/windows-requirements.html">Windows Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install/install-antora.html">Install Antora</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install/upgrade-antora.html">Upgrade Antora</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install/supported-platforms.html">Supported Platforms</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Set Up Content Sources</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="organize-content-files.html">How to Organize Your Content Files</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="content-source-repositories.html">Repositories and Content Source Roots</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="content-source-versioning-methods.html">Content Source Versioning Methods</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="standard-directories.html">Standard File and Directory Set</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="module-directories.html">Module Directories and Modules</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="root-module-directory.html">ROOT Module Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="named-module-directory.html">Named Module Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="module-directory-names.html">Recommendations for Module Directory Names</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="module-url-segment.html">Module Segment in Page URLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="family-directories.html">Family Directories and Families</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pages-directory.html">Pages Directory and Page Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="partials-directory.html">Partials Directory and Partial Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="examples-directory.html">Examples Directory and Example Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="images-directory.html">Images Directory and Image Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="attachments-directory.html">Attachments Directory and Attachment Files</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configure Component Versions</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-version.html">What&#8217;s a Component Version?</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-version-descriptor.html">What&#8217;s antora.yml?</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-name-and-version.html">Define a Component Name and Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-title.html">Customize the Title</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-display-version.html">Customize the Display Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-prerelease.html">Identify a Prerelease Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-with-no-version.html">Define a Component Version with No Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-attributes.html">Assign Attributes to a Component Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-start-page.html">Choose a Start Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-navigation.html">Assign Navigation Files to a Component Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="how-component-versions-are-sorted.html">How Component Versions are Sorted</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="distributed-component-version.html">Distributed Component Versions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Create &amp; Manage Pages</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/index.html">Pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/standard-page.html">Set Up a Standard Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/title-and-metadata.html">Add a Title and Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="page/attributes.html">AsciiDoc Attributes in Antora</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/define-and-modify-attributes.html">Define and Modify Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/page-attributes.html">Page Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/intrinsic-attributes.html">Intrinsic Attributes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/start-page.html">Create a Start Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="page/page-id.html">Page IDs and Cross References</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/module-and-page-xrefs.html">Xref Pages in a Component Version</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/version-and-component-xrefs.html">Xref Pages in Other Components and Versions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/reftext-and-navtitle.html">Customize reftext and navtitle</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/page-aliases.html">Set Up URL Redirects with page-aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/page-layout.html">Assign UI Templates with page-layout</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Create &amp; Manage Resources</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/resource-id.html">Resources and Resource IDs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="page/partials-and-content-snippets.html">Content Snippets and Partials</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/create-a-partial.html">Create a Partial</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/include-a-partial.html">Include a Partial</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="page/examples-and-source-snippets.html">Source Code Snippets and Examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/include-an-example.html">Include an Example</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="page/images.html">Images</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/block-images.html">Add Block Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/inline-images.html">Add Inline Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/image-resource-id-examples.html">Image Resource ID Examples</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/link-attachment.html">Link to an Attachment</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="page/include-a-page.html">Include a Page</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/page-partial.html">Unset page-partial Globally</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">AsciiDoc Primer</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/asciidoc.html">Why AsciiDoc?</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/section-headings.html">Sections</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="asciidoc/text-and-punctuation.html">Text and Punctuation Styles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/bold.html">Bold</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/italic.html">Italic</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/monospace.html">Monospace</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/highlight.html">Highlight</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/quotes-and-apostrophes.html">Quote Marks and Apostrophes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/special-characters-and-symbols.html">Special Characters and Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/subscript-and-superscript.html">Subscript and Superscript</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/in-page-xref.html">Internal Xrefs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/external-urls.html">URLs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="asciidoc/lists.html">Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/ordered-and-unordered-lists.html">Bullet and Numbered Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/description-lists.html">Description Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/checklists.html">Checklists</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/embed-video.html">Embed a Video</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/ui-macros.html">UI Macros</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/source.html">Source Blocks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/admonitions.html">Admonitions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/sidebar.html">Sidebars</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/comments.html">Comments</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Navigation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/index.html">Navigation Assembly</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="navigation/files-and-lists.html">Navigation Files and Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="navigation/single-list.html">Create a Navigation File with One List</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="navigation/multiple-lists.html">Create a Navigation File with Multiple Lists</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/xrefs-and-link-text.html">Page Xrefs and Link Text</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/reference-resources.html">Reference Attachments</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/external-links.html">Add Links to External Sites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/format-content.html">Format List Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/organize-files.html">Navigation File Locations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/include-lists.html">Compose Navigation Files</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/register-navigation-files.html">Register Navigation Files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configure Your Site</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="playbook/index.html">The Antora Playbook</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="playbook/set-up-playbook.html">Set Up a Playbook</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/configure-site.html">Site Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/site-url.html">Site URL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/site-title.html">Site Title</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/site-start-page.html">Site Start Page</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/site-robots.html">Robots</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/site-keys.html">Account and API Keys</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/configure-content-sources.html">Content Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/content-source-url.html">URLs for Content Sources</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="playbook/private-repository-auth.html">Private Repository Authentication</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/content-branches.html">Branches</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/content-tags.html">Tags</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/content-source-start-path.html">Single Start Path</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/content-source-start-paths.html">Multiple Start Paths</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/content-edit-url.html">Edit URL Key</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/configure-git.html">Git Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/git-suffix.html">Git Repository URL Suffix</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/git-credentials-path-and-contents.html">Git Credentials Path and Contents</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/configure-asciidoc.html">AsciiDoc Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/asciidoc-attributes.html">Assign Attributes to a Site</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/asciidoc-extensions.html">Asciidoctor Extensions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/configure-ui.html">UI Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/ui-bundle-url.html">UI Bundle URL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/ui-output-dir.html">UI Output Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/ui-default-layout.html">Default Layout for Pages</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/configure-urls.html">URLs Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/urls-redirect-facility.html">Redirect Facility Key</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/urls-html-extension-style.html">HTML Extension Styles</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/configure-output.html">Output Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/output-dir.html">Output Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/output-provider-archive.html">Archive Provider</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/output-provider-fs.html">Filesystem Provider</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/output-provider-custom.html">Custom Provider</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/configure-runtime.html">Runtime Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/runtime-fetch.html">Fetch Updates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/runtime-cache-dir.html">Cache Directory</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="playbook/author-mode.html">Use Author Mode</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="playbook/use-an-existing-playbook-project.html">Use an Existing Playbook Project</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="playbook/environment-variables.html">Environment Variables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Generate Your Site</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="run-antora.html">Run Antora</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="preview-site.html">Preview Your Site</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cli/index.html">Antora CLI Commands</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cli/options.html">CLI Options</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cli/primer.html">CLI Primer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cache.html">Configure Antora&#8217;s Cache</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="antora-container.html">Run Antora in a Container</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Publish Your Site</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="add-404-error-page.html">Add a 404 Error Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="publish-to-github-pages.html">Publish to GitHub Pages</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Extend &amp; Customize</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipeline/supported-components.html">Antora Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="project/get-help.html">Get Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="security-bulletins.html">Security Bulletins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Project Governance</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="project/release-schedule.html">Release Schedule</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="project/copyright-and-license.html">Copyright and License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora</span>
+    <span class="version">2.3</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../latest/index.html">Antora</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../latest/index.html">3.0</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">2.3</a>
+        </li>
+        <li class="version">
+          <a href="../2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../2.1/index.html">2.1</a>
+        </li>
+        <li class="version">
+          <a href="../2.0/index.html">2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../antora-ui-default/index.html">Antora Default UI</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../antora-ui-default/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../latest/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Antora</a></li>
+    <li><a href="features.html">How Antora Can Help</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2.3</button>
+  <div class="version-menu">
+    <a class="version" href="../latest/features.html">3.0</a>
+    <a class="version is-current" href="features.html">2.3</a>
+    <a class="version" href="../2.2/features.html">2.2</a>
+    <a class="version" href="../2.1/features.html">2.1</a>
+    <a class="version" href="../2.0/features.html">2.0</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://gitlab.com/antora/antora/edit/v2.3.x/docs/modules/ROOT/pages/features.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">How Antora Can Help You and Your Team</h1>
+<div class="sect1">
+<h2 id="agile-and-secure"><a class="anchor" href="#agile-and-secure"></a>Agile and secure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Automate the assembly of your secure, nimble static site as changes happen instead of wrestling with a CMS giant.</strong></p>
+</div>
+<div class="paragraph">
+<p>Rebuild and deploy your site automatically in a matter of seconds in response to any change.
+Never have to worry about patching security holes in your deployed CMS application since you don&#8217;t have one.
+All pages are static&#8212;&#8203;in the JAMstack style.
+Need to migrate your site to a different domain?
+Just rebuild the site and relaunch it on the new host.</p>
+</div>
+<div class="paragraph">
+<p><strong>Adapt your site to fit seamlessly with your other web properties.</strong></p>
+</div>
+<div class="paragraph">
+<p>No site is an island.
+Sites must play nice with others to maintain a consistent brand and user experiences.
+Static sites generated by Antora are well-suited for this role.
+With page templates and a little help from an automated process, you can blend your documentation pages into existing sites, giving the impression it&#8217;s all part of a single uniform site.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="tap-into-a-ready-made-collaboration-workflow"><a class="anchor" href="#tap-into-a-ready-made-collaboration-workflow"></a>Tap into a ready-made collaboration workflow</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Use a git-based CI workflow to manage documentation changes, contributions, and initiatives.</strong></p>
+</div>
+<div class="paragraph">
+<p>Go where the development is.
+Whether it&#8217;s GitHub, GitLab, Bitbucket, or another code hosting service, you can tap into these platforms to develop <strong>Docs as Code</strong>.
+Not only does a git-based CI workflow give you collaboration and review tools for free, it also encourages collaboration to happen across teams.
+As a result, the docs become part of the software development process.
+And that means many more people feel ready to support the effort to improve the docs.</p>
+</div>
+<div class="paragraph">
+<p><strong>Manage teams and permissions by leveraging existing development infrastructure.</strong></p>
+</div>
+<div class="paragraph">
+<p>Chances are, your software product already has a well-defined team, permission structure, and contributor community.
+You can use the same organization or build on it to manage your docs team.
+These platforms can serve as an administrative and management interface for your docs, whether it&#8217;s to monitor activity or grant access to perform certain actions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="produce-a-site-from-a-simple-playbook"><a class="anchor" href="#produce-a-site-from-a-simple-playbook"></a>Produce a site from a simple playbook</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Describe what you want to make and Antora takes it from there.</strong></p>
+</div>
+<div class="paragraph">
+<p>Antora was built for writers first.
+Writers want to write, not fiddle with reconfiguring software.
+That&#8217;s where Antora&#8217;s playbook comes in.
+A playbook is a concise way to describe the site you want to produce.
+This description boils down to a) where to get the content, b) what UI to apply to the pages, and c) where to publish it.
+That&#8217;s all Antora needs to know to do its job.
+Only when you&#8217;re looking for additional customization do you need to dive deeper.</p>
+</div>
+<div class="paragraph">
+<p><strong>Offline first.</strong></p>
+</div>
+<div class="paragraph">
+<p>A site generated using Antora can be viewed entirely offline.
+All the references in the site are self-contained (i.e., relative), so you don&#8217;t need to run a web server to view it.
+Just open one of the generated HTML files in your browser and from there you can navigate to all the pages from the UI.
+Even redirects work offline by default.
+If a web server is available, you can pass additional configuration to tell Antora to take advantage of its capabilities.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="bring-together-content-from-multiple-repositories"><a class="anchor" href="#bring-together-content-from-multiple-repositories"></a>Bring together content from multiple repositories</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Use a single build to aggregate documentation that spans repository boundaries and branches.</strong></p>
+</div>
+<div class="paragraph">
+<p>Most site generators are confined to a single branch of a single repository.
+Antora, on the other hand, knows how to speak git.
+It goes out and gathers up all the content the site needs using its built-in git client.
+It then sorts through the files by separating them into versions of components.
+This allows you to store the documentation in a way that works best for your organization, whether it means keeping content with code or using separate repositories.
+Antora can round up all those disparate projects and repositories and create an integrated site.</p>
+</div>
+<div class="paragraph">
+<p><strong>Pick and choose content to handcraft your site.</strong></p>
+</div>
+<div class="paragraph">
+<p>You won&#8217;t always want to include everything in the site.
+Sometimes, you just want to build a &#8220;microsite&#8221; that includes a reduced selection of products or versions.
+Or perhaps you just need to preview the documentation for the product you&#8217;re currently working on.
+The playbook lets you produce multiple variations of a site from the same content sources simply by tuning which sources you draw from.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="document-all-the-versions"><a class="anchor" href="#document-all-the-versions"></a>Document all the versions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Build each version of the product as part of one site.</strong></p>
+</div>
+<div class="paragraph">
+<p>Since software is versioned, the documentation for it needs to be versioned too.
+Otherwise, users won&#8217;t know which version of the software the documentation they&#8217;re reading covers.
+Confusion ensues.
+Like with software, you can use branches and tags to manage versions of the documentation.
+This content can even be stored with the software itself.
+Antora happily gathers all this content and organizes it so users can access each version of the documentation, all under a single site.</p>
+</div>
+<div class="paragraph">
+<p><strong>Explore different product versions or navigate between pages across versions.</strong></p>
+</div>
+<div class="paragraph">
+<p>With multiple versions of documentation available, the user needs a way to navigate to them.
+Antora provides a catalog of documentation components and versions that are presented to the reader as a menu.
+The reader can scan the menu and jump right to the version of the documentation they need.
+Additionally, each page can self identify as being part of a version sequence, allowing the user to quickly visit older or newer versions of the content on the page.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="asciidoc-minimal-markup-maximum-functionality"><a class="anchor" href="#asciidoc-minimal-markup-maximum-functionality"></a>AsciiDoc: Minimal markup, maximum functionality</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Document using an intuitive syntax designed specifically for technical documentation that&#8217;s lightweight, yet comprehensive.</strong></p>
+</div>
+<div class="paragraph">
+<p>When you write documentation, the last thing you want getting in your way is the markup syntax.
+To create the best content, you need to be able to see what you&#8217;re writing, but still be able to represent different content types appropriately.
+That&#8217;s exactly what AsciiDoc affords.
+Its line-oriented, left-aligned syntax is easy to browse and leaves room for applying just enough metadata to build a semantic structure.
+AsciiDoc is a documentation writer&#8217;s best friend.</p>
+</div>
+<div class="paragraph">
+<p><strong>Keep your content DRY using reusable attributes, includes, and syntax extensions.</strong></p>
+</div>
+<div class="paragraph">
+<p>Every time you type something you&#8217;ve typed before, you&#8217;re losing efficiency and introducing the risk of divergent content.
+AsciiDoc provides several tools to keep you from having to repeat yourself.
+You can use attributes to avoid having to type URLs, product names, or definitions multiple times.
+You can use includes to extract whole paragraphs, sections, and other reusable content to common files.
+And you can introduce extensions to the syntax to reduce commonly repeated patterns, such as references to an issue tracker, or new types of content, such as equations and charts, to shorthand.</p>
+</div>
+<div class="paragraph">
+<p><strong>Pages are simply AsciiDoc documents that can be edited in any text editor.</strong></p>
+</div>
+<div class="paragraph">
+<p>Creating a page in the documentation is as simple as creating an AsciiDoc document.
+The document can be opened and previewed in a text editor, or it can be viewed in the context of the site.
+Antora assigns the page an implicit ID so it can be referenced from other pages, and it can reference other pages using the implicit ID of those pages.
+Features such as section titles, admonition blocks, and highlighted source listings are styled appropriately.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="source-to-source-references"><a class="anchor" href="#source-to-source-references"></a>Source-to-source references</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Create references between pages and other resources using a source-to-source xref system that&#8217;s concise and easy to construct.</strong></p>
+</div>
+<div class="paragraph">
+<p>Instead of relying on generated filenames or URLs, you create references between pages and other resources using the location of the target in the source system.
+This makes reasoning about references easy since you only have to think about where the source file is located, not how it gets processed.
+In other words, you stay in the source coordinate system.
+And you get the benefit of the context of the current source file, so you only need to specify the traits of the target that differ from the current context.</p>
+</div>
+<div class="paragraph">
+<p><strong>Source-to-source references provide the necessary information to decouple the site from the filesystem and publishing environment.</strong></p>
+</div>
+<div class="paragraph">
+<p>By expressing a reference using a resource ID, Antora can intelligently create a link to the resource in the published output that isn&#8217;t coupled with the filesystem or publishing environment.
+That means the generated site can be viewed anywhere, including offline.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="navigation-as-content"><a class="anchor" href="#navigation-as-content"></a>Navigation as content</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Describe the documentation navigation using AsciiDoc lists.</strong></p>
+</div>
+<div class="paragraph">
+<p>Writers using Antora can feel right at home when defining navigation.
+Why?
+Because, like pages, the navigation is just another AsciiDoc document.
+But instead of free-form content, the navigation file contains a list hierarchy that gets translated into the navigation trees you see in the navigation menu sidebar.
+To add another navigation tree, you simply add an additional list.</p>
+</div>
+<div class="paragraph">
+<p><strong>Create navigation links using the same xref system that&#8217;s used in the main content.</strong></p>
+</div>
+<div class="paragraph">
+<p>So how do you create a link to a page from the navigation?
+Using an xref, of course.
+Since the navigation file is just content, it can use the same xref system that&#8217;s used by the main content to create links between pages.
+Think of a navigation file as a page that doesn&#8217;t get published.
+And since the file is stored with the content, the xrefs can be contextual, meaning you only have to specify the traits of the target that differ from the current context.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="interchangeable-ui"><a class="anchor" href="#interchangeable-ui"></a>Interchangeable UI</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>The site&#8217;s user interface and theme is maintained separately from the content.</strong></p>
+</div>
+<div class="paragraph">
+<p>A key theme in Antora is separation of content and presentation.
+This is prominently seen in the UI.
+Antora interfaces with a site UI that is stored and managed as a separate project.
+It passes a UI model to a Handlebars template that the UI provided.
+The template then decides what to display from the model, giving the UI full control over the page layout.
+The template also decides what CSS and JavaScript to include.</p>
+</div>
+<div class="paragraph">
+<p><strong>Iterate on the UI independently from the content.</strong></p>
+</div>
+<div class="paragraph">
+<p>Since the UI and content are maintained separately, they can follow different release cycles.
+And no toes get stepped on.
+The work done on the UI does not interfere with the work done on the content.
+When Antora runs, it fuses the latest content and the latest UI together.
+This means it&#8217;s easy to swap one UI and theme with another, which can be useful for redesigns, A/B testing, or campaigns.
+You have maximum freedom to tailor the UI and its theme(s) to your needs.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="native-support-for-page-redirects"><a class="anchor" href="#native-support-for-page-redirects"></a>Native support for page redirects</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Retain URLs of old pages in a transparent way by storing the information in the target document.</strong></p>
+</div>
+<div class="paragraph">
+<p>Change happens.
+You just need to be ready to deal with it.
+One of the most frequent changes in a documentation site are the URLs of pages, which change as the pages get renamed or reorganized.
+Antora provides a way to retain the URLs of old pages by declaring page aliases.
+Like other features in Antora, this information is stored with the content, in this case in the header of the target AsciiDoc document.</p>
+</div>
+<div class="paragraph">
+<p><strong>Redirects are described using aliases, which are simply inbound xrefs; not coupled to URLs.</strong></p>
+</div>
+<div class="paragraph">
+<p>As you might expect, a page alias is a source reference, which allows Antora to take care of creating the redirect from the correct URL.
+Since not all hosting environments are the same, the facility for performing a redirect isn&#8217;t either.
+Antora generates the appropriate configuration for the redirect facility that the hosting environment provides, falling back to good old-fashioned static bounce pages if no other mechanism is supported.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="publish-sites-to-multiple-destinations"><a class="anchor" href="#publish-sites-to-multiple-destinations"></a>Publish sites to multiple destinations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Publish anywhere, whether local or remote.</strong></p>
+</div>
+<div class="paragraph">
+<p>Sites are meant to be published.
+Antora helps with that.
+Whether the destination is local or remote Antora streams the content there using a built-in or custom provider.
+And yet, no matter where the site is published, the site is not coupled to the host environment.
+Antora supports as many output streams as you want, which could be a local directory, a local archive, a directory on a remote SSH server, or a web service endpoint like S3, or a combination of destinations.
+You can be sure Antora gets the files where they need to go for publishing.
+All in a single build.</p>
+</div>
+<div class="paragraph">
+<p><strong>No need for a separate step, tool or script in the pipeline.</strong></p>
+</div>
+<div class="paragraph">
+<p>Antora&#8217;s site publisher saves you a step in the pipeline.
+Most site generators write the output to a local directory, which you then have to turn around and publish.
+Antora sends the output directly to the destinations you specify.
+And since the references in the site are not coupled to the publishing environment, you can even preview the site offline by publishing it to a local directory.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sensible-defaults-open-architecture"><a class="anchor" href="#sensible-defaults-open-architecture"></a>Sensible defaults. Open architecture.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Start with the default.</strong></p>
+</div>
+<div class="paragraph">
+<p>Antora offers an opinionated site generator and UI out of the box so you can get up and running quickly.
+You interface with the site generator using the <code>antora</code> CLI command, which you can install yourself or invoke using the Docker container.
+Just point the command at your playbook and Antora kicks out a multi-component, multi-version documentation site for you.
+Once you&#8217;ve had a chance to set up or migrate your documentation for use with Antora, you can graduate from the defaults and start tailoring Antora to fit advanced requirements.</p>
+</div>
+<div class="paragraph">
+<p><strong>Tailor Antora just for you.</strong></p>
+</div>
+<div class="paragraph">
+<p>Antora features an open architecture.
+What does that mean?
+It means you have the ability to teach Antora new tricks.
+Perhaps you need to incorporate additional content into Antora&#8217;s catalog.
+Or maybe you want to perform custom processing somewhere along the line.
+You can even introduce your own behavior to reconfigure Antora to fit your needs.
+Antora was designed so you can use it as a foundation when the default site generator pipeline doesn&#8217;t suit you.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="whats-new.html">What&#8217;s New in Antora 2.3</a></span>
+  <span class="next"><a href="how-antora-works.html">How Antora Works</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright © <a href="https://opendevise.com">OpenDevise Inc.</a> and individual contributors to <a href="https://antora.org">Antora</a>.</p>
+  <p>Except where otherwise noted, docs.antora.org, Antora, and the Antora UI, are licensed under the <a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License Version 2.0</a> (MPL-2.0).</p>
+  <p>AsciiDoc® is a trademark of the Eclipse Foundation, Inc.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

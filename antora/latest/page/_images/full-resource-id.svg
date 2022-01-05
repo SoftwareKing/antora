@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="180.28mm" height="61.9mm" version="1.1" viewBox="0 0 180.28 61.9" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <title>Fully qualified Antora resource ID</title>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Fully qualified Antora resource ID</dc:title>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Sarah White</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:publisher>
+     <cc:Agent>
+      <dc:title>OpenDevise Inc.</dc:title>
+     </cc:Agent>
+    </dc:publisher>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>Antora resource ID</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(3.8721e-7 -228.09)">
+  <g>
+   <rect y="228.09" width="180.28" height="61.9" fill="#fff"/>
+   <text transform="scale(1 .99998)" x="0.014459292" y="261.79272" fill="#242424" font-family="'Montserrat Medium'" font-size="7.2298px" font-weight="500" letter-spacing="0px" stroke-width=".0727px" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:0%" xml:space="preserve"><tspan x="0.014459292" y="261.79272" font-family="'Montserrat Medium'" font-size="7.2298px" font-weight="500" stroke-width=".0727px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%"><tspan fill="#de4c36">version@</tspan><tspan fill="#9340a4">component:</tspan><tspan fill="#b91d5e">module:</tspan><tspan fill="#2471dd">family$</tspan><tspan fill="#199d4a">resource.ext</tspan></tspan></text>
+   <text x="56.211388" y="282.72772" fill="#9340a4" font-family="'Montserrat Medium'" font-size="5.7647px" font-weight="500" letter-spacing="0px" stroke-width=".0727px" text-anchor="middle" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:0%" xml:space="preserve"><tspan x="56.211388" y="282.72772" text-align="center" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%">component</tspan><tspan x="56.211388" y="289.93359" text-align="center" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%">coordinate</tspan></text>
+  </g>
+  <path d="m34.639 265.19v5.7034l43.243 2e-5v-5.7034" fill="none" stroke="#9340a4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".529"/>
+  <g transform="translate(-38.416 -2.9481)" fill="none" stroke="#9340a4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".529">
+   <path d="m94.676 274.08v3.2096"/>
+   <circle cx="94.676" cy="278.06" r=".75117" stroke-dashoffset="72"/>
+  </g>
+  <g>
+   <text x="122.17333" y="282.72772" fill="#2471dd" font-family="'Montserrat Medium'" font-size="5.7647px" font-weight="500" letter-spacing="0px" stroke-width=".0727px" text-anchor="middle" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:0%" xml:space="preserve"><tspan x="122.17333" y="282.72772" text-align="center" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%">family</tspan><tspan x="122.17333" y="289.93359" text-align="center" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%">coordinate</tspan></text>
+   <path d="m109.46 265.19v5.7034h25.437v-5.7034" fill="none" stroke="#2471dd" stroke-linecap="round" stroke-linejoin="round" stroke-width=".529"/>
+   <g transform="translate(-46.184 -2.9481)" fill="none" stroke="#2471dd" stroke-linecap="round" stroke-linejoin="round" stroke-width=".529">
+    <path transform="translate(-14.288)" d="m182.64 274.08v3.2096"/>
+    <circle cx="168.36" cy="278.06" r=".75117" stroke-dashoffset="72"/>
+   </g>
+   <path d="m136.47 253.82v-5.7034h43.427v5.7034" fill="none" stroke="#199d4a" stroke-linecap="round" stroke-linejoin="round" stroke-width=".529"/>
+   <g transform="matrix(1 0 0 -1 -24.078 521.96)" fill="none" stroke="#199d4a" stroke-linecap="round" stroke-linejoin="round" stroke-width=".529">
+    <path d="m182.26 274.08v3.2096"/>
+    <circle cx="182.26" cy="278.06" r=".75117" stroke-dashoffset="72"/>
+   </g>
+   <text x="16.568512" y="232.45686" fill="#de4c36" font-family="'Montserrat Medium'" font-size="5.7647px" font-weight="500" letter-spacing="0px" stroke-width=".0727px" text-anchor="middle" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:0%" xml:space="preserve"><tspan x="16.568512" y="232.45686" text-align="center" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%">version</tspan><tspan x="16.568512" y="239.66272" text-align="center" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%">coordinate</tspan></text>
+   <path d="m0.2645 253.82v-5.7034h32.608v5.7034" fill="none" stroke="#de4c36" stroke-linecap="round" stroke-linejoin="round" stroke-width=".529"/>
+  </g>
+  <g transform="translate(-177.37 -2.9481)" fill="none" stroke="#de4c36" stroke-linecap="round" stroke-linejoin="round" stroke-width=".529">
+   <path transform="translate(13.131)" d="m180.81 250.83v-3.2096"/>
+   <circle transform="scale(1,-1)" cx="193.94" cy="-246.85" r=".75117" stroke-dashoffset="72"/>
+  </g>
+  <g>
+   <text x="93.772812" y="232.45685" fill="#b91d5e" font-family="'Montserrat Medium'" font-size="5.7647px" font-weight="500" letter-spacing="0px" stroke-width=".0727px" text-anchor="middle" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:0%" xml:space="preserve"><tspan x="93.772812" y="232.45685" text-align="center" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%">module</tspan><tspan x="93.772812" y="239.6627" text-align="center" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%">coordinate</tspan></text>
+   <path d="m79.687 253.82v-5.7034h28.172v5.7034" fill="none" stroke="#b91d5e" stroke-linecap="round" stroke-linejoin="round" stroke-width=".529"/>
+   <g transform="translate(-64.417 -2.9481)" fill="none" stroke="#b91d5e" stroke-linecap="round" stroke-linejoin="round" stroke-width=".529">
+    <path d="m158.19 250.83v-3.2096"/>
+    <circle transform="scale(1,-1)" cx="158.19" cy="-246.85" r=".75117" stroke-dashoffset="72"/>
+   </g>
+   <text x="158.1859" y="232.45685" fill="#199d4a" font-family="'Montserrat Medium'" font-size="5.7647px" font-weight="500" letter-spacing="0px" stroke-width=".0727px" text-anchor="middle" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:0%" xml:space="preserve"><tspan x="158.1859" y="232.45685" text-align="center" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%">file</tspan><tspan x="158.1859" y="239.6627" text-align="center" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%">coordinate</tspan></text>
+  </g>
+ </g>
+</svg>

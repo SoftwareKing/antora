@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Runtime Keys :: Antora Docs</title>
+    <link rel="canonical" href="https://docs.antora.org/antora/latest/playbook/configure-runtime.html">
+    <link rel="prev" href="output-provider-custom.html">
+    <link rel="next" href="runtime-log-level.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/site-extra.css">
+    <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="https://antora.org">Antora</a>
+        <span class="separator">//</span>
+        <a href="https://docs.antora.org">Docs</a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Projects</div>
+          <div class="navbar-dropdown">
+            <div class="navbar-item"><strong>Core</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <div class="navbar-item"><strong>Default UI</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/blob/main/contributing.adoc">Contributing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Community</div>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="https://antora.zulipchat.com">Chat (Zulip)</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://twitter.com/antoraproject">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#57aaee" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora" data-version="3.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Antora</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../whats-new.html">What&#8217;s New in Antora 3.0</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoctor-upgrade-notes.html">Asciidoctor Upgrade Notes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features.html">How Antora Can Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../how-antora-works.html">How Antora Works</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install-and-run-quickstart.html">Install and Run Antora Quickstart</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Antora</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install/linux-requirements.html">Linux Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install/macos-requirements.html">macOS Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install/windows-requirements.html">Windows Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install/install-antora.html">Install Antora</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install/upgrade-antora.html">Upgrade Antora</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install/supported-platforms.html">Supported Platforms</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Set Up Content Sources</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../organize-content-files.html">How to Organize Your Content Files</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../content-source-repositories.html">Repositories and Content Source Roots</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../content-source-versioning-methods.html">Content Source Versioning Methods</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../standard-directories.html">Standard File and Directory Set</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../symlinks.html">Symlinks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../module-directories.html">Module Directories and Modules</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../root-module-directory.html">ROOT Module Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../named-module-directory.html">Named Module Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../module-directory-names.html">Recommendations for Module Directory Names</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../module-url-segment.html">Module Segment in Page URLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../family-directories.html">Family Directories and Families</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../pages-directory.html">Pages Directory and Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../partials-directory.html">Partials Directory and Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../examples-directory.html">Examples Directory and Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../images-directory.html">Images Directory and Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../attachments-directory.html">Attachments Directory and Files</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configure Component Versions</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-version.html">What&#8217;s a Component Version?</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-version-descriptor.html">What&#8217;s antora.yml?</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-name-and-version.html">Define a Component Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-name-key.html">Name Key</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-version-key.html">Version Key</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-title.html">Customize the Title</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-display-version.html">Customize the Display Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-prerelease.html">Identify a Prerelease Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-with-no-version.html">Define a Component with No Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-attributes.html">Assign Attributes to a Component Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-start-page.html">Choose a Start Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-navigation.html">Assign Navigation Files to a Component Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../version-facets.html">Version Facets</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../how-component-versions-are-sorted.html">How Component Versions are Sorted</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../distributed-component-version.html">Distributed Component Versions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../page/resource-id.html">Resources and Resource IDs</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/resource-id-coordinates.html">Resource ID Coordinates</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../page/index.html">Pages</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/standard-page.html">Set Up a Standard Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/title-and-metadata.html">Add a Title and Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../page/attributes.html">AsciiDoc Attributes in Antora</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../page/define-and-modify-attributes.html">Define and Modify Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../page/page-attributes.html">Page Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../page/intrinsic-attributes.html">Intrinsic Attributes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/start-page.html">Create a Start Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../page/xref.html">Xref Macros and Page Links</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../page/page-links.html">Create Page Links</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../page/link-content.html">Page Link Text</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/reftext-and-navtitle.html">Customize reftext and navtitle</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/page-aliases.html">Set Up URL Redirects with page-aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/page-layout.html">Assign UI Templates with page-layout</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../page/include-a-page.html">Include a Page</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../page/page-partial.html">Unset page-partial Globally</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../page/images.html">Images</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/block-images.html">Add Block Images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/inline-images.html">Add Inline Images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/image-resource-id-examples.html">Image Resource ID Examples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/image-xref-and-link.html">Resource Links From Images</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../page/partials.html">Partials</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/include-a-partial.html">Include a Partial</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../page/examples.html">Examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/include-an-example.html">Include an Example</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/attachments.html">Attachments</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">AsciiDoc Primer</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/asciidoc.html">Why AsciiDoc?</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/section-headings.html">Sections</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asciidoc/text-and-punctuation.html">Text and Punctuation Styles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/bold.html">Bold</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/italic.html">Italic</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/monospace.html">Monospace</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/highlight.html">Highlight</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/quotes-and-apostrophes.html">Quote Marks and Apostrophes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/special-characters-and-symbols.html">Special Characters and Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/subscript-and-superscript.html">Subscript and Superscript</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/in-page-xref.html">Internal Xrefs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/external-urls.html">URLs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asciidoc/lists.html">Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/ordered-and-unordered-lists.html">Bullet and Numbered Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/description-lists.html">Description Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/checklists.html">Checklists</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/embed-video.html">Embed a Video</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/ui-macros.html">UI Macros</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/source.html">Source Blocks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/admonitions.html">Admonitions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/sidebar.html">Sidebars</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/comments.html">Comments</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Navigation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/index.html">Navigation Assembly</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../navigation/files-and-lists.html">Navigation Files and Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../navigation/single-list.html">Create a Navigation File with One List</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../navigation/multiple-lists.html">Create a Navigation File with Multiple Lists</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/xrefs-and-link-text.html">Page Xrefs and Link Text</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/reference-resources.html">Attachment Xrefs and Link Text</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/external-links.html">Add Links to External Sites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/format-content.html">Format List Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/organize-files.html">Navigation File Locations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/include-lists.html">Compose Navigation Files</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/register-navigation-files.html">Register Navigation Files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configure Your Site</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">The Antora Playbook</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="set-up-playbook.html">Set Up a Playbook</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configure-site.html">Site Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="site-url.html">Site URL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="site-title.html">Site Title</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="site-start-page.html">Site Start Page</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="site-robots.html">Robots</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="site-keys.html">Account and API Keys</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configure-content-sources.html">Content Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="content-source-url.html">URLs for Content Sources</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="private-repository-auth.html">Private Repository Authentication</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-branches.html">Branches</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-worktrees.html">Worktrees</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-tags.html">Tags</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-source-start-path.html">Single Start Path</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-source-start-paths.html">Multiple Start Paths</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-source-version.html">Fallback Version</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-edit-url.html">Edit URL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configure-git.html">Git Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="git-suffix.html">Git Repository URL Suffix</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="git-fetch-concurrency.html">Git Fetch Concurrency Limit</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="git-credentials-path-and-contents.html">Git Credentials Path and Contents</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="git-plugins.html">Git Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configure-asciidoc.html">AsciiDoc Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc-attributes.html">Assign Attributes to a Site</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc-extensions.html">Asciidoctor Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc-sourcemap.html">File and Line Number Information</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configure-ui.html">UI Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui-bundle-url.html">UI Bundle URL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui-supplemental-files.html">Supplemental UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui-output-dir.html">UI Output Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui-default-layout.html">Default Layout for Pages</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configure-urls.html">URLs Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="urls-html-extension-style.html">HTML Extension Styles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="urls-latest-version-segment.html">Latest Version Segment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="urls-latest-prerelease-version-segment.html">Latest Prerelease Version Segment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="urls-latest-version-segment-strategy.html">Latest Version Segment Strategy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="urls-redirect-facility.html">Redirect Facility Key</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configure-output.html">Output Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="output-dir.html">Output Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="output-provider-archive.html">Archive Provider</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="output-provider-fs.html">Filesystem Provider</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="output-provider-custom.html">Custom Provider</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configure-runtime.html">Runtime Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Log Keys</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="runtime-log-level.html">Log Severity Level</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="runtime-log-failure-level.html">Log Failure Level</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="runtime-log-format.html">Log Format</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="runtime-log-destination.html">Log Destination</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-fetch.html">Fetch Updates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="runtime-cache-dir.html">Cache Directory</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configure-network.html">Network Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="network-proxy.html">Network Proxy</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="author-mode.html">Use Author Mode</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="use-an-existing-playbook-project.html">Use an Existing Playbook Project</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="environment-variables.html">Environment Variables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Generate Your Site</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../run-antora.html">Run Antora</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../preview-site.html">Preview Your Site</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/index.html">Antora CLI Commands</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/options.html">CLI Options</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/primer.html">CLI Primer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cache.html">Configure Antora&#8217;s Cache</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../antora-container.html">Run Antora in a Container</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Publish Your Site</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../how-antora-builds-urls.html">How Antora Builds URLs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../add-404-error-page.html">Add a 404 Error Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../sitemap.html">Automatic Sitemap</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../publish-to-github-pages.html">Publish to GitHub Pages</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Extend Antora</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../extend/extensions.html">Antora Extensions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/define-extension.html">Define an Extension</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/register-extension.html">Register an Extension</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/add-event-listeners.html">Add Event Listeners</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/use-context-variables.html">Use Context Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/configure-extension.html">Configure an Extension</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/enable-extension.html">Enable an Extension</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/extension-helpers.html">Extension Helpers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/class-based-extension.html">Class-Based Extension</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/asynchronous-listeners.html">Asynchronous Listeners</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/replace-generator-functions.html">Replace Generator Functions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/extension-tutorial.html">Extension Tutorial</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/generator-events-reference.html">Generator Events Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/generator-context-reference.html">GeneratorContext API Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../extend/supported-components.html">Antora Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../project/get-help.html">Get Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security-bulletins.html">Security Bulletins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Project Governance</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../project/release-schedule.html">Release Schedule</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../project/copyright-and-license.html">Copyright and License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora</span>
+    <span class="version">3.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Antora</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">3.0</a>
+        </li>
+        <li class="version">
+          <a href="../../2.3/index.html">2.3</a>
+        </li>
+        <li class="version">
+          <a href="../../2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../2.1/index.html">2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../2.0/index.html">2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../antora-ui-default/index.html">Antora Default UI</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../antora-ui-default/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Antora</a></li>
+    <li>Configure Your Site</li>
+    <li><a href="configure-runtime.html">Runtime Keys</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">3.0</button>
+  <div class="version-menu">
+    <a class="version is-current" href="configure-runtime.html">3.0</a>
+    <a class="version" href="../../2.3/playbook/configure-runtime.html">2.3</a>
+    <a class="version" href="../../2.2/playbook/configure-runtime.html">2.2</a>
+    <a class="version" href="../../2.1/playbook/configure-runtime.html">2.1</a>
+    <a class="version" href="../../2.0/playbook/configure-runtime.html">2.0</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://gitlab.com/antora/antora/edit/main/docs/modules/playbook/pages/configure-runtime.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Runtime Keys</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The playbook keys configured under the <code>runtime</code> key manage Antora&#8217;s logger, as well as its console output, caching, and remote repository update behavior.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="runtime-key"><a class="anchor" href="#runtime-key"></a>runtime key</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The global log, console output, fetch, and cache directory properties are defined under the <code>runtime</code> key in a playbook file.
+These settings are applied to the Antora pipeline when it starts.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 1. antora-playbook.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">runtime: <i class="conum" data-value="1"></i><b>(1)</b>
+  cache_dir: ./.cache/antora <i class="conum" data-value="2"></i><b>(2)</b>
+  fetch: true <i class="conum" data-value="3"></i><b>(3)</b>
+  log: <i class="conum" data-value="4"></i><b>(4)</b>
+    level: error <i class="conum" data-value="5"></i><b>(5)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Optional <code>runtime</code> key</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Optional <code>cache_dir</code> key</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Optional <code>fetch</code> key</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Optional <code>log</code> key</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Optional <code>level</code> key</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The <code>runtime</code> key and the key-value pairs it accepts are optional.
+If <code>runtime</code> isn&#8217;t set in the playbook, Antora uses the default cache directory, fetch, and log settings.
+Alternatively, these keys can be assigned from the <a href="../cli/options.html#generate-options" class="xref page">CLI</a> or, except for <code>fetch</code>, using <a href="environment-variables.html" class="xref page">environment variables</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="log-key"><a class="anchor" href="#log-key"></a>log key</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>log</code> key is optional.
+If you do set it in a playbook, you must nest it under the <a href="#runtime-key">runtime key</a>.
+The <code>log</code> key accepts a list of built-in key-value pairs that configure the log level (<code>level</code>), failure level (<code>failure_level</code>), and display format (<code>format</code>).</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 2. antora-playbook.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">runtime:
+  log: <i class="conum" data-value="1"></i><b>(1)</b>
+    format: json <i class="conum" data-value="2"></i><b>(2)</b>
+    failure_level: warn <i class="conum" data-value="3"></i><b>(3)</b>
+    level: all <i class="conum" data-value="4"></i><b>(4)</b>
+    level_format: number <i class="conum" data-value="5"></i><b>(5)</b>
+    destination: <i class="conum" data-value="6"></i><b>(6)</b>
+      file: ./antora.log <i class="conum" data-value="7"></i><b>(7)</b>
+      append: true <i class="conum" data-value="8"></i><b>(8)</b>
+      buffer_size: 4096 <i class="conum" data-value="9"></i><b>(9)</b>
+      sync: false <i class="conum" data-value="10"></i><b>(10)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The optional <code>log</code> category key is nested under the <code>runtime</code> category key.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The optional <code>format</code> key is nested under the <code>log</code> category key.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The optional <code>failure_level</code> key is nested under the <code>log</code> category key.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>The optional <code>level</code> key is nested under the <code>log</code> category key.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>The optional <code>level_format</code> key is nested under the <code>log</code> category key.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>The optional <code>destination</code> category key is nested under the <code>log</code> category key.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>The optional <code>file</code> key is nested under the <code>destination</code> category key.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
+<td>The optional <code>append</code> key is nested under the <code>destination</code> category key.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="9"></i><b>9</b></td>
+<td>The optional <code>buffer_size</code> key is nested under the <code>destination</code> category key.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="10"></i><b>10</b></td>
+<td>The optional <code>sync</code> key is nested under the <code>destination</code> category key.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If <code>level</code>, <code>failure_level</code>, <code>format</code>, or <code>level_format</code> are set in the playbook, they must be nested under the <code>log</code> category key.
+The <a href="runtime-log-level.html#default" class="xref page">level</a>, <a href="runtime-log-failure-level.html#default" class="xref page">failure_level</a>, <a href="runtime-log-format.html#default" class="xref page">format</a>, and <a href="runtime-log-format.html#level-format-key" class="xref page">level_format</a> keys have default values that are automatically applied when Antora runs if they&#8217;re not explicitly defined in the playbook or using the corresponding the <a href="../cli/options.html#generate-options" class="xref page">command line options</a> or <a href="environment-variables.html" class="xref page">environment variables</a>.</p>
+</div>
+<div class="paragraph">
+<p>If <code>file</code>, <code>append</code>, <code>buffer_size</code>, or <code>sync</code> are set in the playbook, they must be nested under the <code>destination</code> category key.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The log settings are not honored if a fatal error is thrown before Antora fully configures the playbook.
+In such cases, the error message is only printed directly to standard error (stderr) using a preconfigured logger.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="runtime-reference"><a class="anchor" href="#runtime-reference"></a>Available runtime keys</h2>
+<div class="sectionbody">
+<table class="tableblock frame-none grid-rows stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 60%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Runtime Keys</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="runtime-cache-dir.html" class="xref page">cache_dir</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specifies the directory where the remote content sources git repositories and UI bundles are cached.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="runtime-fetch.html" class="xref page">fetch</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When set to <code>true</code>, the <code>fetch</code> key refreshes the files in the cache each time Antora runs.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="runtime-log-failure-level.html" class="xref page">log.failure_level</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the log level tolerance that, when met or exceeded, causes Antora to fail on exit with a non-zero exit code.
+Accepts the values <code>warn</code>, <code>error</code>, <code>fatal</code>, and <code>none</code>.
+The default value is <code>fatal</code>.
+The value <code>none</code> causes Antora to always exit with a zero exit code.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="runtime-log-format.html" class="xref page">log.format</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the format of log messages.
+Accepts the values <code>pretty</code> and <code>json</code>.
+The default value is <code>json</code> in a CI environment and <code>pretty</code> in all other environments.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="runtime-log-level.html" class="xref page">log.level</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the minimum severity threshold level that must be met for a message to be logged.
+Accepts the values <code>all</code>, <code>debug</code>, <code>info</code>, <code>warn</code>, <code>error</code>, <code>fatal</code>, and <code>silent</code>.
+The default value is <code>warn</code>.
+The value <code>silent</code> turns the logger off.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="runtime-log-format.html#level-format-key" class="xref page">log.level_format</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the format of how the log levels are expressed.
+Only applies when <code>log.format</code> is <code>json</code>.
+Accepts the values <code>label</code> and <code>number</code>.
+The default value is <code>label</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="runtime-log-destination.html#file-key" class="xref page">log.destination.file</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the destination file or stream where log messages are written.
+The default value (either <code>stdout</code> or <code>stderr</code>) depends on the log format.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="runtime-log-destination.html#append-key" class="xref page">log.destination.append</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configures whether to truncate (i.e., clear) the file before writing to it.
+The default value is <code>false</code>, which means to truncate the file.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="runtime-log-destination.html#buffer-size-key" class="xref page">log.destination.buffer_size</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the amount of memory to use to buffer log messages.
+Once the buffer reaches this size, the buffered messages are written to the destination in a batch.
+The default value is <code>0</code>, which turns off this behavior.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="runtime-log-destination.html#sync-key" class="xref page">log.destination.sync</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configures whether to use a sync or async operation to write log messages to the destination.
+The default value is <code>true</code>, which means log messages are written synchronously (blocking).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="output-provider-custom.html">Custom Provider</a></span>
+  <span class="next"><a href="runtime-log-level.html">Log Severity Level</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright © <a href="https://opendevise.com">OpenDevise Inc.</a> and individual contributors to <a href="https://antora.org">Antora</a>.</p>
+  <p>Except where otherwise noted, docs.antora.org, Antora, and the Antora UI, are licensed under the <a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License Version 2.0</a> (MPL-2.0).</p>
+  <p>AsciiDoc® is a trademark of the Eclipse Foundation, Inc.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

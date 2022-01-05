@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Private Repository Authentication :: Antora Docs</title>
+    <link rel="canonical" href="https://docs.antora.org/antora/latest/playbook/private-repository-auth.html">
+    <link rel="prev" href="configure-content-sources.html">
+    <link rel="next" href="configure-asciidoc.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/site-extra.css">
+    <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="https://antora.org">Antora</a>
+        <span class="separator">//</span>
+        <a href="https://docs.antora.org">Docs</a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Projects</div>
+          <div class="navbar-dropdown">
+            <div class="navbar-item"><strong>Core</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <div class="navbar-item"><strong>Default UI</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/blob/main/contributing.adoc">Contributing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Community</div>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="https://antora.zulipchat.com">Chat (Zulip)</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://twitter.com/antoraproject">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#57aaee" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora" data-version="2.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Antora</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../whats-new.html">What&#8217;s New in Antora 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features.html">How Antora Can Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../how-antora-works.html">How Antora Works</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Antora</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../install/linux-requirements.html">Linux Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../install/macos-requirements.html">macOS Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../install/windows-requirements.html">Windows Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../install/install-antora.html">Install Antora</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../install/upgrade-antora.html">Upgrade Antora</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../install/supported-platforms.html">Supported Platforms</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../run-antora.html">Run Antora</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../run-antora.html#cache">About the Cache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../run-antora.html#local-site-preview">Local Preview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../run-antora.html#publish-to-github-pages">Publish to GitHub Pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../antora-container.html">Run Antora in a Container</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/index.html">CLI Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../component-structure.html">File Organization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-descriptor.html">Component Descriptor</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-versions.html">Versions &amp; Branches</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../page/index.html">Pages</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/page-id.html">Antora Page ID</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/page-and-site-attributes.html">Page and Site Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/create-standard-page.html">Create a Standard Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asciidoc/page-header.html">Page Header</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/page-header.html#page-title">Title</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/page-header.html#page-meta">Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/page-header.html#page-attrs">Attributes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/section-headings.html">Page Sections</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asciidoc/text-and-punctuation.html">Text and Punctuation Styles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/bold.html">Bold</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/italic.html">Italic</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/monospace.html">Monospace</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/highlight.html">Highlight</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/quotes-and-apostrophes.html">Quote Marks and Apostrophes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/special-characters-and-symbols.html">Special Characters and Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/subscript-and-superscript.html">Subscript and Superscript</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cross References and Links</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/page-to-page-xref.html">Page to Page Xrefs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/in-page-xref.html">Same Page Xrefs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/external-urls.html">URLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asciidoc/lists.html">Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/ordered-and-unordered-lists.html">Bullet and Numbered Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/description-lists.html">Description Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/checklists.html">Checklists</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Include Partials, Pages, and Examples</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../page/resource-id.html">Antora Resource ID</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/include-partial.html">Include a Partial</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/include-example.html">Include an Example</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/include-page.html">Include a Page</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/insert-image.html">Insert an Image</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/embed-video.html">Embed a Video</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/link-attachment.html">Link to an Attachment</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/ui-macros.html">UI Macros</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/admonitions.html">Admonitions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/sidebar.html">Sidebars</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/comments.html">Comments</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../navigation/index.html">Navigation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/filenames-and-locations.html">Navigation File Names &amp; Storage Locations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/register-navigation-files.html">Navigation File Registration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/list-structures.html">Single &amp; Multi-list Navigation Files</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../navigation/link-syntax-and-content.html">Link Types &amp; Syntax</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../navigation/link-syntax-and-content.html#page">Page Links</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../navigation/link-syntax-and-content.html#resource">Attachment Links</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../navigation/link-syntax-and-content.html#urls">Other URI Links</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../navigation/link-syntax-and-content.html#content">Navigation Content &amp; Link Formatting</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Playbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook-schema.html">Configuration Schema</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configure-site.html">Site</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configure-content-sources.html">Content Sources</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="4">
+    <a class="nav-link" href="private-repository-auth.html">Private Repository Authentication</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configure-asciidoc.html">AsciiDoc</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configure-ui.html">UI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configure-output.html">Output</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configure-runtime.html">Runtime</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="author-mode.html">Create an Author Workspace</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use-an-existing-playbook-project.html">Use an Existing Project</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Extend &amp; Customize</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/supported-components.html">Antora Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security-bulletins.html">Security Bulletins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../project/get-help.html">Get Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Project Governance</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../project/release-schedule.html">Release Schedule</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../project/roadmap.html">Roadmap</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../project/copyright-and-license.html">Copyright &amp; License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora</span>
+    <span class="version">2.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../latest/index.html">Antora</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../latest/index.html">3.0</a>
+        </li>
+        <li class="version">
+          <a href="../../2.3/index.html">2.3</a>
+        </li>
+        <li class="version">
+          <a href="../../2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../2.1/index.html">2.1</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../antora-ui-default/index.html">Antora Default UI</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../antora-ui-default/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../latest/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Antora</a></li>
+    <li><a href="index.html">Playbook</a></li>
+    <li><a href="playbook-schema.html">Configuration Schema</a></li>
+    <li><a href="configure-content-sources.html">Content Sources</a></li>
+    <li><a href="private-repository-auth.html">Private Repository Authentication</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2.0</button>
+  <div class="version-menu">
+    <a class="version" href="../../latest/playbook/private-repository-auth.html">3.0</a>
+    <a class="version" href="../../2.3/playbook/private-repository-auth.html">2.3</a>
+    <a class="version" href="../../2.2/playbook/private-repository-auth.html">2.2</a>
+    <a class="version" href="../../2.1/playbook/private-repository-auth.html">2.1</a>
+    <a class="version is-current" href="private-repository-auth.html">2.0</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://gitlab.com/antora/antora/edit/v2.0.x/docs/modules/playbook/pages/private-repository-auth.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Private Repository Authentication</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In order for Antora to access private repositories, you need to supply it with authentication credentials for each private repository URL you want to use.
+You can pass these credentials to Antora in several ways, including the default git credential store, a custom credential store, or even your own credential manager.</p>
+</div>
+<div class="paragraph">
+<p>First, let&#8217;s review the authentication credential types Antora accepts by default: username and password pairs and personal access (OAuth) tokens.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="credential-types"><a class="anchor" href="#credential-types"></a>Credential types</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Antora will authenticate with private repositories using HTTP Basic authentication.
+HTTP Basic authentication requires sending credentials to the server to verify your identity.
+Authentication credentials consist of either a username and password pair or a personal access (OAuth) token.</p>
+</div>
+<div class="paragraph">
+<p>The username and password pair is typically your login to the service (GitHub, GitLab, etc.) where the repository is hosted.
+You can use this pair as long as you don&#8217;t have two-factor authentication enabled on your account.</p>
+</div>
+<div class="paragraph">
+<p>If you do have two-factor authentication (2FA) enabled on your account, you must use a personal access token instead.
+To create a personal access token for <strong>GitHub</strong>, see <a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/" target="_blank" rel="noopener">Creating a personal access token for the command line</a>.
+To create one for <strong>GitLab</strong>, see <a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html" target="_blank" rel="noopener">Personal access tokens</a>.
+For <strong>Bitbucket</strong>, you&#8217;ll need to create an <a href="https://confluence.atlassian.com/bitbucket/app-passwords-828781300.html" target="_blank" rel="noopener">app password</a> with read access to repositories.</p>
+</div>
+<div class="paragraph">
+<p>Next, let&#8217;s see how to supply these credentials to Antora&#8217;s built-in credential manager via the default git credential store.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="supply-credentials-using-the-default-git-credential-store"><a class="anchor" href="#supply-credentials-using-the-default-git-credential-store"></a>Supply credentials using the default git credential store</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By default, Antora&#8217;s built-in credential manager automatically checks for credentials in the <a href="https://git-scm.com/docs/git-credential-store" target="_blank" rel="noopener">git credential store</a>.
+The default path for the git credential store is <em>$HOME/.git-credentials</em>, followed by <em>$XDG_CONFIG_HOME/git/credentials</em> if the previous location doesn&#8217;t exist.</p>
+</div>
+<div class="paragraph">
+<p>When Antora is notified by the certain that a URL requires authentication, it will look for an entry in the credentials store that has a matching context.
+If a protocol (e.g., <code>https</code>) and hostname (and, optionally, the path) are found in the credentials store, those credentials are returned to Antora&#8217;s credential manager and passed on to the git server.</p>
+</div>
+<div class="paragraph">
+<p>The credential store contains zero or more line-based entries.
+The structure of each entry is expected to be as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">https://&lt;credentials&gt;@&lt;hostname&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>&lt;credentials&gt;</code> is either a username and password pair (<code>username:password</code>) or a personal access token (<code>token:</code>).
+<code>&lt;hostname&gt;</code> is the address of the git server (e.g., <code>github.com</code>).</p>
+</div>
+<div class="paragraph">
+<p>You can populate the credential store interactively using the system <code>git</code> command or by editing the credential store directly.
+Let&#8217;s start with the interactive approach.</p>
+</div>
+<div class="sect2">
+<h3 id="populate-the-credential-store-interactively"><a class="anchor" href="#populate-the-credential-store-interactively"></a>Populate the credential store interactively</h3>
+<div class="paragraph">
+<p>You can use the <code>git</code> command to populate the credential store interactively.
+This approach is especially useful since it allows you to verify that your credentials are accepted by the git server.</p>
+</div>
+<div class="paragraph">
+<p>First, select the URL of a private repository you want to use with Antora.
+Next, in your terminal, run the following command for each private repository you need to access from Antora:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ git config --global credential.helper store &amp;&amp; \
+  echo -n 'Repository URL: ' &amp;&amp; read REPLY &amp;&amp; \
+  git ls-remote -h $REPLY &gt; /dev/null</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command performs the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Enables the git credential store globally (temporarily).</p>
+</li>
+<li>
+<p>Prompts you for the URL of a private repository.</p>
+</li>
+<li>
+<p>Communicates with the private repository, triggering a prompt for your credentials.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you aren&#8217;t prompted for your credentials, it means your credentials are already stored.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Stores the credentials in <em class="path">$HOME/.git-credentials</em> (and assigning it the appropriate permissions).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If this script succeeds, you can use the applicable private repositories in Antora without any further configuration.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Restore your git configuration</div>
+<div class="paragraph">
+<p>The interactive script above altered your git settings in order to enable the credential store globally.
+If you aren&#8217;t using the credential store outside of Antora, run the following command to disable it again:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ git config --global --remove-section credential</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Changing this setting does not affect how Antora uses the credential store.
+It only affects the behavior of your native git client.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If the interactive approach didn&#8217;t work for you, you can populate the credential store directly.
+Let&#8217;s give that a shot.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="populate-the-credential-store-directly"><a class="anchor" href="#populate-the-credential-store-directly"></a>Populate the credential store directly</h3>
+<div class="paragraph">
+<p>To add credentials to the git credential store directly, create the file <em class="path">$HOME/.git-credentials</em> and open it in your editor.
+Enter the credentials for each private repository on its own line.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s an example entry that uses a username and password pair:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">https://octocat:ilovegit@github.com</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s an example that uses a token (pay attention to the trailing <code>:</code> after the token):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">https://abcdefg0123456:@github.com</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To use different credentials for a given repository, you can append a repository path (i.e., <code>&lt;repo&gt;</code>) to the entry to make the matching more strict.
+(The <code>.git</code> file extension in the repository path is optional).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">https://&lt;credentials&gt;@&lt;hostname&gt;/&lt;repo&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s an example for a specific repository path:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">https://octocat:ilovegit@github.com/octocat/Hello-World</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To ensure this file is protected, immediately set its file permissions so it cannot be read by others.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ chmod 600 $HOME/.git-credentials</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom-credential-path"><a class="anchor" href="#custom-credential-path"></a>Specify a custom git credential store path</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Instead of using the credential store at the default path(s), you can instruct Antora to look for the file in a different location using either the <code>--git-credentials-path</code> CLI option or <code>GIT_CREDENTIALS_PATH</code> environment variable.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s an example that uses the CLI option to specify a path relative to the playbook file:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ antora --git-credentials-path=./.git-credentials antora-playbook.yml</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also specify this location directly in your playbook file under the <code>git</code> key.</p>
+</div>
+<div class="listingblock">
+<div class="title">antora-playbook.yml (fragment)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">git:
+  credentials:
+    path: ./.git-credentials</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="pass-credentials-via-an-environment-variable"><a class="anchor" href="#pass-credentials-via-an-environment-variable"></a>Pass credentials via an environment variable</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Instead of reading the credentials from a file, you can have Antora read the credentials directly from the environment variable named <code>GIT_CREDENTIALS</code>.
+Here&#8217;s an example that demonstrates the concept:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ export GIT_CREDENTIALS='https://octocat:ilovegit@github.com'
+$ antora antora-playbook.yml</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can even reduce this to a single line:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ GIT_CREDENTIALS='https://octocat:ilovegit@github.com' antora antora-playbook.yml</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This strategy is most useful in a CI environment where environment variables can be secured.
+It&#8217;s also a quick and informal way of passing credentials to Antora when generating the site on your own machine.</p>
+</div>
+<div class="paragraph">
+<p>When using the environment variable, multiple entries may be separated either by a comma or a newline character.
+For example:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ GIT_CREDENTIALS='https://my-github-token:@github.com,https://oauth2:my-gitlab-token@gitlab.com' antora antora-playbook.yml</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Exporting the environment variable saves you from having to type it each time you run Antora.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="encode-credentials-in-a-url-not-recommended"><a class="anchor" href="#encode-credentials-in-a-url-not-recommended"></a>Encode credentials in a URL (not recommended)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Another option for passing credentials to the credential manager is to encode them directly in the URL listed in the playbook.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+This strategy is not recommended unless you&#8217;re using a placeholder to inject the real credentials, as described at the end of this section.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Antora will extract the credentials that precede the hostname (i.e., <code>username:password@</code> or <code>token@</code>) and use them to perform authentication on your behalf if requested by the server.</p>
+</div>
+<div class="paragraph">
+<p>Here are several examples:</p>
+</div>
+<div class="listingblock">
+<div class="title">antora-playbook.yml (fragment)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">content:
+  sources:
+  - url: https://GITHUB_TOKEN:@github.com/org/project-docs
+  - url: https://oauth2:GITLAB_TOKEN@gitlab.com/org/project-docs.git
+  - url: https://x-oauth-token:BITBUCKET_TOKEN@bitbucket.org/org/project-docs.git
+  - url: https://USERNAME:BITBUCKET_APP_PASSWORD@bitbucket.org/org/project-docs.git</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Notice that the tokens are located in different locations in the URL depending on the git host.
+See <a href="https://isomorphic-git.org/docs/en/authentication" target="_blank" rel="noopener">OAuth2 formats</a> for more details.
+If you&#8217;re using a Bitbucket app password, you&#8217;ll also need to include your username (using the format <code>USERNAME:BITBUCKET_APP_PASSWORD</code>).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The drawback of this approach is that it requires putting the credentials directly into the playbook file.
+Unfortunately, Antora does not yet support resolving environment variables located in the playbook file.
+However, you can emulate this behavior by using a script to substitute references to an environment variable in the playbook file with its value.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s assume you have the following source defined in your playbook file:</p>
+</div>
+<div class="listingblock">
+<div class="title">antora-playbook.yml (fragment)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">content:
+  sources:
+  - url: https://$GITHUB_TOKEN:@github.com/org-name/project-docs</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you&#8217;re using multiple private repositories that require the same credentials, you can instead define the credentials once under the <code>git</code> key as follows:</p>
+</div>
+<div class="listingblock">
+<div class="title">antora-playbook.yml (fragment)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">git:
+  credentials:
+    contents: https://$GITHUB_TOKEN:@github.com</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can then use the following script to expand the references to the environment variable, which you may run in CI prior to invoking Antora:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ sed -i s/\$GITHUB_TOKEN/$GITHUB_TOKEN/ antora-playbook.yml
+$ antora antora-playbook.yml</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Despite this workaround, we still recommend using the credential store integration described earlier.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom-manager"><a class="anchor" href="#custom-manager"></a>Configure a custom credential manager</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The git client used by Antora, isomorphic-git, provides a <a href="https://isomorphic-git.org/docs/en/plugin_credentialManager" target="_blank" rel="noopener">pluggable credential manager</a> for looking up authentication credentials.
+Antora provides a default implementation of this plugin.
+As you&#8217;ve seen in previous sections, this implementation assumes Antora can access the credentials directly, in plain text, either via a file or environment variable.
+If this arrangement does not meet your security requirements, you can replace the built-in credential manager with your own.</p>
+</div>
+<div class="paragraph">
+<p>To write a custom credential manager, create a JavaScript object (or class) that implements the following methods:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">configure ({ config, startDir })
+async fill ({ url })
+async approved ({ url })
+async rejected ({ url, auth })
+status ({ url })</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The method that looks up the credentials is <code>fill</code>.
+It must return either a <code>{ username, password }</code> or <code>{ token }</code> data object.
+The <code>approved</code> and <code>rejected</code> methods are called when the credentials are approved or rejected by the server, respectively.</p>
+</div>
+<div class="paragraph">
+<p>The optional <code>configure</code> and <code>status</code> methods are specific to Antora, extending the capabilities of what a credential manager in isomomrphic-git typically provides.
+If defined, the <code>configure</code> method is called each time Antora starts, providing an opportunity to perform initialization steps such as defining properties.
+The <code>status</code> method, if available, is used by Antora to look up whether authentication was requested for a given URL.</p>
+</div>
+<div class="paragraph">
+<p>To activate your custom credential manager, first write your implementation in a dedicated JavaScript file and register it with isomorphic-git as follows:</p>
+</div>
+<div class="listingblock">
+<div class="title">custom-credential-manager.js</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">const git = require('isomorphic-git')
+
+git.cores.create('antora').set('credentialManager', {
+  async fill ({ url }) { ... },
+  async approved ({ url }) { ... },
+  async rejected ({ url, auth }) { ... },
+})</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then pass this file to the <code>-r</code> option when running Antora:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ antora -r ./custom-credential-manager.js antora-playbook.yml</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="get-credentials-from-git"><a class="anchor" href="#get-credentials-from-git"></a>Get credentials from git</h3>
+<div class="paragraph">
+<p>Git offers a command named <code>git credential</code> that serves as a simple interface for storing and retrieving credentials from system-specific helpers in the same manner as git itself.
+It can also prompt the user for a username and password.
+We can use this command in a custom credential manager to allow Antora to delegate to git to look up credentials (and thus integrate with the user&#8217;s own git settings).</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s start by creating a helper function that interfaces with the system git via <code>git credentials fill</code> to retrieve the credentials for a URL:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">const git = require('isomorphic-git')
+const { spawn } = require('child_process')
+const { URL } = require('url')
+
+function gitCredentialFill (url) {
+  const { protocol, host } = new URL(url)
+  return new Promise((resolve, reject) =&gt; {
+    const output = []
+    const process = spawn('git', ['credential', 'fill'])
+    process.on('close', (code) =&gt; {
+      if (code) return reject(code)
+      const { username, password } = output.join('\n').split('\n').reduce((acc, line) =&gt; {
+        if (line.startsWith('username') || line.startsWith('password')) {
+          const [ key, val ] = line.split('=')
+          acc[key] = val
+        }
+        return acc
+      }, {})
+      resolve(password ? { username, password } : username ? { token: username } : undefined)
+    })
+    process.stdout.on('data', (data) =&gt; output.push(data.toString().trim()))
+    process.stdin.write(`protocol=${protocol.slice(0, -1)}\nhost=${host}\n\n`)
+  })
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Next, let&#8217;s create a credential manager that uses this function to retrieve the credentials:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">const systemGitCredentialManager = {
+  configure () {
+    this.urls = []
+  },
+  async fill ({ url }) {
+    this.urls.push(url)
+    return gitCredentialFill(url)
+  },
+  async approved ({ url }) {},
+  async rejected ({ url, auth }) {
+    const data = { statusCode: 401, statusMessage: 'HTTP Basic: Access Denied' }
+    const err = new Error(`HTTP Error: ${data.statusCode} ${data.statusMessage}`)
+    err.name = err.code = 'HTTPError'
+    err.data = data
+    err.rejected = !!auth
+    throw err
+  },
+  status ({ url }) {
+    return this.urls.includes(url)
+  },
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Finally, we need to register the credential manager with isomorphic-git:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">git.cores.create('antora').set('credentialManager', systemGitCredentialManager)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If we require this script when invoking Antora, Antora will delegate to the system git to fill the credentials:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ antora -r ./system-git-credential-manager.js antora-playbook.yml</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It&#8217;s left up to an exercise for the reader to store or erase the credentials based on whether they were approved or rejected by the server (hint: use the <code>approved</code> and <code>rejected</code> methods to invoke <code>git credential</code> again).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ssh-auth"><a class="anchor" href="#ssh-auth"></a>SSH authentication</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Since 2.0, Antora no longer supports public/private key authentication over SSH using an SSH agent.
+Instead, Antora transparently converts git SSH URLs in the playbook to HTTPS URLs.
+That means you can use SSH URLs and HTTPS URLs interchangeably in your playbook file.
+If this automatic translation doesn&#8217;t work, meaning a git repository is not available at the equivalent HTTPS URL, then you&#8217;ll need to update your playbook file to use the correct HTTPS URL.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="configure-content-sources.html">Content Sources</a></span>
+  <span class="next"><a href="configure-asciidoc.html">AsciiDoc</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright © <a href="https://opendevise.com">OpenDevise Inc.</a> and individual contributors to <a href="https://antora.org">Antora</a>.</p>
+  <p>Except where otherwise noted, docs.antora.org, Antora, and the Antora UI, are licensed under the <a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License Version 2.0</a> (MPL-2.0).</p>
+  <p>AsciiDoc® is a trademark of the Eclipse Foundation, Inc.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Create a Standard Page :: Antora Docs</title>
+    <link rel="canonical" href="https://docs.antora.org/antora/latest/page/standard-page.html">
+    <link rel="prev" href="page-and-site-attributes.html">
+    <link rel="next" href="page-aliases.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/site-extra.css">
+    <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="https://antora.org">Antora</a>
+        <span class="separator">//</span>
+        <a href="https://docs.antora.org">Docs</a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Projects</div>
+          <div class="navbar-dropdown">
+            <div class="navbar-item"><strong>Core</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <div class="navbar-item"><strong>Default UI</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/blob/main/contributing.adoc">Contributing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Community</div>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="https://antora.zulipchat.com">Chat (Zulip)</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://twitter.com/antoraproject">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#57aaee" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora" data-version="2.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Antora</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../whats-new.html">What&#8217;s New in Antora 2.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features.html">How Antora Can Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../how-antora-works.html">How Antora Works</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Antora</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../install/linux-requirements.html">Linux Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../install/macos-requirements.html">macOS Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../install/windows-requirements.html">Windows Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../install/install-antora.html">Install Antora</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../install/upgrade-antora.html">Upgrade Antora</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../install/supported-platforms.html">Supported Platforms</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../run-antora.html">Run Antora</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../run-antora.html#cache">About the Cache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../run-antora.html#local-site-preview">Local Preview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../run-antora.html#publish-to-github-pages">Publish to GitHub Pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../antora-container.html">Run Antora in a Container</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/index.html">CLI Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">File Organization</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-structure.html">Documentation Components and Repositories</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules.html">Modules, Families, and Subdirectories</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-descriptor.html">Component Descriptor: antora.yml</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-versions.html">Component Versions and Branches</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Pages</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page-id.html">Antora Page ID</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page-and-site-attributes.html">Page and Site Attributes</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="create-standard-page.html">Create a Standard Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page-aliases.html">Set Up URL Redirects with Page Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asciidoc/page-header.html">Page Header</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/page-header.html#page-title">Title</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/page-header.html#page-meta">Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/page-header.html#page-attrs">Attributes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/section-headings.html">Page Sections</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asciidoc/text-and-punctuation.html">Text and Punctuation Styles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/bold.html">Bold</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/italic.html">Italic</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/monospace.html">Monospace</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/highlight.html">Highlight</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/quotes-and-apostrophes.html">Quote Marks and Apostrophes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/special-characters-and-symbols.html">Special Characters and Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/subscript-and-superscript.html">Subscript and Superscript</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cross References and Links</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/page-to-page-xref.html">Page to Page Xrefs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/in-page-xref.html">Same Page Xrefs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/external-urls.html">URLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asciidoc/lists.html">Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/ordered-and-unordered-lists.html">Bullet and Numbered Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/description-lists.html">Description Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/checklists.html">Checklists</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Include Partials, Pages, and Examples</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="resource-id.html">Antora Resource ID</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/include-partial.html">Include a Partial</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/include-example.html">Include an Example</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/include-page.html">Include a Page</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/insert-image.html">Insert an Image</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/embed-video.html">Embed a Video</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/link-attachment.html">Link to an Attachment</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/ui-macros.html">UI Macros</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/admonitions.html">Admonitions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/sidebar.html">Sidebars</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/comments.html">Comments</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../navigation/index.html">Navigation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/filenames-and-locations.html">Navigation File Names &amp; Storage Locations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/register-navigation-files.html">Navigation File Registration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/list-structures.html">Single &amp; Multi-list Navigation Files</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../navigation/link-syntax-and-content.html">Link Types &amp; Syntax</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../navigation/link-syntax-and-content.html#page">Page Links</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../navigation/link-syntax-and-content.html#resource">Attachment Links</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../navigation/link-syntax-and-content.html#urls">Other URI Links</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../navigation/link-syntax-and-content.html#content">Navigation Content &amp; Link Formatting</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/index.html">Playbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/playbook-schema.html">Configuration Schema</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../playbook/configure-site.html">Site</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/configure-content-sources.html">Content Sources</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../playbook/private-repository-auth.html">Private Repository Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../playbook/configure-edit-url.html">Edit URL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../playbook/configure-asciidoc.html">AsciiDoc</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../playbook/configure-ui.html">UI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../playbook/configure-redirect-facility.html">Redirect Facility</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../playbook/configure-output.html">Output</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../playbook/configure-runtime.html">Runtime</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/author-mode.html">Create an Author Workspace</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/use-an-existing-playbook-project.html">Use an Existing Project</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Extend &amp; Customize</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/supported-components.html">Antora Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../project/get-help.html">Get Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security-bulletins.html">Security Bulletins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Project Governance</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../project/release-schedule.html">Release Schedule</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../project/copyright-and-license.html">Copyright and License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora</span>
+    <span class="version">2.2</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../latest/index.html">Antora</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../latest/index.html">3.0</a>
+        </li>
+        <li class="version">
+          <a href="../../2.3/index.html">2.3</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../2.1/index.html">2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../2.0/index.html">2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../antora-ui-default/index.html">Antora Default UI</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../antora-ui-default/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../latest/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Antora</a></li>
+    <li><a href="index.html">Pages</a></li>
+    <li><a href="create-standard-page.html">Create a Standard Page</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2.2</button>
+  <div class="version-menu">
+    <a class="version" href="../../latest/page/standard-page.html">3.0</a>
+    <a class="version" href="../../2.3/page/standard-page.html">2.3</a>
+    <a class="version is-current" href="create-standard-page.html">2.2</a>
+    <a class="version" href="../../2.1/page/create-standard-page.html">2.1</a>
+    <a class="version" href="../../2.0/page/create-standard-page.html">2.0</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://gitlab.com/antora/antora/edit/v2.2.x/docs/modules/page/pages/create-standard-page.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Create a Standard Page</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>A standard page is an AsciiDoc file in the <em class="path">pages</em> directory of a module.
+Standard pages have a header, which includes the page title, and a body, which includes the majority of the page&#8217;s displayed content.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Start a new file in a plain text editor such as Atom, Brackets, or gedit.</p>
+</li>
+<li>
+<p>On the first line of file, enter a page title.</p>
+<div class="paragraph">
+<p>A page title is specified by one equals sign (<code>=</code>), followed by one blank space, and then the text of the title.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">= The title of my new page</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>On the second line and subsequent contiguous lines, add document metadata and attributes.
+<strong>The page title is the only required header element.</strong></p>
+</li>
+<li>
+<p>Separate the header block from the body block by at least one blank line.</p>
+</li>
+<li>
+<p>Write your content.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">= The title of my new page
+:attribute-a: value-a
+
+Welcome to the preamble of my new page!
+
+== This is a section title
+
+This is a paragraph.</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Save the file.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Save the file with the extension <code>.adoc</code> in a module&#8217;s <em class="path">pages</em> directory.</p>
+</li>
+<li>
+<p>The name you use when saving the file will be used to compute the page&#8217;s URL.</p>
+<div class="paragraph">
+<p>my-new-page.adoc &#8658; my-new-page.html</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You&#8217;ve now created a standard page.
+When you run Antora, it will be converted to an HTML page and published to your site automatically.
+If you want a site visitor to locate this page via a component navigation menu, you&#8217;ll need to add a link to the page (<code>xref</code>) to a <a href="../navigation/index.html" class="xref page">navigation file</a>.</p>
+</div>
+<div class="paragraph">
+<p>The page created in this example is simple.
+Using AsciiDoc, a page&#8217;s header can encompass a wide range of capabilities and its body can handle complex content.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="page-header-and-body-structure"><a class="anchor" href="#page-header-and-body-structure"></a>Page header and body structure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A standard page has two general parts, a header and a body.</p>
+</div>
+<div class="paragraph">
+<p>The <a href="../asciidoc/page-header.html" class="xref page">page header</a> is a set of contiguous lines that start on the first line of the file.
+The header encapsulates the following elements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../asciidoc/page-header.html#page-title" class="xref page">page title</a> (required)</p>
+</li>
+<li>
+<p><a href="../asciidoc/page-header.html#page-meta" class="xref page">metadata</a>, such as author information, a page description, and user-defined <code>page</code> attributes</p>
+</li>
+<li>
+<p>environment settings</p>
+</li>
+<li>
+<p><a href="../asciidoc/page-header.html#page-attrs" class="xref page">built-in AsciiDoc attributes</a>, such as section numbering</p>
+</li>
+<li>
+<p>user-defined attributes</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A single blank line signals the end of the page header.
+The next line with content is the start of the page body.
+The page body includes the:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>preamble</p>
+</li>
+<li>
+<p>section headings</p>
+</li>
+<li>
+<p>section content such as paragraphs, <a href="../asciidoc/lists.html" class="xref page">lists</a>, source code blocks, images, included partials, and much more</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">Key Points to Remember</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The file must be saved in the <em class="path">pages</em> directory of a module.</p>
+</li>
+<li>
+<p>The file must be saved with the extension <code>.adoc</code>.</p>
+</li>
+<li>
+<p>The file must be marked up with valid AsciiDoc.</p>
+</li>
+<li>
+<p>The file must have a page title.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="page-and-site-attributes.html">Page and Site Attributes</a></span>
+  <span class="next"><a href="page-aliases.html">Set Up URL Redirects with Page Aliases</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright © <a href="https://opendevise.com">OpenDevise Inc.</a> and individual contributors to <a href="https://antora.org">Antora</a>.</p>
+  <p>Except where otherwise noted, docs.antora.org, Antora, and the Antora UI, are licensed under the <a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License Version 2.0</a> (MPL-2.0).</p>
+  <p>AsciiDoc® is a trademark of the Eclipse Foundation, Inc.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

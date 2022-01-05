@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Modules, Families, and Subdirectories :: Antora Docs</title>
+    <link rel="canonical" href="https://docs.antora.org/antora/latest/module-directories.html">
+    <link rel="prev" href="component-structure.html">
+    <link rel="next" href="component-descriptor.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/site-extra.css">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="https://antora.org">Antora</a>
+        <span class="separator">//</span>
+        <a href="https://docs.antora.org">Docs</a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Projects</div>
+          <div class="navbar-dropdown">
+            <div class="navbar-item"><strong>Core</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <div class="navbar-item"><strong>Default UI</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/blob/main/contributing.adoc">Contributing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Community</div>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="https://antora.zulipchat.com">Chat (Zulip)</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://twitter.com/antoraproject">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#57aaee" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora" data-version="2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Antora</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="whats-new.html">What&#8217;s New in Antora 2.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="features.html">How Antora Can Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="how-antora-works.html">How Antora Works</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Antora</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="install/linux-requirements.html">Linux Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="install/macos-requirements.html">macOS Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="install/windows-requirements.html">Windows Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="install/install-antora.html">Install Antora</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="install/upgrade-antora.html">Upgrade Antora</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="install/supported-platforms.html">Supported Platforms</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="run-antora.html">Run Antora</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="run-antora.html#cache">About the Cache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="run-antora.html#local-site-preview">Local Preview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="run-antora.html#publish-to-github-pages">Publish to GitHub Pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="antora-container.html">Run Antora in a Container</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cli/index.html">CLI Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">File Organization</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-structure.html">Documentation Components and Repositories</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="modules.html">Modules, Families, and Subdirectories</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-descriptor.html">Component Descriptor: antora.yml</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-versions.html">Component Versions and Branches</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="page/index.html">Pages</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/page-id.html">Antora Page ID</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/page-and-site-attributes.html">Page and Site Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/create-standard-page.html">Create a Standard Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="asciidoc/page-header.html">Page Header</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/page-header.html#page-title">Title</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/page-header.html#page-meta">Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/page-header.html#page-attrs">Attributes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/section-headings.html">Page Sections</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="asciidoc/text-and-punctuation.html">Text and Punctuation Styles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/bold.html">Bold</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/italic.html">Italic</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/monospace.html">Monospace</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/highlight.html">Highlight</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/quotes-and-apostrophes.html">Quote Marks and Apostrophes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/special-characters-and-symbols.html">Special Characters and Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/subscript-and-superscript.html">Subscript and Superscript</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cross References and Links</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/page-to-page-xref.html">Page to Page Xrefs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/in-page-xref.html">Same Page Xrefs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/external-urls.html">URLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="asciidoc/lists.html">Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/ordered-and-unordered-lists.html">Bullet and Numbered Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/description-lists.html">Description Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/checklists.html">Checklists</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Include Partials, Pages, and Examples</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/resource-id.html">Antora Resource ID</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/include-partial.html">Include a Partial</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/include-example.html">Include an Example</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/include-page.html">Include a Page</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/insert-image.html">Insert an Image</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/embed-video.html">Embed a Video</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/link-attachment.html">Link to an Attachment</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/ui-macros.html">UI Macros</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/admonitions.html">Admonitions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/sidebar.html">Sidebars</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/comments.html">Comments</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="navigation/index.html">Navigation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/filenames-and-locations.html">Navigation File Names &amp; Storage Locations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/register-navigation-files.html">Navigation File Registration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/list-structures.html">Single &amp; Multi-list Navigation Files</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="navigation/link-syntax-and-content.html">Link Types &amp; Syntax</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="navigation/link-syntax-and-content.html#page">Page Links</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="navigation/link-syntax-and-content.html#resource">Attachment Links</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="navigation/link-syntax-and-content.html#urls">Other URI Links</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="navigation/link-syntax-and-content.html#content">Navigation Content &amp; Link Formatting</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/index.html">Playbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/playbook-schema.html">Configuration Schema</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="playbook/configure-site.html">Site</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/configure-content-sources.html">Content Sources</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="playbook/private-repository-auth.html">Private Repository Authentication</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="playbook/configure-asciidoc.html">AsciiDoc</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="playbook/configure-ui.html">UI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="playbook/configure-output.html">Output</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="playbook/configure-runtime.html">Runtime</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/author-mode.html">Create an Author Workspace</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/use-an-existing-playbook-project.html">Use an Existing Project</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Extend &amp; Customize</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipeline/supported-components.html">Antora Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="security-bulletins.html">Security Bulletins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="project/get-help.html">Get Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Project Governance</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project/release-schedule.html">Release Schedule</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project/roadmap.html">Roadmap</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project/copyright-and-license.html">Copyright &amp; License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora</span>
+    <span class="version">2.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../latest/index.html">Antora</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../latest/index.html">3.0</a>
+        </li>
+        <li class="version">
+          <a href="../2.3/index.html">2.3</a>
+        </li>
+        <li class="version">
+          <a href="../2.2/index.html">2.2</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">2.1</a>
+        </li>
+        <li class="version">
+          <a href="../2.0/index.html">2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../antora-ui-default/index.html">Antora Default UI</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../antora-ui-default/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../latest/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Antora</a></li>
+    <li>File Organization</li>
+    <li><a href="modules.html">Modules, Families, and Subdirectories</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2.1</button>
+  <div class="version-menu">
+    <a class="version" href="../latest/module-directories.html">3.0</a>
+    <a class="version" href="../2.3/module-directories.html">2.3</a>
+    <a class="version" href="../2.2/modules.html">2.2</a>
+    <a class="version is-current" href="modules.html">2.1</a>
+    <a class="version" href="../2.0/modules.html">2.0</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://gitlab.com/antora/antora/edit/v2.1.x/docs/modules/ROOT/pages/modules.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Modules, Families, and Subdirectories</h1>
+<div class="sect1">
+<h2 id="what-is-a-module"><a class="anchor" href="#what-is-a-module"></a>What is a module?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A documentation component is composed of one or more modules.
+A <strong class="term">module</strong> is a discrete bundle of content that is usually related by concept, stage, feature, or workflow.
+A module can contain full page text files, reusable text and example snippets, images, and other source materials that are organized into <a href="#family">families</a>.
+The content associated with a module is stored in a module directory and its files are sorted into family subdirectories.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="module-directory-names-and-structure"><a class="anchor" href="#module-directory-names-and-structure"></a>Module directory names and structure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A module directory represents a module in a documentation component.
+A component&#8217;s module directories must reside in the <a href="component-structure.html#modules-dir" class="xref page"><em>modules</em> directory</a>.
+<a href="#fig-1">Figure 1</a> illustrates a documentation component with three module directories.
+You can create as many module directories as you require.</p>
+</div>
+<div id="fig-1" class="imageblock">
+<div class="content">
+<img src="_images/module-dir-structure.png" alt="Directory structure of a component containing three modules. The ROOT module contains all of the possible family subdirectories." width="240">
+</div>
+<div class="title">Figure 1. Directory structure of a documentation component containing two named modules and a ROOT module.</div>
+</div>
+<div class="paragraph">
+<p><a href="#fig-1">Figure 1</a> contains two directories that represent named modules, <em class="path">a-named-module</em> and <em class="path">another-named-module</em>.
+You choose the directory name of a named module.
+This directory name is then used as the module coordinate in a resource ID, so it can&#8217;t contain spaces.
+If your team often references pages, examples, images, or partials across modules, they&#8217;ll have to type the target file&#8217;s module coordinate in a resource ID, so don&#8217;t make the directory name hard to remember or extremely long.</p>
+</div>
+<div class="paragraph">
+<p>In addition to being the module coordinate, the directory name of a module, with the exception of the special <em class="path">ROOT</em> directory, also appears in the site&#8217;s output path.
+See <a href="#named-module-urls">URLs for named module pages</a> to learn more.</p>
+</div>
+<div class="paragraph">
+<p>Inside of a module directory, you can create one or more <a href="#family">family subdirectories</a>.
+Antora recognizes family subdirectories named <em class="path">attachments</em>, <em class="path">examples</em>, <em class="path">images</em>, <em class="path">pages</em>, and <em class="path">partials</em>.
+In <a href="#fig-1">Figure 1</a>, the <em class="path">a-named-module</em> directory contains two family subdirectories while the <em class="path">ROOT</em> directory just happens to contain all five possible family subdirectories.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s examine the role of the ROOT module in more depth.</p>
+</div>
+<div class="sect2">
+<h3 id="root-dir"><a class="anchor" href="#root-dir"></a>ROOT module</h3>
+<div class="paragraph">
+<p>The <strong class="term">ROOT module</strong> typically contains the content that&#8217;s directly associated with the documentation component itself.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/root-dir-structure.png" alt="Directory structure of the ROOT module that uses the subdirectories named examples, pages, and partials." width="190">
+</div>
+</div>
+<div class="paragraph">
+<p>The directory name, <em class="path">ROOT</em>, as well as when the module coordinate, <code>ROOT</code>, is used in a resource ID, must be written in uppercase.</p>
+</div>
+<div class="paragraph">
+<p>We recommend you create a <em class="path">ROOT</em> module directory in your component because Antora automatically applies component-level URLs to the <a href="#pages-dir">page files</a> stored in it.
+When the pages in the ROOT module are published, these pages are promoted a level above any other modules&#8217; pages in that component&#8217;s URL.
+This means that, unlike the named modules, the directory name <em class="path">ROOT</em> isn&#8217;t displayed in the site&#8217;s output path.
+You can see an example of a ROOT page&#8217;s URL in <a href="#root-module-urls">URLs for ROOT module pages</a>.</p>
+</div>
+<div class="paragraph">
+<p>Small documentation components may never need more than a ROOT module.
+However, as your project grows, you can easily add more modules and gradually redistribute the content without having to restructure the project.
+So while the extra structure seems like overkill now, in the long run, you&#8217;ll be glad you gave your content the space to grow.</p>
+</div>
+<div class="paragraph">
+<p>Now, let&#8217;s review the requirements of each of the family subdirectories in more detail.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="family"><a class="anchor" href="#family"></a>What is a family?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <strong class="term">family</strong> is a collection of files in a module that share the same content type or output role.
+These files are stored in the standardized family subdirectories, <em class="path">attachments</em>, <em class="path">examples</em>, <em class="path">images</em>, <em class="path">pages</em>, and <em class="path">partials</em>, within a module.
+Antora automatically assigns preset behavior to the files it finds in these subdirectories.
+Example, image, page, and partial files can be referenced by any module or component using Antora&#8217;s resource IDs.
+(The ability to reference attachments using a resource ID is coming soon.)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="attachments-dir"><a class="anchor" href="#attachments-dir"></a>Attachments</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="_images/attachments-dir.png" alt="The attachments subdirectory of a module" width="179">
+</div>
+</div>
+<div class="paragraph">
+<p>An attachment is a resource, such as the ZIP archive of a sample project, that a site visitor can download via a link.
+Attachment files are saved in the <em class="path">attachments</em> directory.
+A link to an attachment is created using the <a href="asciidoc/link-attachment.html" class="xref page">AsciiDoc link macro</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="binaries-and-other-large-files"><a class="anchor" href="#binaries-and-other-large-files"></a>Binaries and other large files</h3>
+<div class="paragraph">
+<p>If your documentation component contains large attachment files, such as sample project binaries, libraries, or PDFs, we don&#8217;t recommend storing them in a regular git repository.
+Instead, host them in a binary repository such as Bintray or S3, or use git LFS (Large File Storage).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="examples-dir"><a class="anchor" href="#examples-dir"></a>Examples</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="_images/examples-dir.png" alt="The examples subdirectory of a module" width="176">
+</div>
+</div>
+<div class="paragraph">
+<p>The <em class="path">examples</em> directory contains non-AsciiDoc file types, such as source code or sample data sets.
+An example is inserted into a page using the <a href="asciidoc/include-example.html" class="xref page">AsciiDoc include directive and the example&#8217;s resource ID</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="images-dir"><a class="anchor" href="#images-dir"></a>Images</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="_images/images-dir.png" alt="The images subdirectory of a module" width="176">
+</div>
+</div>
+<div class="paragraph">
+<p>Photographs, diagrams, screenshots, and other graphics files are saved in the <em class="path">images</em> directory.
+They&#8217;re inserted into a page using the <a href="asciidoc/insert-image.html" class="xref page">block or inline image macros</a>.
+AsciiDoc supports PNG, JPG, SVG, and GIF (static and animated) image file formats.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="pages-dir"><a class="anchor" href="#pages-dir"></a>Pages</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="_images/pages-dir.png" alt="The pages subdirectory of a module" width="174">
+</div>
+</div>
+<div class="paragraph">
+<p>AsciiDoc files destined to become <a href="page/index.html#standard" class="xref page">site pages</a> are stored in the <em class="path">pages</em> directory of a module.
+These files are converted to HTML and automatically published as individual pages in the generated site.</p>
+</div>
+<div class="sect2">
+<h3 id="root-module-urls"><a class="anchor" href="#root-module-urls"></a>URLs for ROOT module pages</h3>
+<div class="paragraph">
+<p>When the AsciiDoc files stored in the <em class="path">pages</em> directory of ROOT are published to a documentation site, they&#8217;re promoted a level above any other modules&#8217; pages in that component&#8217;s URL.
+To demonstrate this concept, let&#8217;s compare the URLs of two pages, one from a ROOT module and one from a named module.
+The standardized directory structure illustrated in <a href="#fig-2">Figure 2</a> contains the documentation for a software product named <em>Hyper Lemur</em>.
+Notice that there is a file named <em class="path">deploy.adoc</em> in the <em class="path">pages</em> directory of ROOT.</p>
+</div>
+<div id="fig-2" class="imageblock">
+<div class="content">
+<img src="_images/hyperlemur-dir-structure.png" alt="hyperlemur dir structure" width="260">
+</div>
+<div class="title">Figure 2. Directory structure of the Hyper Lemur documentation.</div>
+</div>
+<div class="paragraph">
+<p>When Antora generates a site that includes the documentation for Hyper Lemur, the URL for the page created from the <em class="path">deploy.adoc</em> file would look like this.</p>
+</div>
+<div class="imageblock grow-x">
+<div class="content">
+<img src="_images/root-page-url.svg" alt="ROOT module page URL">
+</div>
+</div>
+<div class="paragraph">
+<p>The base URL, <em>https://my-company.com</em>, <a href="playbook/configure-site.html#configure-url" class="xref page">is set in the playbook</a> Antora uses to generate the site.
+The component name segment, <em>hyperlemur</em>, is set by the <code>name</code> key in the <a href="component-descriptor.html#name-key" class="xref page">component descriptor</a>.
+The version segment, <em>1.0</em>, is set by the <code>version</code> key in the <a href="component-descriptor.html#version-key" class="xref page">component descriptor</a>.
+The page name segment, <em>deploy</em>, is the basename of the AsciiDoc file <em class="path">deploy.adoc</em>.</p>
+</div>
+<div class="paragraph">
+<p>Notice that the name of the module, <em>ROOT</em>, isn&#8217;t in the URL.
+Now, let&#8217;s see what the URL of a page stored in the named module, <em>admin</em>, would look like.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="named-module-urls"><a class="anchor" href="#named-module-urls"></a>URLs for named module pages</h3>
+<div class="paragraph">
+<p>AsciiDoc files stored in the <em class="path">pages</em> directory of named modules are preceded by the name of the module.
+The module name is the name of the module directory where that page is stored.
+Using the Hyper Lemur documentation shown in <a href="#fig-2">Figure 2</a>, let&#8217;s see what the URL for the <em class="path">user-management.adoc</em> file stored in the <em class="path">pages</em> directory of the <em>admin</em> module would look like.</p>
+</div>
+<div class="imageblock grow-x">
+<div class="content">
+<img src="_images/module-page-url.svg" alt="Named module page URL">
+</div>
+</div>
+<div class="paragraph">
+<p>Notice that the name of the module, <em>admin</em>, is in the URL directly after the documentation component&#8217;s version.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="partials-dir"><a class="anchor" href="#partials-dir"></a>Partials</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="_images/partials-dir.png" alt="The partials subdirectory of a module" width="177">
+</div>
+</div>
+<div class="paragraph">
+<p><a href="page/index.html#partial" class="xref page">Partials</a> are AsciiDoc files that contain reusable content snippets such as product descriptions and definitions.
+They&#8217;re stored in the <em class="path">partials</em> directory in a module.
+A partial file or a tagged portion of a partial file is inserted into a page using the <a href="asciidoc/include-partial.html" class="xref page">AsciiDoc include directive and the partial&#8217;s resource ID</a>.</p>
+</div>
+<div id="assets-dir" class="sidebarblock">
+<div class="content">
+<div class="title">Assets</div>
+<div class="paragraph">
+<p>A module can also contain a directory named <em class="path">assets</em>.
+This is an alternate location, recognized by Antora, where the <em class="path">attachments</em> and <em class="path">images</em> family subdirectories can be placed.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/component-dir-structure-with-assets.png" alt="The assets subdirectory of a module that contains an images folder and an attachments folder" width="200">
+</div>
+</div>
+<div class="paragraph">
+<p>You don&#8217;t need to set the path to these predefined subdirectories in the header of your AsciiDoc files.
+This is managed automatically by Antora.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="component-structure.html">Documentation Components and Repositories</a></span>
+  <span class="next"><a href="component-descriptor.html">Component Descriptor: antora.yml</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright © <a href="https://opendevise.com">OpenDevise Inc.</a> and individual contributors to <a href="https://antora.org">Antora</a>.</p>
+  <p>Except where otherwise noted, docs.antora.org, Antora, and the Antora UI, are licensed under the <a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License Version 2.0</a> (MPL-2.0).</p>
+  <p>AsciiDoc® is a trademark of the Eclipse Foundation, Inc.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

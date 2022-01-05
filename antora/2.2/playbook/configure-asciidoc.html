@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AsciiDoc Configuration :: Antora Docs</title>
+    <link rel="canonical" href="https://docs.antora.org/antora/latest/playbook/configure-asciidoc.html">
+    <link rel="prev" href="configure-edit-url.html">
+    <link rel="next" href="configure-ui.html">
+    <meta name="keywords" content="AsciiDoc attrs, page header attributes">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/site-extra.css">
+    <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="https://antora.org">Antora</a>
+        <span class="separator">//</span>
+        <a href="https://docs.antora.org">Docs</a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Projects</div>
+          <div class="navbar-dropdown">
+            <div class="navbar-item"><strong>Core</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <div class="navbar-item"><strong>Default UI</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/blob/main/contributing.adoc">Contributing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Community</div>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="https://antora.zulipchat.com">Chat (Zulip)</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://twitter.com/antoraproject">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#57aaee" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora" data-version="2.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Antora</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../whats-new.html">What&#8217;s New in Antora 2.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features.html">How Antora Can Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../how-antora-works.html">How Antora Works</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Antora</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../install/linux-requirements.html">Linux Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../install/macos-requirements.html">macOS Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../install/windows-requirements.html">Windows Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../install/install-antora.html">Install Antora</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../install/upgrade-antora.html">Upgrade Antora</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../install/supported-platforms.html">Supported Platforms</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../run-antora.html">Run Antora</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../run-antora.html#cache">About the Cache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../run-antora.html#local-site-preview">Local Preview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../run-antora.html#publish-to-github-pages">Publish to GitHub Pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../antora-container.html">Run Antora in a Container</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/index.html">CLI Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">File Organization</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-structure.html">Documentation Components and Repositories</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules.html">Modules, Families, and Subdirectories</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-descriptor.html">Component Descriptor: antora.yml</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../component-versions.html">Component Versions and Branches</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../page/index.html">Pages</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/page-id.html">Antora Page ID</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/page-and-site-attributes.html">Page and Site Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/create-standard-page.html">Create a Standard Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../page/page-aliases.html">Set Up URL Redirects with Page Aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asciidoc/page-header.html">Page Header</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/page-header.html#page-title">Title</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/page-header.html#page-meta">Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/page-header.html#page-attrs">Attributes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/section-headings.html">Page Sections</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asciidoc/text-and-punctuation.html">Text and Punctuation Styles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/bold.html">Bold</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/italic.html">Italic</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/monospace.html">Monospace</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/highlight.html">Highlight</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/quotes-and-apostrophes.html">Quote Marks and Apostrophes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/special-characters-and-symbols.html">Special Characters and Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/subscript-and-superscript.html">Subscript and Superscript</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cross References and Links</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/page-to-page-xref.html">Page to Page Xrefs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/in-page-xref.html">Same Page Xrefs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/external-urls.html">URLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asciidoc/lists.html">Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/ordered-and-unordered-lists.html">Bullet and Numbered Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/description-lists.html">Description Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/checklists.html">Checklists</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Include Partials, Pages, and Examples</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../page/resource-id.html">Antora Resource ID</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/include-partial.html">Include a Partial</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/include-example.html">Include an Example</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/include-page.html">Include a Page</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/insert-image.html">Insert an Image</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/embed-video.html">Embed a Video</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/link-attachment.html">Link to an Attachment</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/ui-macros.html">UI Macros</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/admonitions.html">Admonitions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/sidebar.html">Sidebars</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/comments.html">Comments</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../navigation/index.html">Navigation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/filenames-and-locations.html">Navigation File Names &amp; Storage Locations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/register-navigation-files.html">Navigation File Registration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/list-structures.html">Single &amp; Multi-list Navigation Files</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../navigation/link-syntax-and-content.html">Link Types &amp; Syntax</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../navigation/link-syntax-and-content.html#page">Page Links</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../navigation/link-syntax-and-content.html#resource">Attachment Links</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../navigation/link-syntax-and-content.html#urls">Other URI Links</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../navigation/link-syntax-and-content.html#content">Navigation Content &amp; Link Formatting</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Playbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook-schema.html">Configuration Schema</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configure-site.html">Site</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="configure-content-sources.html">Content Sources</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="private-repository-auth.html">Private Repository Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="configure-edit-url.html">Edit URL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="configure-asciidoc.html">AsciiDoc</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configure-ui.html">UI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configure-redirect-facility.html">Redirect Facility</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configure-output.html">Output</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="configure-runtime.html">Runtime</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="author-mode.html">Create an Author Workspace</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use-an-existing-playbook-project.html">Use an Existing Project</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Extend &amp; Customize</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../pipeline/supported-components.html">Antora Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../project/get-help.html">Get Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security-bulletins.html">Security Bulletins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Project Governance</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../project/release-schedule.html">Release Schedule</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../project/copyright-and-license.html">Copyright and License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora</span>
+    <span class="version">2.2</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../latest/index.html">Antora</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../latest/index.html">3.0</a>
+        </li>
+        <li class="version">
+          <a href="../../2.3/index.html">2.3</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../2.1/index.html">2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../2.0/index.html">2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../antora-ui-default/index.html">Antora Default UI</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../antora-ui-default/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../latest/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Antora</a></li>
+    <li><a href="index.html">Playbook</a></li>
+    <li><a href="playbook-schema.html">Configuration Schema</a></li>
+    <li><a href="configure-asciidoc.html">AsciiDoc</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2.2</button>
+  <div class="version-menu">
+    <a class="version" href="../../latest/playbook/configure-asciidoc.html">3.0</a>
+    <a class="version" href="../../2.3/playbook/configure-asciidoc.html">2.3</a>
+    <a class="version is-current" href="configure-asciidoc.html">2.2</a>
+    <a class="version" href="../../2.1/playbook/configure-asciidoc.html">2.1</a>
+    <a class="version" href="../../2.0/playbook/configure-asciidoc.html">2.0</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://gitlab.com/antora/antora/edit/v2.2.x/docs/modules/playbook/pages/configure-asciidoc.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">AsciiDoc Configuration</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>On this page, you&#8217;ll learn:</p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> How to define global (site-wide) AsciiDoc document attributes in a playbook.</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> How to override a global AsciiDoc document attribute from a page.</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> How to register an Asciidoctor extension globally.</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> How to register an Asciidoctor extension that&#8217;s scoped to each page.</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> How to preload modules into the Antora runtime.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="attrs"><a class="anchor" href="#attrs"></a>Global document attributes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you find yourself defining the same AsciiDoc document attributes over and over in every page, you can move these attributes to the playbook, where you only have to define them once.
+Antora then adds these attributes to every page it converts.</p>
+</div>
+<div class="paragraph">
+<p>You can define global (i.e., site-wide) AsciiDoc document attributes using the <code>attributes</code> key under the <code>asciidoc</code> category in the playbook.
+This key accepts a map of name-value pairs.
+The attribute can be one of the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A <a href="https://asciidoctor.org/docs/user-manual/#builtin-attributes-table" target="_blank" rel="noopener">built-in AsciiDoc attribute</a> you want to override (e.g., <code>sectnums</code>, <code>hide-uri-scheme</code>, <code>linkattrs</code>)</p>
+</li>
+<li>
+<p>A custom attribute specific to your content (e.g., <code>product-name</code>)</p>
+</li>
+<li>
+<p>An attribute that configures the behavior of a custom extension (e.g., <code>plantuml-server-url</code>)</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Defining global AsciiDoc document attributes</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">asciidoc:
+  attributes:
+    hide-uri-scheme: ''
+    product-name: 'Instant Container Maker'
+    toc: ~</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These attributes will be applied and available to every page in your site.
+You can yield the value of these attributes using the attribute reference syntax (e.g., <code>{product-name}</code>).</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Certain built-in attributes are not applicable in the Antora environment.
+These attributes include <code>data-uri</code>, <code>allow-uri-read</code>, <code>docinfo</code>, <code>linkcss</code>, <code>noheader</code>, <code>nofooter</code>, <code>webfonts</code>, and <code>outfilesuffix</code>.
+Assigning a value to these attributes either has no effect or may cause Antora to malfunction.
+Other attributes, such as <code>imagesdir</code>, are automatically set by Antora and cannot be overridden.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="attribute-value-types"><a class="anchor" href="#attribute-value-types"></a>Attribute value types</h3>
+<div class="paragraph">
+<p>There are three attribute value types in AsciiDoc: String, Number, and Boolean.</p>
+</div>
+<div class="paragraph">
+<p>If the attribute value is a <em>String</em>, we recommend enclosing the value in quotes just to be safe (e.g., <code>'Listing'</code>).
+(If you&#8217;re using YAML for your playbook, and you are comfortable with the rules of the syntax, you may choose to drop the quotes when they aren&#8217;t needed).</p>
+</div>
+<div class="paragraph">
+<p>If the attribute value is a <em>Number</em>, no quotes should be used around the value (e.g., <code>3</code>).</p>
+</div>
+<div class="paragraph">
+<p>If the attribute value is a <em>Boolean</em>, use an empty string (i.e., <code>''</code>) to set the attribute and a null value (i.e., <code>null</code> or <code>~</code>) to unset the value.</p>
+</div>
+<div class="paragraph">
+<p>You can also use a null value to unset any type of attribute (e.g., <code>table-caption: ~</code>).
+This is a good way to disable attributes that authors may use for local preview but should never be set in Antora (e.g., <code>toc: ~</code>).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="default-attribute-values"><a class="anchor" href="#default-attribute-values"></a>Default attribute values</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Sometimes, you want to assign a default value to an attribute, but still allow a given page to override that value.
+By default, an attribute defined in the playbook overrides any assignment in the document (aka the page) itself.
+This behavior can be changed by appending the modifier <code>@</code>.</p>
+</div>
+<div class="paragraph">
+<p>If you add the <code>@</code> symbol at the end of an attribute value defined in the playbook, it lowers the precedence of the attribute assignment so the page may override the value.
+The <code>@</code> modifier is then stripped from the value.
+We refer to this technique as <strong class="term">soft setting</strong> an attribute.</p>
+</div>
+<div class="listingblock">
+<div class="title">Defining attributes that can be overridden by a page</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">asciidoc:
+  attributes:
+    product-name: 'Instant Container Maker@'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, any page can override this attribute as follows:</p>
+</div>
+<div class="listingblock">
+<div class="title">Overriding a default global attribute in a page</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">= Document Title
+:product-name: Explosive Container Maker</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Unfortunately, it&#8217;s not currently possible to soft unset an attribute.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="extensions"><a class="anchor" href="#extensions"></a>Asciidoctor extensions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>asciidoc</code> category can also used for registering Asciidoctor extensions.
+First, you need to install the extension code, which you can either do by installing it globally, declaring it as a dependency of the project, or adding the extension script to the playbook project.
+Then, you can register the extension using the <code>extensions</code> key.
+The <code>extensions</code> key accepts a list of node module names (i.e., npm package names) and/or paths.</p>
+</div>
+<div class="sect2">
+<h3 id="global-extensions"><a class="anchor" href="#global-extensions"></a>Global Asciidoctor extensions</h3>
+<div class="paragraph">
+<p>Global extensions are registered once, before any pages are converted.
+These extensions are shared by all documents Antora converts using Asciidoctor (including navigation files).
+A global extension is a node module or script that exports a function when required.
+Antora passes this function directly to the <code>register</code> method of Asciidoctor&#8217;s static extension registry.</p>
+</div>
+<div class="paragraph">
+<p>To register a global extension, all you need to do is reference its name (if it&#8217;s a node module on the require path) or path (if it&#8217;s a local script) in the <code>extensions</code> key.</p>
+</div>
+<div class="listingblock">
+<div class="title">Register a global extension provided by a node module</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">asciidoc:
+  extensions:
+  - asciidoctor-emoji-macro</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this case, <code>asciidoctor-emoji-macro</code> is the name of an installed node module and is thus available on the require path (either in the <em class="path">node_modules</em> directory in the playbook project or in the global <em class="path">node_modules</em> directory).</p>
+</div>
+<div class="listingblock">
+<div class="title">Register a global extension from a local script</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">asciidoc:
+  extensions:
+  - ./lib/shout-block</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this case, the extension is a script located at the path <em class="path">lib/shout-block.js</em> relative to the playbook file.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s an example that shows how to register multiple global extensions:</p>
+</div>
+<div class="listingblock">
+<div class="title">Register multiple global extensions</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">asciidoc:
+  extensions:
+  - asciidoctor-emoji-macro
+  - ./lib/shout-block</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="scoped-extensions"><a class="anchor" href="#scoped-extensions"></a>Scoped Asciidoctor extensions</h3>
+<div class="paragraph">
+<p>Rather than requiring an extension globally, you may want to register an extension per instance of the AsciiDoc processor.
+The benefit of this approach is that it allows the extension to hook into the Antora lifecycle.
+The other difference is that scoped extensions are only registered and used for pages, not for navigation files.</p>
+</div>
+<div class="paragraph">
+<p>In order to register a scoped extension, the extension must support this mode of usage.
+Specifically, the extension must export a <code>register</code> function that accepts an extension registry on which it self registers.
+The function is called with a scoped (per-processor) extension registry and a context object.
+The context object includes the current file, the content catalog, and the AsciiDoc configuration object from the playbook.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s an example of a <code>register</code> function for a scoped extension:</p>
+</div>
+<div class="listingblock">
+<div class="title">Scoped Asciidoctor extension register function</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">module.exports.register = function (registry, context) {
+  registry.block('shout', createShoutBlock(context))
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A scoped extension is registered in the playbook in exactly the same way as a global extension.</p>
+</div>
+<div class="listingblock">
+<div class="title">Register a scoped extension from the require path</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">asciidoc:
+  extensions:
+  - asciidoctor-plantuml</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Register a scoped extension from a local script</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">asciidoc:
+  extensions:
+  - ./lib/equation-macro</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The main difference is that if the extension exports the <code>register</code> function, it gets scoped to the processor instance instead of being registered globally.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="preloading-modules"><a class="anchor" href="#preloading-modules"></a>Preloading modules</h3>
+<div class="paragraph">
+<p>Instead of registering extensions using the playbook, you can preload extensions using the <code>-r</code> (or <code>--require</code>) CLI option.
+The value of this option may be either a path to a file (relative to the current directory), or a node module name.
+The <code>-r</code> option may be specified multiple times.</p>
+</div>
+<div class="paragraph">
+<p>This option gives site authors the ability to load additional code into the runtime before Antora begins executing.
+The option follows the module resolution rules of the <code>require()</code> function in Node.
+A common use case for this option is to register Asciidoctor extensions globally.</p>
+</div>
+<div class="paragraph">
+<p>If the node module or script is an Asciidoctor extension, it must self-register with Asciidoctor&#8217;s static extension registry when required in order for the extension to be used.
+(Antora merely requires the script.
+It does not invoke its exported function).</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s an example showing how to use the Antora CLI to preload multiple Asciidoctor extensions:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ antora -r ./lib/shout-block -r asciidoctor-emoji-macro antora-playbook.yml</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>-r</code> option can also be used for other purposes, such as to alter global state or override Antora components.</p>
+</div>
+<div class="paragraph">
+<p>For more information about the CLI, see the <a href="../cli/index.html" class="xref page">CLI commands and options</a> page.</p>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="configure-edit-url.html">Edit URL</a></span>
+  <span class="next"><a href="configure-ui.html">UI</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright © <a href="https://opendevise.com">OpenDevise Inc.</a> and individual contributors to <a href="https://antora.org">Antora</a>.</p>
+  <p>Except where otherwise noted, docs.antora.org, Antora, and the Antora UI, are licensed under the <a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License Version 2.0</a> (MPL-2.0).</p>
+  <p>AsciiDoc® is a trademark of the Eclipse Foundation, Inc.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

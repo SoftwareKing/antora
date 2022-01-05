@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>What&#8217;s New in Antora 2.0 :: Antora Docs</title>
+    <link rel="canonical" href="https://docs.antora.org/antora/latest/whats-new.html">
+    <link rel="prev" href="index.html">
+    <link rel="next" href="features.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/site-extra.css">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="https://antora.org">Antora</a>
+        <span class="separator">//</span>
+        <a href="https://docs.antora.org">Docs</a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Projects</div>
+          <div class="navbar-dropdown">
+            <div class="navbar-item"><strong>Core</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <div class="navbar-item"><strong>Default UI</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/blob/main/contributing.adoc">Contributing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Community</div>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="https://antora.zulipchat.com">Chat (Zulip)</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://twitter.com/antoraproject">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#57aaee" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora" data-version="2.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Antora</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="whats-new.html">What&#8217;s New in Antora 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="features.html">How Antora Can Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="how-antora-works.html">How Antora Works</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Antora</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="install/linux-requirements.html">Linux Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="install/macos-requirements.html">macOS Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="install/windows-requirements.html">Windows Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="install/install-antora.html">Install Antora</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="install/upgrade-antora.html">Upgrade Antora</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="install/supported-platforms.html">Supported Platforms</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="run-antora.html">Run Antora</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="run-antora.html#cache">About the Cache</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="run-antora.html#local-site-preview">Local Preview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="run-antora.html#publish-to-github-pages">Publish to GitHub Pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="antora-container.html">Run Antora in a Container</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cli/index.html">CLI Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="component-structure.html">File Organization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-descriptor.html">Component Descriptor</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="component-versions.html">Versions &amp; Branches</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="page/index.html">Pages</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/page-id.html">Antora Page ID</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/page-and-site-attributes.html">Page and Site Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/create-standard-page.html">Create a Standard Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="asciidoc/page-header.html">Page Header</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/page-header.html#page-title">Title</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/page-header.html#page-meta">Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/page-header.html#page-attrs">Attributes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/section-headings.html">Page Sections</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="asciidoc/text-and-punctuation.html">Text and Punctuation Styles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/bold.html">Bold</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/italic.html">Italic</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/monospace.html">Monospace</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/highlight.html">Highlight</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/quotes-and-apostrophes.html">Quote Marks and Apostrophes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/special-characters-and-symbols.html">Special Characters and Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/subscript-and-superscript.html">Subscript and Superscript</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cross References and Links</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/page-to-page-xref.html">Page to Page Xrefs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/in-page-xref.html">Same Page Xrefs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/external-urls.html">URLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="asciidoc/lists.html">Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/ordered-and-unordered-lists.html">Bullet and Numbered Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/description-lists.html">Description Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/checklists.html">Checklists</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Include Partials, Pages, and Examples</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/resource-id.html">Antora Resource ID</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/include-partial.html">Include a Partial</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/include-example.html">Include an Example</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/include-page.html">Include a Page</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/insert-image.html">Insert an Image</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/embed-video.html">Embed a Video</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/link-attachment.html">Link to an Attachment</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/ui-macros.html">UI Macros</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/admonitions.html">Admonitions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/sidebar.html">Sidebars</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/comments.html">Comments</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="navigation/index.html">Navigation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/filenames-and-locations.html">Navigation File Names &amp; Storage Locations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/register-navigation-files.html">Navigation File Registration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/list-structures.html">Single &amp; Multi-list Navigation Files</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="navigation/link-syntax-and-content.html">Link Types &amp; Syntax</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="navigation/link-syntax-and-content.html#page">Page Links</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="navigation/link-syntax-and-content.html#resource">Attachment Links</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="navigation/link-syntax-and-content.html#urls">Other URI Links</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="navigation/link-syntax-and-content.html#content">Navigation Content &amp; Link Formatting</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/index.html">Playbook</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/playbook-schema.html">Configuration Schema</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="playbook/configure-site.html">Site</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/configure-content-sources.html">Content Sources</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="playbook/private-repository-auth.html">Private Repository Authentication</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="playbook/configure-asciidoc.html">AsciiDoc</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="playbook/configure-ui.html">UI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="playbook/configure-output.html">Output</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="playbook/configure-runtime.html">Runtime</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/author-mode.html">Create an Author Workspace</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/use-an-existing-playbook-project.html">Use an Existing Project</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Extend &amp; Customize</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipeline/supported-components.html">Antora Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="security-bulletins.html">Security Bulletins</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="project/get-help.html">Get Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Project Governance</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project/release-schedule.html">Release Schedule</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project/roadmap.html">Roadmap</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="project/copyright-and-license.html">Copyright &amp; License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora</span>
+    <span class="version">2.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../latest/index.html">Antora</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../latest/index.html">3.0</a>
+        </li>
+        <li class="version">
+          <a href="../2.3/index.html">2.3</a>
+        </li>
+        <li class="version">
+          <a href="../2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../2.1/index.html">2.1</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../antora-ui-default/index.html">Antora Default UI</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../antora-ui-default/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../latest/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Antora</a></li>
+    <li><a href="whats-new.html">What&#8217;s New in Antora 2.0</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2.0</button>
+  <div class="version-menu">
+    <a class="version" href="../latest/whats-new.html">3.0</a>
+    <a class="version" href="../2.3/whats-new.html">2.3</a>
+    <a class="version" href="../2.2/whats-new.html">2.2</a>
+    <a class="version" href="../2.1/whats-new.html">2.1</a>
+    <a class="version is-current" href="whats-new.html">2.0</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://gitlab.com/antora/antora/edit/v2.0.x/docs/modules/ROOT/pages/whats-new.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">What&#8217;s New in Antora 2.0</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Learn about what&#8217;s new in the 2.0 release series of Antora.</p>
+</div>
+</div>
+</div>
+<h1 id="antora-2-0-1" class="sect0"><a class="anchor" href="#antora-2-0-1"></a>Antora 2.0.1</h1>
+<div class="openblock partintro">
+<div class="content">
+<div class="paragraph">
+<p><em><strong>Release date:</strong> 2019.08.22 | <strong>Issue Label:</strong> <a href="https://gitlab.com/antora/antora/issues?scope=all&amp;state=closed&amp;label_name%5B%5D=%5BVersion%5D%202.0.1" target="_blank" rel="noopener">2.0.1</a></em></p>
+</div>
+<div class="paragraph">
+<p>The Antora 2.0.1 release updates Antora&#8217;s dependencies (<a href="https://gitlab.com/antora/antora/merge_requests/328" target="_blank" rel="noopener">MR 328</a>) and adds several fixes.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="fixed-issues"><a class="anchor" href="#fixed-issues"></a>Fixed issues</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/315" target="_blank" rel="noopener">315</a></dt>
+<dd>
+<p>The URL of the most recent non-prerelease version of page is now used as the canonical URL.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/433" target="_blank" rel="noopener">433</a></dt>
+<dd>
+<p>The path (i.e., relative) of an xref target can now begin with <code>@</code>.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/434" target="_blank" rel="noopener">434</a></dt>
+<dd>
+<p>If an xref target isn&#8217;t verified as publishable, it&#8217;s now left unresolved.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/455" target="_blank" rel="noopener">455</a></dt>
+<dd>
+<p>If a repository fails to clone, the empty repository is now automatically deleted from Antora&#8217;s cache directory.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/456" target="_blank" rel="noopener">456</a></dt>
+<dd>
+<p>Instead of stopping, Antora now issues a warning if it can&#8217;t resolve the start page of a site or component version.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/457" target="_blank" rel="noopener">457</a></dt>
+<dd>
+<p>Resource ID path segments are now cleaned and page aliases are prevented from referencing themselves through the use of self references, parent references, and/or repeat separators.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/458" target="_blank" rel="noopener">458</a></dt>
+<dd>
+<p>Spaces in URLs of rewrite rules are now properly escaped; applies to the nginx and Netlify redirect facilities.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/459" target="_blank" rel="noopener">459</a></dt>
+<dd>
+<p>Component names can no longer contain <code>/</code>, <code>.</code>, or <code>..</code> because these characters are interpreted as path segments in the generated site.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/462" target="_blank" rel="noopener">462</a></dt>
+<dd>
+<p>The correct line number is now reported when an include target or tag cannot be resolved.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/463" target="_blank" rel="noopener">463</a></dt>
+<dd>
+<p>A reference to a page with the same root-relative path as a navigation file is now fixed.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="thank-you-2-0-1"><a class="anchor" href="#thank-you-2-0-1"></a>Thank you!</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Most important of all, a huge <strong>thank you!</strong> to all the folks who helped make Antora even better.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Amit Mendapara (<a href="https://gitlab.com/cristatus" target="_blank" rel="noopener">@cristatus</a>)</dt>
+<dd>
+<p>Update credential store setup command for zsh <a href="https://gitlab.com/antora/antora/merge_requests/319" target="_blank" rel="noopener">MR 319</a></p>
+</dd>
+<dt class="hdlist1">Jean-Baptiste (<a href="https://gitlab.com/jibecfed" target="_blank" rel="noopener">@jibecfed</a>)</dt>
+<dd>
+<p>Correct a typo and make the runtime configuration easier to understand <a href="https://gitlab.com/antora/antora/merge_requests/321" target="_blank" rel="noopener">MR 321</a></p>
+</dd>
+<dt class="hdlist1">James Elliott (<a href="https://gitlab.com/Deep-Symmetry" target="_blank" rel="noopener">@Deep-Symmetry</a>)</dt>
+<dd>
+<p>Remove _attributes.adoc from documentation <a href="https://gitlab.com/antora/antora/merge_requests/322" target="_blank" rel="noopener">MR 322</a></p>
+</dd>
+<dt class="hdlist1">François Violette (<a href="https://gitlab.com/fviolette" target="_blank" rel="noopener">@fviolette</a>)</dt>
+<dd>
+<p>Fix typos in documentation <a href="https://gitlab.com/antora/antora/merge_requests/329" target="_blank" rel="noopener">MR 329</a><br>
+Fix inline ID syntax example <a href="https://gitlab.com/antora/antora/merge_requests/340" target="_blank" rel="noopener">MR 340</a></p>
+</dd>
+<dt class="hdlist1">Daniel Mulholland (<a href="https://gitlab.com/danyill" target="_blank" rel="noopener">@danyill</a>)</dt>
+<dd>
+<p>Re-order version information and mention version is used in page URL <a href="https://gitlab.com/antora/antora/merge_requests/334" target="_blank" rel="noopener">MR 334</a></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<h1 id="antora-2-0-0" class="sect0"><a class="anchor" href="#antora-2-0-0"></a>Antora 2.0.0</h1>
+<div class="openblock partintro">
+<div class="content">
+<div class="paragraph">
+<p><em><strong>Release date:</strong> 2018.12.25 | <strong>Issue label:</strong> <a href="https://gitlab.com/antora/antora/issues?scope=all&amp;state=closed&amp;label_name%5B%5D=%5BVersion%5D%202.0.0" target="_blank" rel="noopener">2.0.0</a></em></p>
+</div>
+<div class="paragraph">
+<p>The Antora 2.0.0 release streamlines the installation process, improves platform and library compatibility, provides a simpler and pluggable authentication mechanism for private repositories, and delivers the latest Asciidoctor capabilities.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If you need a quick overview of the breaking changes, jump to the <a href="#checklist">upgrade checklist</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="hassle-free-installation-thanks-to-isomorphic-git"><a class="anchor" href="#hassle-free-installation-thanks-to-isomorphic-git"></a>Hassle-free installation thanks to isomorphic-git</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When Antora launched, nodegit was the only git client for JavaScript that provided the features Antora required for interfacing with git repositories (clone, fetch, resolve refs, walk trees, read blobs).
+Despite being a comprehensive git client, nodegit has proven to be tremendously difficult for users to install.
+This difficulty stems from its coupling to native system libraries for compilation, bundling of native libraries, limited portability across platforms and Node versions, misbehaving post-install scripts, reliance on an SSH agent for authentication, and lack of interest in addressing portability concerns.</p>
+</div>
+<div class="paragraph">
+<p>Since then, a full-fledged alternative has emerged.
+Our friend <a href="https://github.com/wmhilton" target="_blank" rel="noopener">William Hilton</a> stepped up to create <a href="https://isomorphic-git.org/" target="_blank" rel="noopener">isomorphic-git</a>, a pure JavaScript git client (fun fact, it also runs in a browser).
+In Antora 2.0, we&#8217;ve completely replaced nodegit with isomorphic-git.</p>
+</div>
+<div class="paragraph">
+<p>Switching Antora to isomorphic-git not only guarantees a hassle-free installation, but drastically reduces installation time and size as well.
+This improvement is a result of Antora&#8217;s dependencies no longer relying on native system libraries.
+And it means Antora now works on all platforms and supported Node versions.</p>
+</div>
+<div class="paragraph">
+<p>isomorphic-git also allowed us to expand our test coverage and therefore improve Antora&#8217;s stability.
+isomorphic-git drives all of the git tests in the test suite.
+And those tests now use proper remote clone and fetch operations to test remote repositories.</p>
+</div>
+<div class="paragraph">
+<p>All-in-all, the switch from nodegit to isomorphic-git has been very positive, a huge step forward for Antora, and the main reason for the major version jump to Antora 2.0.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="goodbye-ssh-hello-git-credentials"><a class="anchor" href="#goodbye-ssh-hello-git-credentials"></a>Goodbye SSH. Hello git credentials.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Replacing nodegit with isomorphic-git brought with it a breaking change in how Antora handles private repository authentication.
+<a href="playbook/private-repository-auth.html" class="xref page">Private repository authentication</a> is now performed using HTTP Basic authentication over HTTPS instead of public/private key authentication over SSH using an SSH agent.</p>
+</div>
+<div class="paragraph">
+<p>This change makes it easier to manage authentication because Antora no longer requires running an SSH agent.
+Instead, authentication credentials can be managed using the git credential store mechanism or a custom credential manager provided by the user.</p>
+</div>
+<div class="paragraph">
+<p><strong>If you use private repositories, you&#8217;ll need to add authentication credentials for each git host (or individual repository) to the default or a custom git credentials store before running Antora 2.0</strong>.
+To learn what types of credentials Antora can use for authentication and how to add your credentials to the default credentials store, refer to the <a href="playbook/private-repository-auth.html" class="xref page">Private repository authentication</a> documentation.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s a quick summary of where those credentials can be stored:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em class="path">$HOME/.git-credentials</em> by default</p>
+</li>
+<li>
+<p><code>--git-credentials-path</code> CLI option&#8201;&#8212;&#8201;override location of git credential store</p>
+</li>
+<li>
+<p><code>GIT_CREDENTIALS_PATH</code> environment variable&#8201;&#8212;&#8201;override location of git credential store</p>
+</li>
+<li>
+<p><code>git.credentials</code> key in Antora playbook&#8201;&#8212;&#8201;override path or contents of git credential store</p>
+</li>
+<li>
+<p><code>GIT_CREDENTIALS</code> environment variable&#8201;&#8212;&#8201;override contents of git credential store</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The documentation has examples showing how to <a href="playbook/private-repository-auth.html#custom-credential-path" class="xref page">specify a custom git credential store</a> using each of the methods listed above.
+If none of these options meet your requirements, the documentation also shows how to implement your own <a href="playbook/private-repository-auth.html#custom-manager" class="xref page">credential manager plugin</a>.</p>
+</div>
+<div class="paragraph">
+<p>Finally, Antora transparently converts git SSH URLs in your playbook to HTTPS URLs so you don&#8217;t have to modify your playbook file when upgrading to Antora 2.0.
+If this automatic translation doesn&#8217;t work, meaning a git repository is not available at the equivalent HTTPS URL, then you&#8217;ll need to update your playbook file to use the correct HTTPS URL.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="all-the-latest-asciidoctor-features"><a class="anchor" href="#all-the-latest-asciidoctor-features"></a>All the latest Asciidoctor features</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Antora 2.0 ships with Asciidoctor.js 1.5.9 thanks to the hard work by <a href="https://github.com/mogztter" target="_blank" rel="noopener">Guillaume Grossetie</a>.
+This release of Asciidoctor.js brings you the latest Asciidoctor features, updates the Asciidoctor.js API, fixes conflicts with libraries, and offers several nice enhancements to the AsciiDoc syntax.
+Here are some of the highlights:</p>
+</div>
+<div class="ulist">
+<div class="title">AsciiDoc</div>
+<ul>
+<li>
+<p>Nest ordered and unordered lists to an arbitrary depth.</p>
+</li>
+<li>
+<p>Autonumber callout markers using the <code>&lt;.&gt;</code> syntax.</p>
+</li>
+<li>
+<p>Create an xref with automatic text to a list item or table cell.</p>
+</li>
+<li>
+<p>Attribute references in the attribute list of an include directive are replaced.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Asciidoctor</div>
+<ul>
+<li>
+<p>Section titles are scrubbed more thoroughly when auto-generating an ID.</p>
+</li>
+<li>
+<p>The position of section anchors can be configured (before <em>or</em> after).</p>
+</li>
+<li>
+<p>The xref macro now supports attributes (just as the link macro does).</p>
+</li>
+<li>
+<p>The <code>docname</code> attribute is now set to the module-relative path of the page (minus the file extension).</p>
+</li>
+<li>
+<p>Accurate warnings if an include tag is mismatched, unclosed, or not found (additionally, Asciidoctor now emits a warning if Antora cannot locate the include target).</p>
+</li>
+<li>
+<p>All messages are now routed through a logger (which will hook into Antora&#8217;s logger, once implemented).</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Asciidoctor.js API (for extension writers)</div>
+<ul>
+<li>
+<p>An upgrade to Opal means Asciidoctor.js no longer goes down a rabbit hole when iterating over an object&#8217;s properties.</p>
+</li>
+<li>
+<p>Much more of the Asciidoctor API has been mapped in Asciidoctor.js, making it far easier to write extensions.</p>
+</li>
+<li>
+<p>The extension API provides a simple mechanism for generating an extension class (as an alternative to an extension block).</p>
+</li>
+<li>
+<p>The AbstractNode#findBy method can be short-circuited to halt the tree walk.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See the release notes for <a href="https://github.com/asciidoctor/asciidoctor/releases" target="_blank" rel="noopener">Asciidoctor</a> and <a href="https://github.com/asciidoctor/asciidoctor.js/releases" target="_blank" rel="noopener">Asciidoctor.js</a> to find complete details.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="more-improvements-and-changes"><a class="anchor" href="#more-improvements-and-changes"></a>More improvements and changes</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Next, previous, and parent pages</dt>
+<dd>
+<p>The <code>next</code>, <code>previous</code>, and <code>parent</code> properties are now available in the UI model so your UI can access adjacent pages in the navigation tree.
+See the <a href="../../antora-ui-default/templates.html#template-variables" class="xref page">template variables</a> documentation to learn more.</p>
+</dd>
+<dt class="hdlist1">Versioned cache folder</dt>
+<dd>
+<p>Antora uses a versioned cache folder for the cloned git content repositories.
+On first run, Antora will re-clone your content repositories into this folder.
+This was necessary to avoid conflicts with repositories that were cached using nodegit.</p>
+</dd>
+<dt class="hdlist1">Node compatibility</dt>
+<dd>
+<p>Antora now works with Node 10 (and 11).</p>
+</dd>
+<dt class="hdlist1">Antora playbook files in TOML</dt>
+<dd>
+<p>You can now write Antora playbook files in the TOML configuration language.
+The CSON format is no longer supported.
+If your Antora playbook is in CSON, <strong>you&#8217;ll need to migrate it</strong> to YAML, JSON, or TOML before using Antora 2.0.</p>
+</dd>
+<dt class="hdlist1">runtime.fetch</dt>
+<dd>
+<p>The <code>runtime.pull</code> playbook key has been replaced with <code>runtime.fetch</code> and the <code>--pull</code> CLI option has been replaced with <code>--fetch</code>.
+This setting tells Antora to fetch updates to remote content repositories and grab a fresh UI bundle if marked as a snapshot.
+It was renamed to avoid confusion with the <code>pull</code> command in git.
+But don&#8217;t worry, the old names still work.
+They&#8217;re just deprecated and will be removed in the next major version.</p>
+</dd>
+<dt class="hdlist1">page.origin.private</dt>
+<dd>
+<p>If a content source requires authentication (either because credentials were defined in the URL or credentials were requested from the credentials manager), the <code>page.origin.private</code> property will be set in the UI model.</p>
+</dd>
+<dt class="hdlist1">page.displayVersion</dt>
+<dd>
+<p>The display version of a component is now accessible via the UI model using the <code>page.displayVersion</code> property.
+The display version is defined by the <code>display_version</code> key in the component descriptor (i.e., <em class="path">antora.yml</em>).</p>
+</dd>
+<dt class="hdlist1">page.latest</dt>
+<dd>
+<p>The <code>page.versions.latest</code> property in the UI model can now be reached using <code>page.latest</code>.</p>
+</dd>
+<dt class="hdlist1">AsciiDoc doctype</dt>
+<dd>
+<p>The AsciiDoc <code>doctype</code> option can be safely set in the AsciiDoc configuration key.
+Navigation files will always be parsed using the article doctype.</p>
+</dd>
+<dt class="hdlist1">default tags filter</dt>
+<dd>
+<p>The default tags filter for content repositories can now be set using the <code>content.tags</code> key in the playbook.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="known-issues"><a class="anchor" href="#known-issues"></a>Known issues</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="reference-pruning"><a class="anchor" href="#reference-pruning"></a>Reference pruning</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Issue</dt>
+<dd>
+<p><a href="https://gitlab.com/antora/antora/issues/374" target="_blank" rel="noopener">#374</a></p>
+</dd>
+<dt class="hdlist1">Summary</dt>
+<dd>
+<p>After the switch to isomorphic-git, references are no longer pruned when the <code>--pull</code> option is specified.
+This means that if a reference is removed from the remote repository, it will not be removed from Antora&#8217;s cached version.</p>
+</dd>
+<dt class="hdlist1">Workaround</dt>
+<dd>
+<p>You can clear Antora&#8217;s cache directory or the cache of the repository in question.
+We&#8217;ll restore this behavior in a future enhancement.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="broken-404-pages-for-sites-that-arent-served-from-root-folder"><a class="anchor" href="#broken-404-pages-for-sites-that-arent-served-from-root-folder"></a>Broken 404 pages for sites that aren&#8217;t served from root folder</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Issue</dt>
+<dd>
+<p><a href="https://gitlab.com/antora/antora/issues/258" target="_blank" rel="noopener">#258</a></p>
+</dd>
+<dt class="hdlist1">Summary</dt>
+<dd>
+<p>If your site is not served from the root folder of a domain (such as is the case of sites running on the GitHub Pages or GitLab Pages domain), the references to UI assets and navigation links on the 404 page will not work property.</p>
+</dd>
+<dt class="hdlist1">Workaround</dt>
+<dd>
+<p>Postprocess the 404.html page to fix the paths before publishing the site.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="self-signed-certificates"><a class="anchor" href="#self-signed-certificates"></a>Self-signed certificates</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Issue</dt>
+<dd>
+<p><a href="https://gitlab.com/antora/antora/issues/390" target="_blank" rel="noopener">#390</a></p>
+</dd>
+<dt class="hdlist1">Summary</dt>
+<dd>
+<p>The HTTP client Antora uses to download the UI bundle (got) does not load the CA certificate file on the local machine.
+As a result, if the server hosting the UI bundle has a self-signed certificate, Antora will fail trying to download the bundle (due to the fact that Node rejects the certificate as unauthorized).</p>
+</dd>
+<dt class="hdlist1">Workaround</dt>
+<dd>
+<p>Instruct Node not to reject unauthorized certificates by setting the environment variable NODE_TLS_REJECT_UNAUTHORIZED=0 when calling Antora.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="thank-you"><a class="anchor" href="#thank-you"></a>Thank you!</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Most important of all, a huge <strong>thank you!</strong> to all the folks who helped make Antora even better.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Abel Salgado Romero (<a href="https://gitlab.com/abelsromero" target="_blank" rel="noopener">@abelsromero</a>)</dt>
+<dd>
+<p>Fix wrong gulp-ci package name replacing it with correct gulp-cli <a href="https://gitlab.com/antora/antora/merge_requests/294" target="_blank" rel="noopener">MR 294</a></p>
+</dd>
+<dt class="hdlist1">Antonio (<a href="https://gitlab.com/bandantonio" target="_blank" rel="noopener">@bandantonio</a>)</dt>
+<dd>
+<p>Fix colon typo in resource id include directive <a href="https://gitlab.com/antora/antora/merge_requests/284" target="_blank" rel="noopener">MR 284</a><br>
+Add information about missing runtime category in the playbook configuration <a href="https://gitlab.com/antora/antora/merge_requests/282" target="_blank" rel="noopener">MR 282</a></p>
+</dd>
+<dt class="hdlist1">Julien Grenier (<a href="https://gitlab.com/jgrenier" target="_blank" rel="noopener">@jgrenier</a>)</dt>
+<dd>
+<p>Fix failing build (docker-antora) <a href="https://gitlab.com/antora/docker-antora/merge_requests/5" target="_blank" rel="noopener">MR 5</a></p>
+</dd>
+<dt class="hdlist1">Matthew Setter (<a href="https://gitlab.com/settermjd" target="_blank" rel="noopener">@settermjd</a>)</dt>
+<dd>
+<p>Correct reference to ui-bundle-url in the docs <a href="https://gitlab.com/antora/antora/merge_requests/280" target="_blank" rel="noopener">MR 280</a></p>
+</dd>
+<dt class="hdlist1"><a href="https://gitlab.com/Leantricity" target="_blank" rel="noopener">@Leantricity</a></dt>
+<dd>
+<p>Fix page-to-page-xref.adoc typo <a href="https://gitlab.com/antora/antora/merge_requests/278" target="_blank" rel="noopener">MR 278</a></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="metrics"><a class="anchor" href="#metrics"></a>Metrics</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The raw install size of Antora drops from 154MB down to 43MB.
+The Docker image on DockerHub dropped from 60 MB to 29 MB.
+It took 11 seconds to install Antora 1.1.1 from cache.
+It only takes 3 seconds to install Antora 2.0.0 from cache.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="checklist"><a class="anchor" href="#checklist"></a>Upgrade checklist</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You may need to make some of the following changes to your documentation system before using Antora 2.0.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Does Antora access private repositories in order to build your site?</dt>
+<dd>
+<p>If yes, you get to say goodbye to your SSH agent and set up your authentication credentials for each private repository URL in a git credential store.
+Refer to the <a href="playbook/private-repository-auth.html" class="xref page">Private repository authentication</a> documentation for setup options and instructions.</p>
+</dd>
+<dt class="hdlist1">Does Antora access git repositories using the git: protocol or static HTTP (such as a host using cgit)?</dt>
+<dd>
+<p>Unfortunately, Antora can no longer connect to repositories that use these connection methods.
+You&#8217;ll need to either clone the repositories to a local folder and point Antora at those locations or you&#8217;ll need to set up a proxy server that serves the repositories over smart HTTP (as do all major git hosts).</p>
+</dd>
+<dt class="hdlist1">Is your Antora playbook file written in CSON?</dt>
+<dd>
+<p>If yes, you&#8217;ll need to migrate it to YAML, JSON, or TOML before running Antora 2.0.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>If you answered <strong>No</strong> to all of the above questions, then you&#8217;re ready to upgrade to Antora 2.0 now!
+See <a href="install/upgrade-antora.html" class="xref page">Upgrade Antora</a> for instructions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="software-lifecycle-notices"><a class="anchor" href="#software-lifecycle-notices"></a>Software Lifecycle Notices</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Antora 1.1 will enter maintenance on March 25, 2019.
+See the <a href="project/release-schedule.html" class="xref page">release schedule</a> for details.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="index.html">Antora</a></span>
+  <span class="next"><a href="features.html">How Antora Can Help</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright © <a href="https://opendevise.com">OpenDevise Inc.</a> and individual contributors to <a href="https://antora.org">Antora</a>.</p>
+  <p>Except where otherwise noted, docs.antora.org, Antora, and the Antora UI, are licensed under the <a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License Version 2.0</a> (MPL-2.0).</p>
+  <p>AsciiDoc® is a trademark of the Eclipse Foundation, Inc.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

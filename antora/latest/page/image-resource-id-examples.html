@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Image Resource ID Examples :: Antora Docs</title>
+    <link rel="canonical" href="https://docs.antora.org/antora/latest/page/image-resource-id-examples.html">
+    <link rel="prev" href="inline-images.html">
+    <link rel="next" href="image-xref-and-link.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/site-extra.css">
+    <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="https://antora.org">Antora</a>
+        <span class="separator">//</span>
+        <a href="https://docs.antora.org">Docs</a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Projects</div>
+          <div class="navbar-dropdown">
+            <div class="navbar-item"><strong>Core</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <div class="navbar-item"><strong>Default UI</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/blob/main/contributing.adoc">Contributing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Community</div>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="https://antora.zulipchat.com">Chat (Zulip)</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://twitter.com/antoraproject">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#57aaee" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora" data-version="3.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Antora</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../whats-new.html">What&#8217;s New in Antora 3.0</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoctor-upgrade-notes.html">Asciidoctor Upgrade Notes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features.html">How Antora Can Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../how-antora-works.html">How Antora Works</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install-and-run-quickstart.html">Install and Run Antora Quickstart</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Antora</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install/linux-requirements.html">Linux Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install/macos-requirements.html">macOS Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install/windows-requirements.html">Windows Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install/install-antora.html">Install Antora</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install/upgrade-antora.html">Upgrade Antora</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install/supported-platforms.html">Supported Platforms</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Set Up Content Sources</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../organize-content-files.html">How to Organize Your Content Files</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../content-source-repositories.html">Repositories and Content Source Roots</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../content-source-versioning-methods.html">Content Source Versioning Methods</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../standard-directories.html">Standard File and Directory Set</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../symlinks.html">Symlinks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../module-directories.html">Module Directories and Modules</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../root-module-directory.html">ROOT Module Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../named-module-directory.html">Named Module Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../module-directory-names.html">Recommendations for Module Directory Names</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../module-url-segment.html">Module Segment in Page URLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../family-directories.html">Family Directories and Families</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../pages-directory.html">Pages Directory and Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../partials-directory.html">Partials Directory and Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../examples-directory.html">Examples Directory and Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../images-directory.html">Images Directory and Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../attachments-directory.html">Attachments Directory and Files</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configure Component Versions</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-version.html">What&#8217;s a Component Version?</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-version-descriptor.html">What&#8217;s antora.yml?</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-name-and-version.html">Define a Component Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-name-key.html">Name Key</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-version-key.html">Version Key</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-title.html">Customize the Title</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-display-version.html">Customize the Display Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-prerelease.html">Identify a Prerelease Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-with-no-version.html">Define a Component with No Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-attributes.html">Assign Attributes to a Component Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-start-page.html">Choose a Start Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-navigation.html">Assign Navigation Files to a Component Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../version-facets.html">Version Facets</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../how-component-versions-are-sorted.html">How Component Versions are Sorted</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../distributed-component-version.html">Distributed Component Versions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="resource-id.html">Resources and Resource IDs</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="resource-id-coordinates.html">Resource ID Coordinates</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Pages</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="standard-page.html">Set Up a Standard Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="title-and-metadata.html">Add a Title and Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="attributes.html">AsciiDoc Attributes in Antora</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="define-and-modify-attributes.html">Define and Modify Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-attributes.html">Page Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="intrinsic-attributes.html">Intrinsic Attributes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="start-page.html">Create a Start Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="xref.html">Xref Macros and Page Links</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-links.html">Create Page Links</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="link-content.html">Page Link Text</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="reftext-and-navtitle.html">Customize reftext and navtitle</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page-aliases.html">Set Up URL Redirects with page-aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page-layout.html">Assign UI Templates with page-layout</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="include-a-page.html">Include a Page</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-partial.html">Unset page-partial Globally</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="images.html">Images</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="block-images.html">Add Block Images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="inline-images.html">Add Inline Images</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="image-resource-id-examples.html">Image Resource ID Examples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="image-xref-and-link.html">Resource Links From Images</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="partials.html">Partials</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="include-a-partial.html">Include a Partial</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="examples.html">Examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="include-an-example.html">Include an Example</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="attachments.html">Attachments</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">AsciiDoc Primer</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/asciidoc.html">Why AsciiDoc?</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/section-headings.html">Sections</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asciidoc/text-and-punctuation.html">Text and Punctuation Styles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/bold.html">Bold</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/italic.html">Italic</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/monospace.html">Monospace</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/highlight.html">Highlight</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/quotes-and-apostrophes.html">Quote Marks and Apostrophes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/special-characters-and-symbols.html">Special Characters and Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/subscript-and-superscript.html">Subscript and Superscript</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/in-page-xref.html">Internal Xrefs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/external-urls.html">URLs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asciidoc/lists.html">Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/ordered-and-unordered-lists.html">Bullet and Numbered Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/description-lists.html">Description Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/checklists.html">Checklists</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/embed-video.html">Embed a Video</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/ui-macros.html">UI Macros</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/source.html">Source Blocks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/admonitions.html">Admonitions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/sidebar.html">Sidebars</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/comments.html">Comments</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Navigation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/index.html">Navigation Assembly</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../navigation/files-and-lists.html">Navigation Files and Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../navigation/single-list.html">Create a Navigation File with One List</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../navigation/multiple-lists.html">Create a Navigation File with Multiple Lists</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/xrefs-and-link-text.html">Page Xrefs and Link Text</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/reference-resources.html">Attachment Xrefs and Link Text</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/external-links.html">Add Links to External Sites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/format-content.html">Format List Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/organize-files.html">Navigation File Locations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/include-lists.html">Compose Navigation Files</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/register-navigation-files.html">Register Navigation Files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configure Your Site</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../playbook/index.html">The Antora Playbook</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../playbook/set-up-playbook.html">Set Up a Playbook</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/configure-site.html">Site Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/site-url.html">Site URL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/site-title.html">Site Title</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/site-start-page.html">Site Start Page</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/site-robots.html">Robots</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/site-keys.html">Account and API Keys</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/configure-content-sources.html">Content Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/content-source-url.html">URLs for Content Sources</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../playbook/private-repository-auth.html">Private Repository Authentication</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/content-branches.html">Branches</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/content-worktrees.html">Worktrees</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/content-tags.html">Tags</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/content-source-start-path.html">Single Start Path</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/content-source-start-paths.html">Multiple Start Paths</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/content-source-version.html">Fallback Version</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/content-edit-url.html">Edit URL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/configure-git.html">Git Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/git-suffix.html">Git Repository URL Suffix</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/git-fetch-concurrency.html">Git Fetch Concurrency Limit</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/git-credentials-path-and-contents.html">Git Credentials Path and Contents</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/git-plugins.html">Git Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/configure-asciidoc.html">AsciiDoc Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/asciidoc-attributes.html">Assign Attributes to a Site</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/asciidoc-extensions.html">Asciidoctor Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/asciidoc-sourcemap.html">File and Line Number Information</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/configure-ui.html">UI Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/ui-bundle-url.html">UI Bundle URL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/ui-supplemental-files.html">Supplemental UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/ui-output-dir.html">UI Output Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/ui-default-layout.html">Default Layout for Pages</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/configure-urls.html">URLs Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/urls-html-extension-style.html">HTML Extension Styles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/urls-latest-version-segment.html">Latest Version Segment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/urls-latest-prerelease-version-segment.html">Latest Prerelease Version Segment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/urls-latest-version-segment-strategy.html">Latest Version Segment Strategy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/urls-redirect-facility.html">Redirect Facility Key</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/configure-output.html">Output Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/output-dir.html">Output Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/output-provider-archive.html">Archive Provider</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/output-provider-fs.html">Filesystem Provider</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/output-provider-custom.html">Custom Provider</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/configure-runtime.html">Runtime Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Log Keys</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../playbook/runtime-log-level.html">Log Severity Level</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../playbook/runtime-log-failure-level.html">Log Failure Level</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../playbook/runtime-log-format.html">Log Format</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../playbook/runtime-log-destination.html">Log Destination</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/runtime-fetch.html">Fetch Updates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/runtime-cache-dir.html">Cache Directory</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/configure-network.html">Network Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/network-proxy.html">Network Proxy</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../playbook/author-mode.html">Use Author Mode</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../playbook/use-an-existing-playbook-project.html">Use an Existing Playbook Project</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../playbook/environment-variables.html">Environment Variables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Generate Your Site</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../run-antora.html">Run Antora</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../preview-site.html">Preview Your Site</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/index.html">Antora CLI Commands</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/options.html">CLI Options</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/primer.html">CLI Primer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cache.html">Configure Antora&#8217;s Cache</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../antora-container.html">Run Antora in a Container</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Publish Your Site</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../how-antora-builds-urls.html">How Antora Builds URLs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../add-404-error-page.html">Add a 404 Error Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../sitemap.html">Automatic Sitemap</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../publish-to-github-pages.html">Publish to GitHub Pages</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Extend Antora</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../extend/extensions.html">Antora Extensions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/define-extension.html">Define an Extension</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/register-extension.html">Register an Extension</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/add-event-listeners.html">Add Event Listeners</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/use-context-variables.html">Use Context Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/configure-extension.html">Configure an Extension</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/enable-extension.html">Enable an Extension</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/extension-helpers.html">Extension Helpers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/class-based-extension.html">Class-Based Extension</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/asynchronous-listeners.html">Asynchronous Listeners</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/replace-generator-functions.html">Replace Generator Functions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/extension-tutorial.html">Extension Tutorial</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/generator-events-reference.html">Generator Events Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/generator-context-reference.html">GeneratorContext API Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../extend/supported-components.html">Antora Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../project/get-help.html">Get Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security-bulletins.html">Security Bulletins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Project Governance</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../project/release-schedule.html">Release Schedule</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../project/copyright-and-license.html">Copyright and License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora</span>
+    <span class="version">3.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Antora</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">3.0</a>
+        </li>
+        <li class="version">
+          <a href="../../2.3/index.html">2.3</a>
+        </li>
+        <li class="version">
+          <a href="../../2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../2.1/index.html">2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../2.0/index.html">2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../antora-ui-default/index.html">Antora Default UI</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../antora-ui-default/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Antora</a></li>
+    <li><a href="images.html">Images</a></li>
+    <li><a href="image-resource-id-examples.html">Image Resource ID Examples</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">3.0</button>
+  <div class="version-menu">
+    <a class="version is-current" href="image-resource-id-examples.html">3.0</a>
+    <a class="version" href="../../2.3/page/image-resource-id-examples.html">2.3</a>
+    <a class="version is-missing" href="../../2.2/index.html">2.2</a>
+    <a class="version is-missing" href="../../2.1/index.html">2.1</a>
+    <a class="version is-missing" href="../../2.0/index.html">2.0</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://gitlab.com/antora/antora/edit/main/docs/modules/page/pages/image-resource-id-examples.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Image Resource ID Examples</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can insert an image into any page in your site, regardless of the module or component version to which the target image file belongs.
+On this page, you&#8217;ll learn how to assign the correct resource ID coordinates to an image macro based on the version, component, and module the image belongs to in relation to the page where you want to embed it.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For an overview of the block image macro and inline image macro and step-by-step instructions on how to add them to a page, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="block-images.html" class="xref page">Add Block Images</a></p>
+</li>
+<li>
+<p><a href="inline-images.html" class="xref page">Add Inline Images</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you aren&#8217;t familiar with the Antora resource ID or its coordinates, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="resource-id.html" class="xref page">Resources and Resource IDs</a></p>
+</li>
+<li>
+<p><a href="resource-id-coordinates.html" class="xref page">Resource ID Coordinates</a></p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+All of the examples on this page, regardless of the image macro they use to demonstrate a concept, apply to both the <a href="block-images.html" class="xref page">block image macro</a> and <a href="inline-images.html" class="xref page">inline image macro</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="use-an-image-within-a-module"><a class="anchor" href="#use-an-image-within-a-module"></a>Use an image within a module</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Most of the images you reference with an image macro will probably belong to the <a href="../module-directories.html#module" class="xref page">same module</a> and <a href="../component-version.html" class="xref page">component version</a> as the current page.
+In such circumstances, the AsciiDoc image macros only require the <a href="resource-id-coordinates.html#id-resource" class="xref page">file coordinate</a> of the target image&#8217;s resource ID be assigned as a value.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><a id="target"></a>The <strong class="term">target image</strong> is the image source file that&#8217;s being referenced by the current page.
+The target image is referenced by assigning its resource ID to an inline or block image macro in the content of the current page.
+<a id="current"></a>The <strong class="term">current page</strong> is the page source file containing the image macro that references the target image.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The structure of the target image&#8217;s file coordinate varies depending on whether the target image is stored at the root of the <em class="path">images</em> family directory or in a subdirectory of the <em class="path">images</em> directory.</p>
+</div>
+<div id="ex-file" class="listingblock">
+<div class="title">Example 1. current-page.adoc</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">image:target-image-filename.ext[optional attribute] <i class="conum" data-value="1"></i><b>(1)</b>
+
+image:path/to/target-image-filename.ext[optional attribute] <i class="conum" data-value="2"></i><b>(2)</b>
+
+image:./target-image-filename.ext[optional attribute] <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>File coordinate of the target image when it&#8217;s stored at the root of the <em class="path">images</em> directory.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>File coordinate of the target image when it&#8217;s stored in a subdirectory of the <em class="path">images</em> directory.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>File coordinate of the target image when the target image and current page are stored in a subdirectory with the same family-relative directory path.
+<em>This is an advanced use case.</em></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following sections provide examples showing the different file coordinate structures.</p>
+</div>
+<div class="sect2">
+<h3 id="images-root"><a class="anchor" href="#images-root"></a>File coordinate at images directory root</h3>
+<div class="paragraph">
+<p>When the target image is stored at the root of the <em class="path">images</em> family directory, the file coordinate is the target image&#8217;s filename and file extension.
+Remember, the file coordinate of the target image is always calculated from the root of the <em class="path">images</em> family directory.</p>
+</div>
+<div id="ex-image-base" class="listingblock">
+<div class="title">Example 2. File coordinate in an image macro when the target image is stored at the root of an images directory</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">image::target-image-filename.ext[optional attribute]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s use the files that belong to the component version <em>colorado 5.2</em> as the basis for the example in this section.
+The component version&#8217;s source files are assigned to modules and families based on the <a href="../standard-directories.html" class="xref page">set of standard directories</a> listed in <a href="#ex-co">Example 3</a>.</p>
+</div>
+<div id="ex-co" class="listingblock">
+<div class="title">Example 3. Directories and files assigned to colorado 5.2</div>
+<div class="content">
+<pre>📄 antora.yml <i class="conum" data-value="1"></i><b>(1)</b>
+📂 modules
+  📂 la-garita <i class="conum" data-value="2"></i><b>(2)</b>
+    📂 images <i class="conum" data-value="3"></i><b>(3)</b>
+      📄 wilderness-map.jpg
+    📂 pages <i class="conum" data-value="4"></i><b>(4)</b>
+      📄 ridge.adoc</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Defines the component version as <em>colorado 5.2</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Defines a module named <em>la-garita</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Defines subsequent files as images</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Defines subsequent files as pages</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Using the two files that belong to the <em>la-garita</em> module, shown in <a href="#ex-co">Example 3</a> above, let&#8217;s insert the <em class="path">wilderness-map.jpg</em> image into the <em class="path">ridge.adoc</em> page.
+That means the source file <em class="path">wilderness-map.jpg</em> is the target image and <em class="path">ridge.adoc</em> is the current page.</p>
+</div>
+<div class="paragraph">
+<p><a href="#ex-image">Example 4</a> shows a block image macro in the <em class="path">ridge.adoc</em> page (current page) that references, the <em class="path">wilderness-map.jpg</em> image (target image).
+When the target image and current page belong to the same module, only the file coordinate of the target image&#8217;s resource ID needs to be entered in the image macro.</p>
+</div>
+<div id="ex-image" class="listingblock">
+<div class="title">Example 4. ridge.adoc (current page)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">The trailhead is north of town.
+
+image::wilderness-map.jpg[]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In <a href="#ex-image">Example 4</a>, the file coordinate for the <em class="path">wilderness-map.jpg</em> image is <code>wilderness-map.jpg</code>.
+Its file coordinate consists solely of its filename and file extension because <em class="path">wilderness-map.jpg</em> is stored at the root of the <em class="path">images</em> directory.</p>
+</div>
+<div class="paragraph">
+<p>If the target image is stored in a subdirectory of the <em class="path">images</em> directory, its file coordinate must specify the <em>images</em>-relative directory path, filename, and file extension.
+See <a href="#relative-path">File coordinate with images-relative directory path</a> for file coordinate examples when the target image is stored in a subdirectory.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="relative-path"><a class="anchor" href="#relative-path"></a>File coordinate with images-relative directory path</h3>
+<div class="paragraph">
+<p>The <em>images</em>-relative directory path of the <a href="#target">target image</a> is required in its file coordinate when it&#8217;s stored in a subdirectory of the <em class="path">images</em> directory.</p>
+</div>
+<div id="ex-subdir-base" class="listingblock">
+<div class="title">Example 5. File coordinate in an image macro when the target image is stored in a subdirectory of an images directory</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">image::path/to/target-image-filename.ext[optional attribute]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s use the pages that belong to the component version shown in <a href="#ex-co-subdir">Example 6</a> as the basis for the examples in this section.</p>
+</div>
+<div id="ex-co-subdir" class="listingblock">
+<div class="title">Example 6. Directories and files assigned to colorado 5.2</div>
+<div class="content">
+<pre>📄 antora.yml <i class="conum" data-value="1"></i><b>(1)</b>
+📂 modules
+  📂 la-garita <i class="conum" data-value="2"></i><b>(2)</b>
+    📂 images <i class="conum" data-value="3"></i><b>(3)</b>
+      📂 aerial <i class="conum" data-value="4"></i><b>(4)</b>
+        📄 skyline.jpg
+    📂 pages <i class="conum" data-value="5"></i><b>(5)</b>
+      📄 ridge.adoc</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Defines the component version as <em>colorado 5.2</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Defines a module named <em>la-garita</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Defines subsequent files as images</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>A subdirectory in <em>images</em> containing the source files of images</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Defines subsequent files as pages</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s reference <em class="path">skyline.jpg</em> from <em class="path">ridge.adoc</em>.
+As you can see in <a href="#ex-co-subdir">Example 6</a> above, the image and page belong to the <em>la-garita</em> module.
+In <a href="#ex-subdir">Example 7</a>, an image macro in the <em class="path">ridge.adoc</em> page (current page) references the <em class="path">skyline.jpg</em> image (target image).</p>
+</div>
+<div id="ex-subdir" class="listingblock">
+<div class="title">Example 7. ridge.adoc (current page)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">= La Garita Ridgeline
+
+image::aerial/skyline.jpg[]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As shown in <a href="#ex-subdir">Example 7</a>, the file coordinate for <em class="path">skyline.jpg</em> is <code>aerial/skyline.jpg</code>.
+The file coordinate for <em class="path">skyline.jpg</em> consists of its <em class="path">images</em>-relative directory path, filename, and file extension because it&#8217;s stored in the subdirectory <em class="path">aerial</em>.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+In special circumstances where the <em>images</em>-relative directory path of the target image and the <em>pages</em>-relative directory path of the current page are parallel, the <em>images</em>-relative directory path of the file coordinate can be replaced with the relative path token, <code>./</code>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="modules"><a class="anchor" href="#modules"></a>Use an image from another module</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When the <a href="#target">target image</a> and <a href="#current">current page</a> don&#8217;t belong to the same module, you must specify the target image&#8217;s <a href="resource-id-coordinates.html#id-module" class="xref page">module coordinate</a> and <a href="resource-id-coordinates.html#id-resource" class="xref page">file coordinate</a> in the image macro.</p>
+</div>
+<div id="ex-module-base" class="listingblock">
+<div class="title">Example 8. Module and file coordinates assigned to an image macro</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">image:module:target-image-filename.ext[optional attribute] <i class="conum" data-value="1"></i><b>(1)</b>
+
+image:module:path/to/target-image-filename.ext[optional attribute] <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The image macro is assigned the module coordinate and file coordinate of the target image when the target image doesn&#8217;t belong to the same module as the current page.
+The target image&#8217;s file coordinate is its filename and file extension when the target image is <a href="#images-root">stored at the root of an <em>images</em> family directory</a>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>If <a href="#relative-path">the target image is stored in a subdirectory of an <em>images</em> directory</a>, the target image&#8217;s file coordinate must specify its <em>images</em>-relative directory path, filename, and file extension.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s use the files that belong to the component version shown in <a href="#ex-co-mod">Example 9</a> as the basis for the examples in this section.</p>
+</div>
+<div id="ex-co-mod" class="listingblock">
+<div class="title">Example 9. Directories and files assigned to colorado 5.2</div>
+<div class="content">
+<pre>📄 antora.yml <i class="conum" data-value="1"></i><b>(1)</b>
+📂 modules
+  📂 la-garita <i class="conum" data-value="2"></i><b>(2)</b>
+    📂 images <i class="conum" data-value="3"></i><b>(3)</b>
+      📂 aerial <i class="conum" data-value="4"></i><b>(4)</b>
+        📄 skyline.jpg
+    📂 pages <i class="conum" data-value="5"></i><b>(5)</b>
+      📄 ridge.adoc
+      📄 willow-creek.adoc
+  📂 ROOT <i class="conum" data-value="6"></i><b>(6)</b>
+    📂 images <i class="conum" data-value="7"></i><b>(7)</b>
+      📄 peak.svg
+    📂 pages <i class="conum" data-value="8"></i><b>(8)</b>
+      📄 index.adoc
+      📄 ranges.adoc</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Defines the component version as <em>colorado 5.2</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Defines a module named <em>la-garita</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Defines subsequent files as images</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>A subdirectory in <em>images</em> containing the source files of images</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Defines subsequent files as pages</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Defines the <em>ROOT</em> module</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>Defines subsequent files as images</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
+<td>Defines subsequent files as pages</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>From the <em>colorado 5.2</em> component version, shown in <a href="#ex-co-mod">Example 9</a> above, let&#8217;s insert the <em class="path">peak.svg</em> image into the <em class="path">willow-creek.adoc</em> page.
+That means the source file <em class="path">peak.svg</em> is the target image and <em class="path">willow-creek.adoc</em> is the current page.</p>
+</div>
+<div class="paragraph">
+<p><a href="#ex-module">Example 10</a> shows an inline image macro in <em class="path">willow-creek.adoc</em> (current page) that references the image file <em class="path">peak.svg</em> (target image).
+The module and file coordinates of the target image&#8217;s resource ID are assigned to the image macro.
+The <em class="path">willow-creek.adoc</em> page belongs to the <em>la-garita</em> module.
+The <em class="path">peak.svg</em> image belongs to the <em>ROOT</em> module.</p>
+</div>
+<div id="ex-module" class="listingblock">
+<div class="title">Example 10. Insert peak.svg (target image) into willow-creek.adoc (current page)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">The elevation is image:ROOT:peak.svg[] 10,067 ft (3,068 m).</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As shown in <a href="#ex-module">Example 10</a>, the target image&#8217;s module coordinate is <code>ROOT</code> and its file coordinate is <code>peak.svg</code>.</p>
+</div>
+<div class="paragraph">
+<p>In <a href="#ex-module-subdir">Example 11</a>, let&#8217;s embed the <em class="path">skyline.jpg</em> image (target image) into <em class="path">ranges.adoc</em> (current page).
+The <em class="path">skyline.jpg</em> image belongs to the <em>la-garita</em> module and <em class="path">ranges.adoc</em> belongs to the <em>ROOT</em> module.</p>
+</div>
+<div id="ex-module-subdir" class="listingblock">
+<div class="title">Example 11. Insert skyline.jpg (target image) into ranges.adoc (current page)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">image::la-garita:aerial/skyline.jpg[]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As shown in <a href="#ex-module-subdir">Example 11</a>, the target image&#8217;s module coordinate is <code>la-garita</code> and its file coordinate is <code>aerial/skyline.jpg</code> because it&#8217;s stored in the <em class="path">aerial</em> subdirectory of the <em class="path">images</em> family directory.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="component-versions"><a class="anchor" href="#component-versions"></a>Use an image from another docs component</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When the <a href="#target">target image</a> and <a href="#current">current page</a> belong to different documentation components, you must specify, at a minimum, the target image&#8217;s <a href="resource-id-coordinates.html#id-component" class="xref page">component, module, and file coordinates</a> in the image macro.
+You&#8217;ll almost always specify the version coordinate, too.</p>
+</div>
+<div id="ex-component-version-base" class="listingblock">
+<div class="title">Example 12. Version, component, module, and file coordinates assigned to an image macro</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">image:version@component:module:target-image-filename.ext[optional attribute] <i class="conum" data-value="1"></i><b>(1)</b>
+
+image:version@component:module:path/to/target-image-filename.ext[optional attribute] <i class="conum" data-value="2"></i><b>(2)</b>
+
+image:component:module:file-coordinate-of-target-image.ext[optional attribute] <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The image macro is assigned the version, component, module, and file coordinates of the target image when the target image and current page don&#8217;t belong to the same component version.
+The target image&#8217;s file coordinate is its filename and file extension when the target image is <a href="#images-root">stored at the root of an <em>images</em> family directory</a>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>If <a href="#relative-path">the target image is stored in a subdirectory of an <em>images</em> directory</a>, the target image&#8217;s file coordinate must specify its <em>images</em>-relative directory path, filename, and file extension.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>If the version coordinate isn&#8217;t specified, Antora uses the <a href="#latest-version">latest version of the target image&#8217;s component</a> to complete the resource ID at runtime.
+This behavior only applies when the target image and current page belong to different docs components.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s use the files that belong to the component versions <em>colorado 5.2</em> (<a href="#ex-co-v">Example 13</a>) and <em>wyoming 1.0</em> (<a href="#ex-wy">Example 14</a>) as the basis for the example in this section.</p>
+</div>
+<div id="ex-co-v" class="listingblock">
+<div class="title">Example 13. Directories and files assigned to colorado 5.2</div>
+<div class="content">
+<pre>📄 antora.yml <i class="conum" data-value="1"></i><b>(1)</b>
+📂 modules
+  📂 ROOT <i class="conum" data-value="2"></i><b>(2)</b>
+    📂 images <i class="conum" data-value="3"></i><b>(3)</b>
+      📄 peak.svg
+    📂 pages <i class="conum" data-value="4"></i><b>(4)</b>
+      📄 index.adoc
+      📄 ranges.adoc</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Defines the component version as <em>colorado 5.2</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Defines the <em>ROOT</em> module</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Defines subsequent files as images</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Defines subsequent source files as pages</td>
+</tr>
+</table>
+</div>
+<div id="ex-wy" class="listingblock">
+<div class="title">Example 14. Directories and files assigned to wyoming 1.0</div>
+<div class="content">
+<pre>📄 antora.yml <i class="conum" data-value="1"></i><b>(1)</b>
+📂 modules
+  📂 sierra-madre <i class="conum" data-value="2"></i><b>(2)</b>
+    📂 images <i class="conum" data-value="3"></i><b>(3)</b>
+      📄 panorama.png
+    📂 pages <i class="conum" data-value="4"></i><b>(4)</b>
+      📄 elevation.adoc
+      📄 wilderness-areas.adoc</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Defines the component version as <em>wyoming 1.0</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Defines a module named <em>sierra-madre</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Defines subsequent files as images</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Defines subsequent files as pages</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Using files from <a href="#ex-co-v">Example 13</a> and <a href="#ex-wy">Example 14</a>, let&#8217;s insert <em class="path">panorama.png</em> (target image) into <em class="path">ranges.adoc</em> (current page).
+The image <em class="path">panorama.png</em> belongs to the the <em>sierra-madre</em> module of <em>wyoming 1.0</em>.
+In <a href="#ex-across-components">Example 15</a>, the resource ID assigned to the image macro specifies the version, component, module, and file coordinates of the target image because the target image belongs to the <em>wyoming 1.0</em> component version whereas the current page belongs to <em>colorado 5.2</em>.</p>
+</div>
+<div id="ex-across-components" class="listingblock">
+<div class="title">Example 15. Insert panorama.png (target image) as a block image into ranges.adoc (current page)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">image::1.0@wyoming:sierra-madre:panorama.png[]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As shown in <a href="#ex-across-components">Example 15</a>, the target image&#8217;s version coordinate is <code>1.0</code>, its component coordinate is <code>wyoming</code>, its module coordinate is <code>sierra-madre</code>, and its file coordinate is <code>panorama.png</code>.</p>
+</div>
+<div class="paragraph">
+<p>Now, in <a href="#ex-across-components-root">Example 16</a>, let&#8217;s insert <em class="path">peak.svg</em> (target image) into <em class="path">wilderness-areas.adoc</em> (current page).
+The <em class="path">peak.svg</em> image belongs to the component version <em>colorado 5.2</em>.
+The <em class="path">wilderness-areas.adoc</em> page belongs to the component version <em>wyoming 1.0</em>.</p>
+</div>
+<div id="ex-across-components-root" class="listingblock">
+<div class="title">Example 16. wilderness-areas.adoc (current page)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">image:5.2@colorado::peak.svg[] Bridger Peak is in the Sierra Madre range.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice in <a href="#ex-across-components-root">Example 16</a> that the module coordinate <code>ROOT</code> seems to be missing from the resource ID.
+When a component coordinate is specified in a resource ID, and the target image belongs to the <em>ROOT</em> module, the module coordinate <code>ROOT</code> doesn&#8217;t have to be explicitly specified.
+But you must still enter the colon (<code>:</code>) that would follow the module coordinate.
+You can see this <code>:</code> directly before the file coordinate <code>peak.svg</code>.
+This shorthand only works when a component coordinate is specified and the module coordinate of the target image is <code>ROOT</code>.
+In all other cases where the module coordinate is required, the name of the module must be specified.</p>
+</div>
+<div class="paragraph">
+<p>You may have noticed that the version coordinate is specified in both <a href="#ex-across-components">Example 15</a> and <a href="#ex-across-components-root">Example 16</a>.
+If you don&#8217;t specify the version, Antora will complete the resource ID of the target image using the version coordinate of the target image&#8217;s latest component version at runtime.</p>
+</div>
+<div class="sect2">
+<h3 id="latest-version"><a class="anchor" href="#latest-version"></a>Use the latest version of an image</h3>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+This behavior only applies when the target image and current page belong to different docs components!
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If a version isn&#8217;t specified in the resource ID, <strong>and the target image and current page belong to different documentation components</strong>, Antora uses the version coordinate of the <a href="../how-component-versions-are-sorted.html#latest-version" class="xref page">latest version</a> of the target image&#8217;s component to complete the resource ID at runtime.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s use the files that belong to <em>colorado 5.2</em> (<a href="#ex-co-v">Example 13</a> in the previous section), <em>wyoming 1.0</em> (<a href="#ex-wy">Example 14</a> in the previous section), and <em>wyoming 1.5</em> (<a href="#ex-wy-latest">Example 17</a> below) as the basis for the example in this section.</p>
+</div>
+<div id="ex-wy-latest" class="listingblock">
+<div class="title">Example 17. Directories and files assigned to wyoming 1.5</div>
+<div class="content">
+<pre>📄 antora.yml <i class="conum" data-value="1"></i><b>(1)</b>
+📂 modules
+  📂 sierra-madre
+    📂 images
+      📄 panorama.png
+    📂 pages
+      📄 elevation.adoc
+      📄 wilderness-areas.adoc</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Defines the component version as <em>wyoming 1.5</em></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s reference the <em class="path">panorama.png</em> image (target image) from <em class="path">index.adoc</em> (current page).
+<em class="path">index.adoc</em> belongs to the <em>colorado 5.2</em> component version .
+There are two files named <em class="path">panorama.png</em> that belong to the <em>wyoming</em> component, <em>sierra-madre</em> module, and <em>images</em> family.
+One <em class="path">panorama.png</em> belongs to version <em>1.0</em>, the other <em class="path">panorama.png</em> to version <em>1.5</em>.</p>
+</div>
+<div class="paragraph">
+<p><a href="#ex-across-components-latest">Example 18</a> shows a block image macro referencing <em class="path">panorama.png</em> (target image) from <em class="path">index.adoc</em> (current page).
+Notice that the target image&#8217;s version coordinate isn&#8217;t specified.</p>
+</div>
+<div id="ex-across-components-latest" class="listingblock">
+<div class="title">Example 18. index.adoc (current page)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">image::wyoming:sierra-madre:panorama.png[]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When Antora runs, it will identify <em>wyoming 1.5</em> as the latest version of the <em>wyoming</em> component according to its <a href="../how-component-versions-are-sorted.html#version-sorting-rules" class="xref page">version sorting rules</a> and <a href="../how-component-versions-are-sorted.html#latest-version" class="xref page">latest version criteria</a>.
+Because a version coordinate isn&#8217;t specified in <a href="#ex-across-components-latest">Example 18</a>, Antora will complete the resource ID assigned to the image macro using the version coordinate&#8201;&#8212;&#8201;<code>1.5</code>&#8201;&#8212;&#8201;of the latest <em>wyoming</em> component.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+This behavior of linking to the latest version only applies when the version coordinate is unspecified and the target image and current page belong to different components.
+If the version and component coordinates aren&#8217;t specified in the resource ID, Antora assumes the target image belongs to the same component version as the current page and uses the current page&#8217;s version and component coordinates to complete the target image&#8217;s resource ID.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="versions"><a class="anchor" href="#versions"></a>Use an image from another version of its component</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When the <a href="#current">current page</a> and <a href="#target">target image</a> belong to the same component, but the target image belongs to a different version of the component, you&#8217;ll specify the version, module (if it&#8217;s different than the current page&#8217;s module), and file coordinates.</p>
+</div>
+<div id="ex-version-base" class="listingblock">
+<div class="title">Example 19. current-page.adoc</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">image:version@module:file-coordinate-of-target-image.ext[optional attribute] <i class="conum" data-value="1"></i><b>(1)</b>
+
+image:version@file-coordinate-of-target-image.ext[optional attribute] <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The image macro is assigned the version, module, and file coordinates of the target image when the target image doesn&#8217;t belong to the same version and module as the current page.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The image macro is assigned the version and file coordinates of the target image when the target image doesn&#8217;t belong to the same version as the current page.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s use the files that belong to the component version <em>colorado 5.2</em> (<a href="#ex-co5">Example 20</a>) and the component version <em>colorado 6.0</em> (<a href="#ex-co6">Example 21</a>) as the basis for the example in this section.</p>
+</div>
+<div id="ex-co5" class="listingblock">
+<div class="title">Example 20. Directories and files assigned to colorado 5.2</div>
+<div class="content">
+<pre>📄 antora.yml <i class="conum" data-value="1"></i><b>(1)</b>
+📂 modules
+  📂 la-garita
+    📂 images
+      📄 wilderness-map.jpg
+    📂 pages
+      📄 index.adoc
+      ...</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Defines the component version as <em>colorado 5.2</em></td>
+</tr>
+</table>
+</div>
+<div id="ex-co6" class="listingblock">
+<div class="title">Example 21. Directories and files assigned to colorado 6.0</div>
+<div class="content">
+<pre>📄 antora.yml <i class="conum" data-value="1"></i><b>(1)</b>
+📂 modules
+  📂 la-garita
+    📂 pages
+      📄 index.adoc
+      📄 ridge.adoc
+      📄 willow-creek.adoc</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Defines the component version as <em>colorado 6.0</em></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Notice that the <em>colorado 5.2</em> component version in <a href="#ex-co5">Example 20</a> has the image <em class="path">wilderness-map.jpg</em>.
+However, <em>colorado 6.0</em>, shown in <a href="#ex-co6">Example 21</a>, has no such image file.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s reference the image <em class="path">wilderness-map.jpg</em> (target image), which belongs to <em>colorado 5.2</em>, from the <em class="path">ridge.adoc</em> page (current page) that belongs to the <em>colorado 6.0</em> component version.
+Both resources belong to the <em>la-garita</em> module.
+In <a href="#ex-across-versions">Example 22</a>, the image <em class="path">wilderness-map.jpg</em> (target image) is embedded in the page <em class="path">ridge.adoc</em> (current page).</p>
+</div>
+<div id="ex-across-versions" class="listingblock">
+<div class="title">Example 22. ridge.adoc (current page) in colorado 6.0</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">image::5.2@wilderness-map.jpg[]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As shown in <a href="#ex-across-versions">Example 22</a>, the target image&#8217;s version coordinate is <code>5.2</code> and its file coordinate is <code>wilderness-map.jpg</code>.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="inline-images.html">Add Inline Images</a></span>
+  <span class="next"><a href="image-xref-and-link.html">Resource Links From Images</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright © <a href="https://opendevise.com">OpenDevise Inc.</a> and individual contributors to <a href="https://antora.org">Antora</a>.</p>
+  <p>Except where otherwise noted, docs.antora.org, Antora, and the Antora UI, are licensed under the <a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License Version 2.0</a> (MPL-2.0).</p>
+  <p>AsciiDoc® is a trademark of the Eclipse Foundation, Inc.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

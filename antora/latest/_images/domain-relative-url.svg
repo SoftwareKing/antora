@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="127.33mm" height="7.5333mm" version="1.1" viewBox="0 0 127.33 7.5333" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <title>Site-relative URL computed by Antora</title>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Site-relative URL computed by Antora</dc:title>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Sarah White</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:publisher>
+     <cc:Agent>
+      <dc:title>OpenDevise Inc.</dc:title>
+     </cc:Agent>
+    </dc:publisher>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>Antora</rdf:li>
+      <rdf:li>site URL</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(.86037 -228.09)">
+  <rect x="-.86037" y="228.09" width="127.33" height="7.533" fill="#fff"/>
+  <text transform="scale(1 .99998)" x="-0.65791541" y="234.18584" fill="#242424" font-family="'Montserrat Medium'" font-size="7.2298px" font-weight="500" letter-spacing="0px" stroke-width=".0727px" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:0%" xml:space="preserve"><tspan x="-0.65791541" y="234.18584" fill="#242424" font-family="'Montserrat Medium'" font-size="7.2298px" font-weight="500" stroke-width=".0727px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%">/docs/hyper/2.5/admin/modes.html</tspan></text>
+ </g>
+</svg>

@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Include a Partial :: Antora Docs</title>
+    <link rel="canonical" href="https://docs.antora.org/antora/latest/page/include-a-partial.html">
+    <link rel="prev" href="partials.html">
+    <link rel="next" href="examples.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/site-extra.css">
+    <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="https://antora.org">Antora</a>
+        <span class="separator">//</span>
+        <a href="https://docs.antora.org">Docs</a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Projects</div>
+          <div class="navbar-dropdown">
+            <div class="navbar-item"><strong>Core</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <div class="navbar-item"><strong>Default UI</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/blob/main/contributing.adoc">Contributing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Community</div>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="https://antora.zulipchat.com">Chat (Zulip)</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://twitter.com/antoraproject">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#57aaee" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora" data-version="3.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Antora</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../whats-new.html">What&#8217;s New in Antora 3.0</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoctor-upgrade-notes.html">Asciidoctor Upgrade Notes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features.html">How Antora Can Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../how-antora-works.html">How Antora Works</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install-and-run-quickstart.html">Install and Run Antora Quickstart</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Antora</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install/linux-requirements.html">Linux Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install/macos-requirements.html">macOS Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install/windows-requirements.html">Windows Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install/install-antora.html">Install Antora</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install/upgrade-antora.html">Upgrade Antora</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../install/supported-platforms.html">Supported Platforms</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Set Up Content Sources</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../organize-content-files.html">How to Organize Your Content Files</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../content-source-repositories.html">Repositories and Content Source Roots</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../content-source-versioning-methods.html">Content Source Versioning Methods</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../standard-directories.html">Standard File and Directory Set</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../symlinks.html">Symlinks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../module-directories.html">Module Directories and Modules</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../root-module-directory.html">ROOT Module Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../named-module-directory.html">Named Module Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../module-directory-names.html">Recommendations for Module Directory Names</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../module-url-segment.html">Module Segment in Page URLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../family-directories.html">Family Directories and Families</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../pages-directory.html">Pages Directory and Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../partials-directory.html">Partials Directory and Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../examples-directory.html">Examples Directory and Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../images-directory.html">Images Directory and Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../attachments-directory.html">Attachments Directory and Files</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configure Component Versions</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-version.html">What&#8217;s a Component Version?</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-version-descriptor.html">What&#8217;s antora.yml?</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-name-and-version.html">Define a Component Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-name-key.html">Name Key</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-version-key.html">Version Key</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-title.html">Customize the Title</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-display-version.html">Customize the Display Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-prerelease.html">Identify a Prerelease Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-with-no-version.html">Define a Component with No Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-attributes.html">Assign Attributes to a Component Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-start-page.html">Choose a Start Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../component-navigation.html">Assign Navigation Files to a Component Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../version-facets.html">Version Facets</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../how-component-versions-are-sorted.html">How Component Versions are Sorted</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../distributed-component-version.html">Distributed Component Versions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="resource-id.html">Resources and Resource IDs</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="resource-id-coordinates.html">Resource ID Coordinates</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Pages</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="standard-page.html">Set Up a Standard Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="title-and-metadata.html">Add a Title and Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="attributes.html">AsciiDoc Attributes in Antora</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="define-and-modify-attributes.html">Define and Modify Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-attributes.html">Page Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="intrinsic-attributes.html">Intrinsic Attributes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="start-page.html">Create a Start Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="xref.html">Xref Macros and Page Links</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-links.html">Create Page Links</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="link-content.html">Page Link Text</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="reftext-and-navtitle.html">Customize reftext and navtitle</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page-aliases.html">Set Up URL Redirects with page-aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page-layout.html">Assign UI Templates with page-layout</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="include-a-page.html">Include a Page</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page-partial.html">Unset page-partial Globally</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="images.html">Images</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="block-images.html">Add Block Images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="inline-images.html">Add Inline Images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="image-resource-id-examples.html">Image Resource ID Examples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="image-xref-and-link.html">Resource Links From Images</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="partials.html">Partials</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="include-a-partial.html">Include a Partial</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="examples.html">Examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="include-an-example.html">Include an Example</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="attachments.html">Attachments</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">AsciiDoc Primer</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/asciidoc.html">Why AsciiDoc?</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/section-headings.html">Sections</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asciidoc/text-and-punctuation.html">Text and Punctuation Styles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/bold.html">Bold</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/italic.html">Italic</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/monospace.html">Monospace</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/highlight.html">Highlight</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/quotes-and-apostrophes.html">Quote Marks and Apostrophes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/special-characters-and-symbols.html">Special Characters and Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/subscript-and-superscript.html">Subscript and Superscript</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/in-page-xref.html">Internal Xrefs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/external-urls.html">URLs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../asciidoc/lists.html">Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/ordered-and-unordered-lists.html">Bullet and Numbered Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/description-lists.html">Description Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../asciidoc/checklists.html">Checklists</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/embed-video.html">Embed a Video</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/ui-macros.html">UI Macros</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/source.html">Source Blocks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/admonitions.html">Admonitions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/sidebar.html">Sidebars</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../asciidoc/comments.html">Comments</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Navigation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/index.html">Navigation Assembly</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../navigation/files-and-lists.html">Navigation Files and Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../navigation/single-list.html">Create a Navigation File with One List</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../navigation/multiple-lists.html">Create a Navigation File with Multiple Lists</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/xrefs-and-link-text.html">Page Xrefs and Link Text</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/reference-resources.html">Attachment Xrefs and Link Text</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/external-links.html">Add Links to External Sites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/format-content.html">Format List Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/organize-files.html">Navigation File Locations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/include-lists.html">Compose Navigation Files</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../navigation/register-navigation-files.html">Register Navigation Files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configure Your Site</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../playbook/index.html">The Antora Playbook</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../playbook/set-up-playbook.html">Set Up a Playbook</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/configure-site.html">Site Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/site-url.html">Site URL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/site-title.html">Site Title</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/site-start-page.html">Site Start Page</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/site-robots.html">Robots</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/site-keys.html">Account and API Keys</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/configure-content-sources.html">Content Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/content-source-url.html">URLs for Content Sources</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../playbook/private-repository-auth.html">Private Repository Authentication</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/content-branches.html">Branches</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/content-worktrees.html">Worktrees</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/content-tags.html">Tags</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/content-source-start-path.html">Single Start Path</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/content-source-start-paths.html">Multiple Start Paths</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/content-source-version.html">Fallback Version</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/content-edit-url.html">Edit URL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/configure-git.html">Git Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/git-suffix.html">Git Repository URL Suffix</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/git-fetch-concurrency.html">Git Fetch Concurrency Limit</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/git-credentials-path-and-contents.html">Git Credentials Path and Contents</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/git-plugins.html">Git Plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/configure-asciidoc.html">AsciiDoc Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/asciidoc-attributes.html">Assign Attributes to a Site</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/asciidoc-extensions.html">Asciidoctor Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/asciidoc-sourcemap.html">File and Line Number Information</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/configure-ui.html">UI Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/ui-bundle-url.html">UI Bundle URL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/ui-supplemental-files.html">Supplemental UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/ui-output-dir.html">UI Output Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/ui-default-layout.html">Default Layout for Pages</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/configure-urls.html">URLs Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/urls-html-extension-style.html">HTML Extension Styles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/urls-latest-version-segment.html">Latest Version Segment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/urls-latest-prerelease-version-segment.html">Latest Prerelease Version Segment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/urls-latest-version-segment-strategy.html">Latest Version Segment Strategy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/urls-redirect-facility.html">Redirect Facility Key</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/configure-output.html">Output Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/output-dir.html">Output Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/output-provider-archive.html">Archive Provider</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/output-provider-fs.html">Filesystem Provider</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/output-provider-custom.html">Custom Provider</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/configure-runtime.html">Runtime Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Log Keys</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../playbook/runtime-log-level.html">Log Severity Level</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../playbook/runtime-log-failure-level.html">Log Failure Level</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../playbook/runtime-log-format.html">Log Format</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../playbook/runtime-log-destination.html">Log Destination</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/runtime-fetch.html">Fetch Updates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/runtime-cache-dir.html">Cache Directory</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../playbook/configure-network.html">Network Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../playbook/network-proxy.html">Network Proxy</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../playbook/author-mode.html">Use Author Mode</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../playbook/use-an-existing-playbook-project.html">Use an Existing Playbook Project</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../playbook/environment-variables.html">Environment Variables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Generate Your Site</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../run-antora.html">Run Antora</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../preview-site.html">Preview Your Site</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/index.html">Antora CLI Commands</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/options.html">CLI Options</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/primer.html">CLI Primer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cache.html">Configure Antora&#8217;s Cache</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../antora-container.html">Run Antora in a Container</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Publish Your Site</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../how-antora-builds-urls.html">How Antora Builds URLs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../add-404-error-page.html">Add a 404 Error Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../sitemap.html">Automatic Sitemap</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../publish-to-github-pages.html">Publish to GitHub Pages</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Extend Antora</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../extend/extensions.html">Antora Extensions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/define-extension.html">Define an Extension</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/register-extension.html">Register an Extension</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/add-event-listeners.html">Add Event Listeners</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/use-context-variables.html">Use Context Variables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/configure-extension.html">Configure an Extension</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/enable-extension.html">Enable an Extension</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/extension-helpers.html">Extension Helpers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/class-based-extension.html">Class-Based Extension</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/asynchronous-listeners.html">Asynchronous Listeners</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/replace-generator-functions.html">Replace Generator Functions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/extension-tutorial.html">Extension Tutorial</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/generator-events-reference.html">Generator Events Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extend/generator-context-reference.html">GeneratorContext API Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../extend/supported-components.html">Antora Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../project/get-help.html">Get Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../security-bulletins.html">Security Bulletins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Project Governance</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../project/release-schedule.html">Release Schedule</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../project/copyright-and-license.html">Copyright and License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora</span>
+    <span class="version">3.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Antora</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">3.0</a>
+        </li>
+        <li class="version">
+          <a href="../../2.3/index.html">2.3</a>
+        </li>
+        <li class="version">
+          <a href="../../2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../2.1/index.html">2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../2.0/index.html">2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../antora-ui-default/index.html">Antora Default UI</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../antora-ui-default/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Antora</a></li>
+    <li><a href="partials.html">Partials</a></li>
+    <li><a href="include-a-partial.html">Include a Partial</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">3.0</button>
+  <div class="version-menu">
+    <a class="version is-current" href="include-a-partial.html">3.0</a>
+    <a class="version" href="../../2.3/page/include-a-partial.html">2.3</a>
+    <a class="version" href="../../2.2/asciidoc/include-partial.html">2.2</a>
+    <a class="version" href="../../2.1/asciidoc/include-partial.html">2.1</a>
+    <a class="version" href="../../2.0/asciidoc/include-partial.html">2.0</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://gitlab.com/antora/antora/edit/main/docs/modules/page/pages/include-a-partial.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Include a Partial</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>A partial can be inserted into any page or another partial in your site using the AsciiDoc include directive and the partial&#8217;s resource ID.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you aren&#8217;t familiar with the Antora resource ID and its coordinates, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="resource-id.html" class="xref page">Resources and Resource IDs</a></p>
+</li>
+<li>
+<p><a href="resource-id-coordinates.html" class="xref page">Resource ID Coordinates</a></p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="asciidoc-include-directive-for-partials"><a class="anchor" href="#asciidoc-include-directive-for-partials"></a>AsciiDoc include directive for partials</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An AsciiDoc include directive inserts content from a partial&#8217;s source file into another partial or a page.
+The include directive accepts the <a href="resource-id.html" class="xref page">Antora resource ID</a> of partials, examples, and pages as a value.</p>
+</div>
+<div class="paragraph">
+<p><a href="#ex-base">Example 1</a> shows the structure of an include directive with the fully qualified resource ID of a partial.
+Because the include directive is used to reference other resources, the <code>partial$</code> family coordinate must be specified in the partial&#8217;s resource ID when it&#8217;s assigned to an include directive.</p>
+</div>
+<div id="ex-base" class="listingblock">
+<div class="title">Example 1. Include directive assigned the fully qualified resource ID of a partial</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">include::version@component:module:partial$file-coordinate-of-target-partial.adoc[optional attribute]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>At a minimum, an include directive consists of the directive&#8217;s prefix (<code>include::</code>), the resource ID of the target partial, and a set of square brackets (<code>[]</code>).
+You can specify optional attributes within the square brackets as key-value pairs separated by commas.
+<a id="target"></a>The <strong class="term">target partial</strong> is the source file of a partial that&#8217;s being referenced by the current page.
+The target partial is referenced by assigning its resource ID to an include directive in the content of the current page.
+<a id="current"></a>The <strong class="term">current page</strong> is the page source file containing the include directive that references the target partial.</p>
+</div>
+<div class="paragraph">
+<p>When Antora runs, content from the target partial is inserted into the current page <a href="#placement">at the location where the include directive is entered</a>.
+The target partial&#8217;s content is converted after it&#8217;s inserted into the current page.
+This means the current page&#8217;s component version, module, attributes, and other elements are applied to or may impact the content included from the target partial.
+See <a href="partials.html#current-context" class="xref page">Current page context and structure</a> to learn more.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="partials-root"><a class="anchor" href="#partials-root"></a>Insert a partial into a page</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let&#8217;s break down the AsciiDoc include directive and resource ID coordinates you need to insert a <a href="#target">target partial</a> into the <a href="#current">current page</a>.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In your IDE or plain text editor, open the page where you want to insert the partial.
+For this step and the subsequent steps, let&#8217;s assume you&#8217;ve opened the file <em class="path">ranges.adoc</em>.</p>
+<div class="openblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">Example 2. ranges.adoc (current page)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">= Hike the Ranges
+
+== Terrain
+
+Above the treeline, the trail becomes a hard scramble.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The current page, <em class="path">ranges.adoc</em>, belongs to the component version <em>colorado 5.2</em> and module <em>ROOT</em>, shown in <a href="#ex-co">Example 3</a>.</p>
+</div>
+<div id="ex-co" class="listingblock">
+<div class="title">Example 3. Directories and files assigned to colorado 5.2</div>
+<div class="content">
+<pre>📄 antora.yml <i class="conum" data-value="1"></i><b>(1)</b>
+📂 modules
+  📂 ROOT <i class="conum" data-value="2"></i><b>(2)</b>
+    📂 pages <i class="conum" data-value="3"></i><b>(3)</b>
+      📄 index.adoc
+      📄 ranges.adoc
+    📂 partials <i class="conum" data-value="4"></i><b>(4)</b>
+      📄 treeline-warning.adoc</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Defines the component version as <em>colorado 5.2</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Defines the <em>ROOT</em> module</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Defines subsequent files as pages</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Defines subsequent files as partials</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>In the current page, select the line where you want the partial&#8217;s content to be inserted.
+At the beginning of the line, enter the name of the directive followed by two colons, <code>include::</code>.</p>
+<div class="listingblock">
+<div class="title">Example 4. ranges.adoc (current page)</div>
+<div class="content">
+<pre>Above the treeline, the trail becomes a hard scramble.
+
+<strong>include::</strong></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Let&#8217;s reference the target partial, <em class="path">treeline-warning.adoc</em>, from the current page.
+Assign the resource ID of the target partial to the include directive.
+Both <em class="path">treeline-warning.adoc</em> and <em class="path">ranges.adoc</em> belong to the same component version and module (see <a href="#ex-co">Example 3</a>).
+Therefore, only the <code>partial$</code> family coordinate and file coordinate of the target partial need to be specified.</p>
+<div class="openblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">Example 5. ranges.adoc (current page)</div>
+<div class="content">
+<pre>Above the treeline, the trail becomes a hard scramble.
+
+include::<strong>partial$treeline-warning.adoc</strong></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The file coordinate for the <em class="path">treeline-warning.adoc</em> partial is <code>treeline-warning.adoc</code>.
+The target partial&#8217;s file coordinate consists solely of its filename and file extension because <em class="path">treeline-warning.adoc</em> is stored at the root of the <em class="path">partials</em> directory.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+By default, the include directive assumes the family coordinate is <code>page$</code> when the coordinate isn&#8217;t specified.
+If you forget to use the <code>partial$</code> coordinate, Antora will report an error because it won&#8217;t be able to find the partial.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Directly after the resource ID of the target partial, complete the directive with a set of square brackets (<code>[]</code>).</p>
+<div class="openblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">Example 6. ranges.adoc (current page)</div>
+<div class="content">
+<pre>Above the treeline, the trail becomes a hard scramble.
+
+include::partial$treeline-warning.adoc<strong>[]</strong></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The brackets of the include directive can contain an optional list of attributes, such as <code>lines</code>, <code>tag</code>, or <code>tags</code>.
+Attributes are entered as key-value pairs separated by commas.
+See the <a href="https://docs.asciidoctor.org/asciidoc/latest/directives/include/" target="_blank" rel="noopener">AsciiDoc include directive documentation</a> for full details about the <code>lines</code>, <code>tag</code>, and <code>tags</code> syntax.</p>
+</div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it!
+You&#8217;ve created an include directive that will insert the target partial into the current page.</p>
+</div>
+<div class="paragraph">
+<p>The preceding instructions showed you how to insert a partial into a page under the most common scenario&#8212;&#8203;the target partial and current page belong to the same component version and module and the target partial is stored at the root of a <em class="path">partials</em> folder.
+However, if the target partial is stored in a subdirectory of the <em class="path">partials</em> directory, its file coordinate must specify the <a href="#relative-path">partials-relative directory path in addition to its filename and file extension</a>.</p>
+</div>
+<div id="ex-file" class="listingblock">
+<div class="title">Example 7. current-page.adoc</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">include::partial$target-partial-filename.adoc[] <i class="conum" data-value="1"></i><b>(1)</b>
+
+include::partial$path/to/target-partial-filename.adoc[] <i class="conum" data-value="2"></i><b>(2)</b>
+
+include::partial$./target-partial-filename.adoc[] <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>File coordinate of the target partial when it&#8217;s stored at the root of the <em class="path">partials</em> directory.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>File coordinate of the target partial when it&#8217;s stored in a subdirectory of the <em class="path">partials</em> directory.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>File coordinate of the target partial when the target partial and current page are stored in subdirectories with parallel family-relative directory paths.
+<em>This is an advanced use case.</em></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Also, you&#8217;ll need to specify additional resource ID coordinates when the target partial and current page don&#8217;t belong to the <a href="#modules">same module</a> or <a href="#component-versions">component version</a>.
+The following sections provide examples showing the various resource ID scenarios.</p>
+</div>
+<div class="sect2">
+<h3 id="relative-path"><a class="anchor" href="#relative-path"></a>File coordinate with partials-relative directory path</h3>
+<div class="paragraph">
+<p>The <em>partials</em>-relative directory path of the <a href="#target">target partial</a> is required in its file coordinate when it&#8217;s stored in a subdirectory of the <em class="path">partials</em> directory.</p>
+</div>
+<div id="ex-subdir-base" class="listingblock">
+<div class="title">Example 8. File coordinate when the target partial is stored in a subdirectory of a partials directory</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">include::partial$path/to/target-partial-filename.adoc[optional attribute]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s use the files that belong to the component version in <a href="#ex-co-subdir">Example 9</a> as the basis for the example in this section.</p>
+</div>
+<div id="ex-co-subdir" class="listingblock">
+<div class="title">Example 9. Directories and files assigned to colorado 5.2</div>
+<div class="content">
+<pre>📄 antora.yml <i class="conum" data-value="1"></i><b>(1)</b>
+📂 modules
+  📂 la-garita <i class="conum" data-value="2"></i><b>(2)</b>
+    📂 pages <i class="conum" data-value="3"></i><b>(3)</b>
+      📄 ridge.adoc
+    📂 partials <i class="conum" data-value="4"></i><b>(4)</b>
+      📂 climate <i class="conum" data-value="5"></i><b>(5)</b>
+        📄 gear-list.adoc</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Defines the component version as <em>colorado 5.2</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Defines a module named <em>la-garita</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Defines subsequent files as pages</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Defines subsequent files as partials</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>A subdirectory in <em>partials</em> containing the source files of partials</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s reference <em class="path">gear-list.adoc</em> from <em class="path">ridge.adoc</em>.
+As you can see in <a href="#ex-co-subdir">Example 9</a> above, the partial and page belong to the <em>la-garita</em> module.
+In <a href="#ex-subdir">Example 10</a>, an include directive in the <em class="path">ridge.adoc</em> page (current page) references the <em class="path">gear-list.adoc</em> file (target partial).</p>
+</div>
+<div id="ex-subdir" class="listingblock">
+<div class="title">Example 10. ridge.adoc (current page)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">== Plan your hike
+
+include::partial$climate/gear-list.adoc[]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As shown in <a href="#ex-subdir">Example 10</a>, the family coordinate is <code>partial$</code> and the file coordinate for <em class="path">gear-list.adoc</em> is <code>climate/gear-list.adoc</code>.
+The file coordinate for <em class="path">gear-list.adoc</em> consists of its <em class="path">partials</em>-relative directory path, filename, and file extension because it&#8217;s stored in the subdirectory <em class="path">climate</em>.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+In special circumstances where the <em>partials</em>-relative directory path of the target partial and the <em>pages</em>-relative directory path of the current page are parallel, the <em>partials</em>-relative directory path can be replaced with the relative path token, <code>./</code>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="modules"><a class="anchor" href="#modules"></a>Include a partial from another module</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When the <a href="#target">target partial</a> and the <a href="#current">current page</a> don&#8217;t belong to the same module, you must specify the target partial&#8217;s <a href="resource-id-coordinates.html#id-module" class="xref page">module</a>, <a href="resource-id-coordinates.html#id-family" class="xref page">family</a>, and <a href="resource-id-coordinates.html#id-resource" class="xref page">file coordinates</a> in the include directive.</p>
+</div>
+<div id="ex-module-base" class="listingblock">
+<div class="title">Example 11. Module, family, and file coordinates assigned to an include directive</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">include::module:partial$target-partial-filename.adoc[optional attribute] <i class="conum" data-value="1"></i><b>(1)</b>
+
+include::module:partial$path/to/target-partial-filename.adoc[optional attribute] <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Assign the module, <code>partial$</code>, and file coordinates of the target partial to the include directive when the target partial and current page belong to the same component version but not the same module.
+The target partial&#8217;s file coordinate is its filename and file extension when it&#8217;s <a href="#partials-root">stored at the root of a <em>partials</em> family directory</a>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>If <a href="#relative-path">the target partial is stored in a subdirectory of a <em>partials</em> directory</a>, the target partial&#8217;s file coordinate must specify its <em>partials</em>-relative directory path, filename, and file extension.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s use the files that belong to the component version shown in <a href="#ex-co-mod">Example 12</a> as the basis for the example in this section.</p>
+</div>
+<div id="ex-co-mod" class="listingblock">
+<div class="title">Example 12. Directories and files assigned to colorado 5.2</div>
+<div class="content">
+<pre>📄 antora.yml <i class="conum" data-value="1"></i><b>(1)</b>
+📂 modules
+  📂 la-garita <i class="conum" data-value="2"></i><b>(2)</b>
+    📂 pages <i class="conum" data-value="3"></i><b>(3)</b>
+      📄 ridge.adoc
+  📂 ROOT <i class="conum" data-value="4"></i><b>(4)</b>
+    📂 partials <i class="conum" data-value="5"></i><b>(5)</b>
+      📄 treeline-warning.adoc</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Defines the component version as <em>colorado 5.2</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Defines a module named <em>la-garita</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Defines subsequent files as pages</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Defines a module named <em>ROOT</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Defines subsequent files as partials</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s insert the <em class="path">treeline-warning.adoc</em> partial into the <em class="path">ridge.adoc</em> page.
+That means the source file <em class="path">treeline-warning.adoc</em> is the target partial and <em class="path">ridge.adoc</em> is the current page.
+As shown in <a href="#ex-co-mod">Example 12</a> above, the <em class="path">ridge.adoc</em> page belongs to the <em>la-garita</em> module, and the <em class="path">treeline-warning.adoc</em> partial belongs to the <em>ROOT</em> module.</p>
+</div>
+<div class="paragraph">
+<p><a href="#ex-module">Example 13</a> shows an include directive in <em class="path">ridge.adoc</em> that references the partial <em class="path">treeline-warning.adoc</em>.
+The module, <code>partial$</code>, and file coordinates of the target partial are assigned to the include directive.</p>
+</div>
+<div id="ex-module" class="listingblock">
+<div class="title">Example 13. ridge.adoc (current page)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">include::ROOT:partial$treeline-warning.adoc[]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As shown in <a href="#ex-module">Example 13</a>, the target partial&#8217;s module coordinate is <code>ROOT</code>, its family coordinate is <code>partial$</code>, and its file coordinate is <code>treeline-warning.adoc</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="component-versions"><a class="anchor" href="#component-versions"></a>Include a partial from another component</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When the <a href="#target">target partial</a> and <a href="#current">current page</a> don&#8217;t belong to the same documentation component, specify the partial&#8217;s <a href="resource-id-coordinates.html#id-version" class="xref page">version, component, module, family, and file coordinates</a> in the resource ID assigned to the include directive.</p>
+</div>
+<div id="ex-component-version-base" class="listingblock">
+<div class="title">Example 14. Version, component, module, family, and file coordinates assigned to an include directive</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">include::version@component:module:partial$target-partial-filename.adoc[] <i class="conum" data-value="1"></i><b>(1)</b>
+
+include::version@component:module:partial$path/to/target-partial-filename.adoc[] <i class="conum" data-value="2"></i><b>(2)</b>
+
+include::component:module:partial$file-coordinate-of-target-partial.adoc[] <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Assign the version, component, module, family, and file coordinates of the target partial to the include directive when the target partial and current page don&#8217;t belong to the same component version.
+The target partial&#8217;s file coordinate is its filename and file extension when the target partial is <a href="#partials-root">stored at the root of a <em>partials</em> family directory</a>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>If <a href="#relative-path">the target partial is stored in a subdirectory of a <em>partials</em> directory</a>, the target partial&#8217;s file coordinate must specify its <em>partials</em>-relative directory path, filename, and file extension.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>If the version coordinate isn&#8217;t specified, Antora uses the <a href="#latest-version">latest version of the target partial&#8217;s component</a> to complete the resource ID at runtime.
+This behavior only applies when the target partial and current page belong to different docs components.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s use the files that belong to the component versions <em>colorado 5.2</em> (<a href="#ex-co-v">Example 15</a>) and <em>wyoming 1.0</em> (<a href="#ex-wy">Example 16</a>) as the basis for the example in this section.</p>
+</div>
+<div id="ex-co-v" class="listingblock">
+<div class="title">Example 15. Directories and files assigned to colorado 5.2</div>
+<div class="content">
+<pre>📄 antora.yml <i class="conum" data-value="1"></i><b>(1)</b>
+📂 modules
+  📂 ROOT <i class="conum" data-value="2"></i><b>(2)</b>
+    📂 pages <i class="conum" data-value="3"></i><b>(3)</b>
+      📄 index.adoc
+    📂 partials <i class="conum" data-value="4"></i><b>(4)</b>
+      📄 treeline-warning.adoc</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Defines the component version as <em>colorado 5.2</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Defines the <em>ROOT</em> module</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Defines subsequent source files as pages</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Defines subsequent source files as partials</td>
+</tr>
+</table>
+</div>
+<div id="ex-wy" class="listingblock">
+<div class="title">Example 16. Directories and files assigned to wyoming 1.0</div>
+<div class="content">
+<pre>📄 antora.yml <i class="conum" data-value="1"></i><b>(1)</b>
+📂 modules
+  📂 sierra-madre <i class="conum" data-value="2"></i><b>(2)</b>
+    📂 pages <i class="conum" data-value="3"></i><b>(3)</b>
+      📄 elevation.adoc</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Defines the component version as <em>wyoming 1.0</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Defines a module named <em>sierra-madre</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Defines subsequent files as pages</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Using files from <a href="#ex-co-v">Example 15</a> and <a href="#ex-wy">Example 16</a>, let&#8217;s reference <em class="path">treeline-warning.adoc</em> (target partial) from <em class="path">elevation.adoc</em> (current page).
+The <em class="path">treeline-warning.adoc</em> partial belongs to the component version <em>colorado 5.2</em>.
+The <em class="path">elevation.adoc</em> page belongs to the component version <em>wyoming 1.0</em>.</p>
+</div>
+<div class="paragraph">
+<p>The include directive in <a href="#ex-across-components">Example 17</a> will embed the content of the <em class="path">treeline-warning.adoc</em> partial into the <em class="path">elevation.adoc</em> page.</p>
+</div>
+<div id="ex-across-components" class="listingblock">
+<div class="title">Example 17. elevation.adoc (current page)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">include::5.2@colorado:ROOT:partial$treeline-warning.adoc[]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As shown in <a href="#ex-across-components">Example 17</a>, the target partial&#8217;s version coordinate is <code>5.2</code>, its component coordinate is <code>colorado</code>, its module coordinate is <code>ROOT</code>, its family coordinate is <code>partial$</code>, and its file coordinate is <code>treeline-warning.adoc</code>.
+You could also specify the resource ID for <em class="path">treeline-warning.adoc</em> as <code>5.2@colorado::partial$treeline-warning.adoc</code> (notice the module coordinate <code>ROOT</code> seems to be missing).
+When the target partial&#8217;s component coordinate is specified, and the target partial belongs to the <em>ROOT</em> module, the module coordinate <code>ROOT</code> doesn&#8217;t have to be explicitly specified.
+However, you must still enter the colon (<code>:</code>) that would follow the module coordinate.
+This shorthand only works when a component coordinate is specified and the module coordinate of the target partial is <code>ROOT</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="latest-version"><a class="anchor" href="#latest-version"></a>Use the latest version of a partial</h3>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+This behavior only applies when the target partial and current page belong to different docs components!
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If a version isn&#8217;t specified in the resource ID assigned to an include directive, <strong>and the target partial and current page don&#8217;t belong to the same component</strong>, Antora uses the version coordinate of the <a href="../how-component-versions-are-sorted.html#latest-version" class="xref page">latest version</a> of the target partial&#8217;s component to complete the resource ID at runtime.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s use the files that belong to the component versions <em>colorado 5.2</em> (<a href="#ex-co-latest">Example 18</a>), <em>wyoming 1.0</em> (<a href="#ex-wy1">Example 19</a>), and <em>wyoming 1.5</em> (<a href="#ex-wy-latest">Example 20</a>) as the basis for the example in this section.</p>
+</div>
+<div id="ex-co-latest" class="listingblock">
+<div class="title">Example 18. Directories and files assigned to colorado 5.2</div>
+<div class="content">
+<pre>📄 antora.yml <i class="conum" data-value="1"></i><b>(1)</b>
+📂 modules
+  📂 la-garita
+    📂 pages
+      📄 willow-creek.adoc</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Defines the component version as <em>colorado 5.2</em></td>
+</tr>
+</table>
+</div>
+<div id="ex-wy1" class="listingblock">
+<div class="title">Example 19. Directories and files assigned to wyoming 1.0</div>
+<div class="content">
+<pre>📄 antora.yml <i class="conum" data-value="1"></i><b>(1)</b>
+📂 modules
+  📂 sierra-madre
+    📂 pages
+      📄 elevation.adoc
+    📂 partials
+      📄 bears.adoc</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Defines the component version as <em>wyoming 1.0</em></td>
+</tr>
+</table>
+</div>
+<div id="ex-wy-latest" class="listingblock">
+<div class="title">Example 20. Directories and files assigned to wyoming 1.5</div>
+<div class="content">
+<pre>📄 antora.yml <i class="conum" data-value="1"></i><b>(1)</b>
+📂 modules
+  📂 sierra-madre
+    📂 pages
+      📄 elevation.adoc
+    📂 partials
+      📄 bears.adoc</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Defines the component version as <em>wyoming 1.5</em></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s reference the <em class="path">bears.adoc</em> partial (target partial) from the <em class="path">willow-creek.adoc</em> page (current page).
+<em class="path">willow-creek.adoc</em> belongs to component version <em>colorado 5.2</em>.
+There are two files named <em class="path">bears.adoc</em> that belong to the <em>wyoming</em> component, <em>sierra-madre</em> module, and <em>partials</em> family.
+One <em class="path">bears.adoc</em> belongs to version <em>1.0</em>, the other <em class="path">bears.adoc</em> to version <em>1.5</em>.</p>
+</div>
+<div class="paragraph">
+<p><a href="#ex-across-components-latest">Example 21</a> shows an include directive referencing <em class="path">bears.adoc</em> (target partial) from <em class="path">willow-creek.adoc</em> (current page).
+Notice that the target partial&#8217;s version coordinate isn&#8217;t specified.</p>
+</div>
+<div id="ex-across-components-latest" class="listingblock">
+<div class="title">Example 21. willow-creek.adoc (current page)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">include::wyoming:sierra-madre:partial$bears.adoc[]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When Antora runs, it will identify <em>wyoming 1.5</em> as the latest version of the <em>wyoming</em> component according to its <a href="../how-component-versions-are-sorted.html#version-sorting-rules" class="xref page">version sorting rules</a> and <a href="../how-component-versions-are-sorted.html#latest-version" class="xref page">latest version criteria</a>.
+Because a version coordinate isn&#8217;t specified in <a href="#ex-across-components-latest">Example 21</a>, Antora will complete the resource ID assigned to the include directive using the version coordinate&#8201;&#8212;&#8201;<code>1.5</code>&#8201;&#8212;&#8201;from the latest <em>wyoming</em> component.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+This behavior of linking to the latest version only applies when the version coordinate is unspecified and the target partial and current page belong to different components.
+If the version and component coordinates aren&#8217;t specified in the resource ID, Antora assumes the target partial belongs to the same component version as the current page and uses the current page&#8217;s version and component coordinates to complete the target partial&#8217;s resource ID.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="placement"><a class="anchor" href="#placement"></a>Include directive placement</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An include directive is placed at the beginning of a new line.
+The content from the target partial will be displayed as a standalone block when you enter an empty line above and below the include directive.
+You can attach content from the target partial to a block in the current page by placing the include directive on a new line directly adjacent to the content to which it should be attached.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 22. current-page.adoc</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">A paragraph in the page.
+
+include::partial$cli-options.adoc[tag=compass] <i class="conum" data-value="1"></i><b>(1)</b>
+
+A line of content.
+include::partial$addendum.adoc[] <i class="conum" data-value="2"></i><b>(2)</b>
+Another line of content.</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>To display the included content as a standalone block, make sure there is an empty line above the include directive and after the include directive.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>To attach the included content to a block in the current page, enter the include directive on a new line directly above, between, or below the content lines of the block.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="learn-more"><a class="anchor" href="#learn-more"></a>Learn more</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="include-an-example.html" class="xref page">Include an Example</a></p>
+</li>
+<li>
+<p><a href="include-a-page.html" class="xref page">Include a Page</a></p>
+</li>
+<li>
+<p><a href="resource-id.html" class="xref page">Resources and Resource IDs</a></p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title"><strong>AsciiDoc and Asciidoctor resources</strong></div>
+<ul>
+<li>
+<p><a href="https://docs.asciidoctor.org/asciidoc/latest/directives/include-with-leveloffset/" target="_blank" rel="noopener">Offset section headings with leveloffset</a></p>
+</li>
+<li>
+<p><a href="https://docs.asciidoctor.org/asciidoc/latest/directives/include-tagged-regions/" target="_blank" rel="noopener">Select regions of content with tags</a></p>
+</li>
+<li>
+<p><a href="https://docs.asciidoctor.org/asciidoc/latest/directives/include/" target="_blank" rel="noopener">AsciiDoc include directive</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="partials.html">Partials</a></span>
+  <span class="next"><a href="examples.html">Examples</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright © <a href="https://opendevise.com">OpenDevise Inc.</a> and individual contributors to <a href="https://antora.org">Antora</a>.</p>
+  <p>Except where otherwise noted, docs.antora.org, Antora, and the Antora UI, are licensed under the <a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License Version 2.0</a> (MPL-2.0).</p>
+  <p>AsciiDoc® is a trademark of the Eclipse Foundation, Inc.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

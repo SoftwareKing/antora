@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="130.5mm" height="41.9mm" version="1.1" viewBox="0 0 130.5 41.9" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <title>Resource ID of the target resource</title>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Resource ID of the target resource</dc:title>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Sarah White</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:publisher>
+     <cc:Agent>
+      <dc:title>OpenDevise Inc.</dc:title>
+     </cc:Agent>
+    </dc:publisher>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>Antora resource ID</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+    <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(3.844e-7 -228.09)">
+  <rect y="228.09" width="130.5" height="41.9" fill="#fff"/>
+  <g>
+   <text transform="scale(1 .99998)" x="-0.10121814" y="247.85901" fill="#1565c0" font-family="'Montserrat Medium'" font-size="7.2298px" font-weight="500" letter-spacing="0px" stroke-width=".0727px" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:0%" xml:space="preserve"><tspan x="-0.10121814" y="247.85901" font-family="'Montserrat Medium'" font-size="7.2298px" font-weight="500" stroke-width=".0727px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%"><tspan fill="#808080">xref:</tspan>2.5@hyper:admin:modes.adoc<tspan fill="#808080">[]</tspan></tspan></text>
+   <text x="70.555565" y="268.79431" fill="#1565c0" font-family="'Montserrat Medium'" font-size="7.2059px" font-weight="500" letter-spacing="0px" stroke-width=".0727px" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:0%" xml:space="preserve"><tspan x="70.555565" y="268.79431" fill="#1565c0" font-family="'Montserrat Medium'" font-size="5.7647px" font-weight="500" stroke-width=".0727px" text-align="center" text-anchor="middle" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%">resource ID of target resource</tspan></text>
+   <path d="m16.002 251.26v5.7034l109.39 2e-5v-5.7034" fill="none" stroke="#1565c0" stroke-linecap="round" stroke-linejoin="round" stroke-width=".529"/>
+   <g transform="translate(-23.98 -16.882)" fill="none" stroke="#1565c0" stroke-linecap="round" stroke-linejoin="round" stroke-width=".529">
+    <path d="m94.676 274.08v3.2096"/>
+    <circle cx="94.676" cy="278.06" r=".75117" stroke-dashoffset="72"/>
+   </g>
+   <text transform="scale(1 .99998)" x="-0.10121814" y="233.57129" fill="#242424" font-family="'Montserrat Medium'" font-size="7.2298px" font-weight="500" letter-spacing="0px" stroke-width=".0727px" word-spacing="0px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:0%" xml:space="preserve"><tspan x="-0.10121814" y="233.57129" fill="#808080" font-family="'Montserrat Medium'" font-size="7.2298px" font-weight="500" stroke-width=".0727px" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:125%">= Satellites</tspan></text>
+  </g>
+ </g>
+</svg>

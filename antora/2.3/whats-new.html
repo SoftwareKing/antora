@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>What&#8217;s New in Antora 2.3 :: Antora Docs</title>
+    <link rel="canonical" href="https://docs.antora.org/antora/latest/whats-new.html">
+    <link rel="prev" href="index.html">
+    <link rel="next" href="features.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/site-extra.css">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="https://antora.org">Antora</a>
+        <span class="separator">//</span>
+        <a href="https://docs.antora.org">Docs</a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Projects</div>
+          <div class="navbar-dropdown">
+            <div class="navbar-item"><strong>Core</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <div class="navbar-item"><strong>Default UI</strong></div>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default">Repository</a>
+            <a class="navbar-item" href="https://gitlab.com/antora/antora-ui-default/issues">Issue Tracker</a>
+            <hr class="navbar-divider">
+            <a class="navbar-item" href="https://gitlab.com/antora/antora/blob/main/contributing.adoc">Contributing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Community</div>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="https://antora.zulipchat.com">Chat (Zulip)</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://twitter.com/antoraproject">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#57aaee" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="antora" data-version="2.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Antora</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="whats-new.html">What&#8217;s New in Antora 2.3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="features.html">How Antora Can Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="how-antora-works.html">How Antora Works</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install-and-run-quickstart.html">Install and Run Antora Quickstart</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Antora</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install/linux-requirements.html">Linux Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install/macos-requirements.html">macOS Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install/windows-requirements.html">Windows Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install/install-antora.html">Install Antora</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install/upgrade-antora.html">Upgrade Antora</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="install/supported-platforms.html">Supported Platforms</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Set Up Content Sources</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="organize-content-files.html">How to Organize Your Content Files</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="content-source-repositories.html">Repositories and Content Source Roots</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="content-source-versioning-methods.html">Content Source Versioning Methods</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="standard-directories.html">Standard File and Directory Set</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="module-directories.html">Module Directories and Modules</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="root-module-directory.html">ROOT Module Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="named-module-directory.html">Named Module Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="module-directory-names.html">Recommendations for Module Directory Names</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="module-url-segment.html">Module Segment in Page URLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="family-directories.html">Family Directories and Families</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="pages-directory.html">Pages Directory and Page Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="partials-directory.html">Partials Directory and Partial Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="examples-directory.html">Examples Directory and Example Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="images-directory.html">Images Directory and Image Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="attachments-directory.html">Attachments Directory and Attachment Files</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configure Component Versions</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-version.html">What&#8217;s a Component Version?</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-version-descriptor.html">What&#8217;s antora.yml?</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-name-and-version.html">Define a Component Name and Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-title.html">Customize the Title</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-display-version.html">Customize the Display Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-prerelease.html">Identify a Prerelease Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-with-no-version.html">Define a Component Version with No Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-attributes.html">Assign Attributes to a Component Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-start-page.html">Choose a Start Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="component-navigation.html">Assign Navigation Files to a Component Version</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="how-component-versions-are-sorted.html">How Component Versions are Sorted</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="distributed-component-version.html">Distributed Component Versions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Create &amp; Manage Pages</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/index.html">Pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/standard-page.html">Set Up a Standard Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/title-and-metadata.html">Add a Title and Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="page/attributes.html">AsciiDoc Attributes in Antora</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/define-and-modify-attributes.html">Define and Modify Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/page-attributes.html">Page Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/intrinsic-attributes.html">Intrinsic Attributes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/start-page.html">Create a Start Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="page/page-id.html">Page IDs and Cross References</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/module-and-page-xrefs.html">Xref Pages in a Component Version</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/version-and-component-xrefs.html">Xref Pages in Other Components and Versions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/reftext-and-navtitle.html">Customize reftext and navtitle</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/page-aliases.html">Set Up URL Redirects with page-aliases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/page-layout.html">Assign UI Templates with page-layout</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Create &amp; Manage Resources</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="page/resource-id.html">Resources and Resource IDs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="page/partials-and-content-snippets.html">Content Snippets and Partials</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/create-a-partial.html">Create a Partial</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/include-a-partial.html">Include a Partial</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="page/examples-and-source-snippets.html">Source Code Snippets and Examples</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/include-an-example.html">Include an Example</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="page/images.html">Images</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/block-images.html">Add Block Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/inline-images.html">Add Inline Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/image-resource-id-examples.html">Image Resource ID Examples</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/link-attachment.html">Link to an Attachment</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="page/include-a-page.html">Include a Page</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="page/page-partial.html">Unset page-partial Globally</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">AsciiDoc Primer</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/asciidoc.html">Why AsciiDoc?</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/section-headings.html">Sections</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="asciidoc/text-and-punctuation.html">Text and Punctuation Styles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/bold.html">Bold</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/italic.html">Italic</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/monospace.html">Monospace</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/highlight.html">Highlight</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/quotes-and-apostrophes.html">Quote Marks and Apostrophes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/special-characters-and-symbols.html">Special Characters and Symbols</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/subscript-and-superscript.html">Subscript and Superscript</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/in-page-xref.html">Internal Xrefs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/external-urls.html">URLs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="asciidoc/lists.html">Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/ordered-and-unordered-lists.html">Bullet and Numbered Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/description-lists.html">Description Lists</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc/checklists.html">Checklists</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/embed-video.html">Embed a Video</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/ui-macros.html">UI Macros</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/source.html">Source Blocks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/admonitions.html">Admonitions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/examples.html">Examples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/sidebar.html">Sidebars</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc/comments.html">Comments</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Navigation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/index.html">Navigation Assembly</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="navigation/files-and-lists.html">Navigation Files and Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="navigation/single-list.html">Create a Navigation File with One List</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="navigation/multiple-lists.html">Create a Navigation File with Multiple Lists</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/xrefs-and-link-text.html">Page Xrefs and Link Text</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/reference-resources.html">Reference Attachments</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/external-links.html">Add Links to External Sites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/format-content.html">Format List Content</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/organize-files.html">Navigation File Locations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/include-lists.html">Compose Navigation Files</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="navigation/register-navigation-files.html">Register Navigation Files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configure Your Site</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="playbook/index.html">The Antora Playbook</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="playbook/set-up-playbook.html">Set Up a Playbook</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/configure-site.html">Site Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/site-url.html">Site URL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/site-title.html">Site Title</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/site-start-page.html">Site Start Page</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/site-robots.html">Robots</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/site-keys.html">Account and API Keys</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/configure-content-sources.html">Content Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/content-source-url.html">URLs for Content Sources</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="playbook/private-repository-auth.html">Private Repository Authentication</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/content-branches.html">Branches</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/content-tags.html">Tags</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/content-source-start-path.html">Single Start Path</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/content-source-start-paths.html">Multiple Start Paths</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/content-edit-url.html">Edit URL Key</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/configure-git.html">Git Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/git-suffix.html">Git Repository URL Suffix</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/git-credentials-path-and-contents.html">Git Credentials Path and Contents</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/configure-asciidoc.html">AsciiDoc Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/asciidoc-attributes.html">Assign Attributes to a Site</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/asciidoc-extensions.html">Asciidoctor Extensions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/configure-ui.html">UI Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/ui-bundle-url.html">UI Bundle URL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/ui-output-dir.html">UI Output Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/ui-default-layout.html">Default Layout for Pages</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/configure-urls.html">URLs Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/urls-redirect-facility.html">Redirect Facility Key</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/urls-html-extension-style.html">HTML Extension Styles</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/configure-output.html">Output Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/output-dir.html">Output Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/output-provider-archive.html">Archive Provider</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/output-provider-fs.html">Filesystem Provider</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/output-provider-custom.html">Custom Provider</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="playbook/configure-runtime.html">Runtime Keys</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/runtime-fetch.html">Fetch Updates</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="playbook/runtime-cache-dir.html">Cache Directory</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="playbook/author-mode.html">Use Author Mode</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="playbook/use-an-existing-playbook-project.html">Use an Existing Playbook Project</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="playbook/environment-variables.html">Environment Variables</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Generate Your Site</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="run-antora.html">Run Antora</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="preview-site.html">Preview Your Site</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="cli/index.html">Antora CLI Commands</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cli/options.html">CLI Options</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="cli/primer.html">CLI Primer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cache.html">Configure Antora&#8217;s Cache</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="antora-container.html">Run Antora in a Container</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Publish Your Site</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="add-404-error-page.html">Add a 404 Error Page</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="publish-to-github-pages.html">Publish to GitHub Pages</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Extend &amp; Customize</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pipeline/supported-components.html">Antora Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="project/get-help.html">Get Help</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="security-bulletins.html">Security Bulletins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Project Governance</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="project/release-schedule.html">Release Schedule</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="project/copyright-and-license.html">Copyright and License</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora</span>
+    <span class="version">2.3</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../latest/index.html">Antora</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../latest/index.html">3.0</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">2.3</a>
+        </li>
+        <li class="version">
+          <a href="../2.2/index.html">2.2</a>
+        </li>
+        <li class="version">
+          <a href="../2.1/index.html">2.1</a>
+        </li>
+        <li class="version">
+          <a href="../2.0/index.html">2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../antora-ui-default/index.html">Antora Default UI</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../antora-ui-default/index.html">default</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../latest/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Antora</a></li>
+    <li><a href="whats-new.html">What&#8217;s New in Antora 2.3</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2.3</button>
+  <div class="version-menu">
+    <a class="version" href="../latest/whats-new.html">3.0</a>
+    <a class="version is-current" href="whats-new.html">2.3</a>
+    <a class="version" href="../2.2/whats-new.html">2.2</a>
+    <a class="version" href="../2.1/whats-new.html">2.1</a>
+    <a class="version" href="../2.0/whats-new.html">2.0</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://gitlab.com/antora/antora/edit/v2.3.x/docs/modules/ROOT/pages/whats-new.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">What&#8217;s New in Antora 2.3</h1>
+<h1 id="antora-2-3-4" class="sect0"><a class="anchor" href="#antora-2-3-4"></a>Antora 2.3.4</h1>
+<div class="openblock partintro">
+<div class="content">
+<em><strong>Release date:</strong> 2020.09.15 | <strong>Issue label:</strong> <a href="https://gitlab.com/antora/antora/issues?scope=all&amp;state=closed&amp;label_name%5B%5D=%5BVersion%5D%202.3.4" target="_blank" rel="noopener">2.3.4</a></em>
+</div>
+</div>
+<div class="sect1">
+<h2 id="resolved-issues"><a class="anchor" href="#resolved-issues"></a>Resolved issues</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="changed"><a class="anchor" href="#changed"></a>Changed</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/650" target="_blank" rel="noopener">#650</a></dt>
+<dd>
+<p>If the playbook file isn&#8217;t found, display the invalid file path in the error message.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/665" target="_blank" rel="noopener">#665</a></dt>
+<dd>
+<p>Show a more informative error message if the page ID specifying the site start page (<code>site.start_page</code>) is missing a component name.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/676" target="_blank" rel="noopener">#676</a></dt>
+<dd>
+<p>Instead of crashing, display a warning when the page ID specifying the start page for a site or component version contains invalid syntax.
+Also change <code>ContentCatalog#resolveResource</code> (and thus <code>ContentCatalog#resolvePage</code>) to return <code>false</code> instead of throwing an error when a resource ID has invalid syntax.
+This change makes the <code>resolvePage</code> and <code>resolvePageURL</code> UI helper functions more resilient.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/675" target="_blank" rel="noopener">#675</a></dt>
+<dd>
+<p>Disallow a file URI as the value of <code>site.url</code> in the playbook.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/627" target="_blank" rel="noopener">#627</a></dt>
+<dd>
+<p>Retain the <code>cwd</code> property, and thus the <code>base</code> property, for supplemental UI files read from the local filesystem.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="fixed"><a class="anchor" href="#fixed"></a>Fixed</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/644" target="_blank" rel="noopener">#644</a></dt>
+<dd>
+<p>Don&#8217;t modify the file extension of an AsciiDoc file in the attachments family.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/587" target="_blank" rel="noopener">#587</a></dt>
+<dd>
+<p>Show a more detailed error message when attempting to add a duplicate file.
+<em>Also known as the infamous &#8220;Duplicate nav&#8221; conundrum</em>.
+This error message will serve as a template for more informative messages to be added in the future once a logging facility is integrated into Antora.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/648" target="_blank" rel="noopener">#648</a></dt>
+<dd>
+<p>If a page alias conflicts with an existing page, show the page ID of the page that defines the alias in the error message.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/627" target="_blank" rel="noopener">#627</a></dt>
+<dd>
+<p>Allow dot files (i.e., hidden files) in a supplemental UI directory to be used as static files.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/653" target="_blank" rel="noopener">#653</a></dt>
+<dd>
+<p>Don&#8217;t register a page alias for the default component version index page (i.e., <code>ROOT:index.adoc</code>) when the <code>start_page</code> key in a component version&#8217;s <em class="path">antora.yml</em> file specifies a different page.
+This prevents a concrete index page from being overwritten (i.e., shadowed).</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/673" target="_blank" rel="noopener">#673</a></dt>
+<dd>
+<p>Show an informative error message if the value of a map or primitive-map key in the playbook file is a String.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="thanks-2-3-4"><a class="anchor" href="#thanks-2-3-4"></a>Thanks</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A big <strong>thank you!</strong> to all the folks who helped make Antora even better.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Karl Dangerfield (<a href="https://gitlab.com/obayozo" target="_blank" rel="noopener">@obayozo</a>)</dt>
+<dd>
+<p>For fixing the errors in the content source directory examples.</p>
+</dd>
+<dt class="hdlist1">David Jencks (<a href="https://gitlab.com/djencks" target="_blank" rel="noopener">@djencks</a>)</dt>
+<dd>
+<p>For fixing typos in the documentation.</p>
+</dd>
+<dt class="hdlist1">Alexander Schwartz (<a href="https://gitlab.com/ahus1" target="_blank" rel="noopener">@ahus1</a>)</dt>
+<dd>
+<p>For documenting the environment variables alongside the command line options.</p>
+</dd>
+<dt class="hdlist1">Coley Woyak (<a href="https://gitlab.com/coley.woyak.saagie" target="_blank" rel="noopener">@coley.woyak.saagie</a>)</dt>
+<dd>
+<p>For fixing typos in the documentation.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="caution-coming-soon"><a class="anchor" href="#caution-coming-soon"></a>Caution! Coming soon</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is a friendly reminder that Antora 3 will include breaking changes and deprecations.
+You can get a head start by correcting any invalid resource IDs, page IDs, and page aliases right now.
+See <a href="#deprecation"><em>Deprecations scheduled for removal in Antora 3.0</em></a> for more information.</p>
+</div>
+</div>
+</div>
+<h1 id="antora-2-3-3" class="sect0"><a class="anchor" href="#antora-2-3-3"></a>Antora 2.3.3</h1>
+<div class="openblock partintro">
+<div class="content">
+<em><strong>Release date:</strong> 2020.05.30 | <strong>Issue label:</strong> <a href="https://gitlab.com/antora/antora/issues?scope=all&amp;state=closed&amp;label_name%5B%5D=%5BVersion%5D%202.3.3" target="_blank" rel="noopener">2.3.3</a></em>
+</div>
+</div>
+<div class="sect1">
+<h2 id="resolved-issues-2"><a class="anchor" href="#resolved-issues-2"></a>Resolved issues</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="fixed-2"><a class="anchor" href="#fixed-2"></a>Fixed</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/639" target="_blank" rel="noopener">#639</a></dt>
+<dd>
+<p>Fix crash computing canonical URL for page that only exists in prerelease version.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="thanks-2-3-3"><a class="anchor" href="#thanks-2-3-3"></a>Thanks</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A huge thanks to James Elliott (<a href="https://gitlab.com/DeepSymmetry" target="_blank" rel="noopener">@DeepSymmetry</a>) for suffering through this bug and helping us solve the case of the missing scenario in the test suite.</p>
+</div>
+</div>
+</div>
+<h1 id="antora-2-3-2" class="sect0"><a class="anchor" href="#antora-2-3-2"></a>Antora 2.3.2</h1>
+<div class="openblock partintro">
+<div class="content">
+<em><strong>Release date:</strong> 2020.05.24 | <strong>Issue label:</strong> <a href="https://gitlab.com/antora/antora/issues?scope=all&amp;state=closed&amp;label_name%5B%5D=%5BVersion%5D%202.3.2" target="_blank" rel="noopener">2.3.2</a></em>
+</div>
+</div>
+<div class="sect1">
+<h2 id="highlights"><a class="anchor" href="#highlights"></a>Highlights</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="fix-regression-when-resolving-page-id-with-version-and-no-file-extension"><a class="anchor" href="#fix-regression-when-resolving-page-id-with-version-and-no-file-extension"></a>Fix regression when resolving page ID with version and no file extension</h3>
+<div class="paragraph">
+<p>If the page ID for an xref had a version but no file extension (e.g., <code>2.0@page</code>), the page ID would not resolve.
+This happened because the <code>.</code> in the version number was confused as that start of a file extension.
+Thus the automatic <code>.adoc</code> file extension was not added and the page ID would not match an existing page.</p>
+</div>
+<div class="paragraph">
+<p>What this fix does not solve is when the page (i.e., relative path) part of the page ID has a <code>.</code> but no file extension (e.g., <code>something-2.0</code>).
+This is an ambiguous scenario.
+In this case, you will have to update the page ID to include the <code>.adoc</code> file extension manually (e.g., <code>something-2.0.adoc</code>).</p>
+</div>
+<div class="paragraph">
+<p>Keep in mind that in Antora 3, all page IDs <em>must</em> have a file extension.
+So while this regression has been corrected, this case will not resolve in the future.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="support-image-xref-to-page-id-with-fragment"><a class="anchor" href="#support-image-xref-to-page-id-with-fragment"></a>Support image xref to page ID with fragment</h3>
+<div class="paragraph">
+<p>Support for the xref attribute on images was added in Antora 2.3.
+However, if the page ID included a fragment identifier (e.g., <code>page.adoc#anchor</code>), the value would not be processed as a page ID.
+This has now been fixed.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="resolved-issues-3"><a class="anchor" href="#resolved-issues-3"></a>Resolved issues</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="fixed-3"><a class="anchor" href="#fixed-3"></a>Fixed</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/635" target="_blank" rel="noopener">#635</a></dt>
+<dd>
+<p>Fix cases when page ID with no file extension fails to resolve.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/636" target="_blank" rel="noopener">#636</a></dt>
+<dd>
+<p>Process image xref that points to page ID with fragment.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="thanks-2-3-2"><a class="anchor" href="#thanks-2-3-2"></a>Thanks</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Most important of all, a huge <strong>thank you!</strong> to all the folks who helped make Antora even better.</p>
+</div>
+</div>
+</div>
+<h1 id="antora-2-3-1" class="sect0"><a class="anchor" href="#antora-2-3-1"></a>Antora 2.3.1</h1>
+<div class="openblock partintro">
+<div class="content">
+<em><strong>Release date:</strong> 2020.04.29 | <strong>Issue label:</strong> <a href="https://gitlab.com/antora/antora/issues?scope=all&amp;state=closed&amp;label_name%5B%5D=%5BVersion%5D%202.3.1" target="_blank" rel="noopener">2.3.1</a></em>
+</div>
+</div>
+<div class="sect1">
+<h2 id="notices"><a class="anchor" href="#notices"></a>Notices</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When Antora 2.3.1 was first released, there was a bug in one of the libraries (gulp-vinyl-zip) that caused Antora running on Windows to write files from the UI bundle to the published site with the ReadOnly attribute set.
+This bug, in turn, caused Antora to crash when generating the site a second time without using <code>--clean</code> flag.
+Adding the <code>--clean</code> flag to the <code>antora</code> command would circumvent the issue.
+Fortunately, this workaround is no longer required.
+This bug has been fixed in a patch release.</p>
+</div>
+<div class="paragraph">
+<p>To apply the fix, uninstall Antora (specifically @antora/site-genrator-default) and install it again.
+For details about this problem, and a reference to the upstream issue, refer to issue <a href="https://gitlab.com/antora/antora/issues/631^">#631</a>.</p>
+</div>
+<div class="paragraph">
+<p>Thanks to Chris Jaquet (<a href="https://gitlab.com/chrisjaquet">@chrisjaquet</a>) for recognizing this issue and providing the necessary information to help us resolve it.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="highlights-2"><a class="anchor" href="#highlights-2"></a>Highlights</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="smarter-pagination"><a class="anchor" href="#smarter-pagination"></a>Smarter pagination</h3>
+<div class="paragraph">
+<p>In tandem with this release, we added a pagination widget to all pages when using the default UI.
+This pagination widget allows readers to navigate between adjacent pages (i.e., previous and next page navigation).
+The change also includes adding the corresponding next and prev SEO pagination links to the head of the HTML document.</p>
+</div>
+<div class="paragraph">
+<p>This functionality is currently hidden behind a feature flag.
+To enable it, set the <code>page-pagination</code> attribute in your playbook (or anywhere an AsciiDoc document attribute can be set).</p>
+</div>
+<div class="paragraph">
+<p>While developing this functionality, we discovered a few problems with how the <code>page.previous</code> and <code>page.next</code> properties in the UI model were being computed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the next item in the navigation tree is a fragment of the current page, the pagination widget would get stuck on the current page (since the next property referred back to the current page).</p>
+</li>
+<li>
+<p>If the previous item in the navigation tree is a fragment of the previous page, the pagination widget would jump to the fragment on that page, but from there jump to its previous page, skipping over all other fragments (which simply isn&#8217;t intuitive).</p>
+</li>
+<li>
+<p>The next page for the component version start page would not be set if the start page is not present in the navigation tree.</p>
+</li>
+<li>
+<p>Conversely, the previous page for the first page in the navigation tree would not be set to the component version start page.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All of these issues have been resolved.</p>
+</div>
+<div class="paragraph">
+<p>As a general rule of thumb, we recommend avoiding the use of fragments in the site navigation since it mixes static and interactive models.
+It&#8217;s best to rely on the sidebar TOC to provide navigation within the page.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="greater-portability"><a class="anchor" href="#greater-portability"></a>Greater portability</h3>
+<div class="paragraph">
+<p>One of Antora&#8217;s dependencies was limiting the platforms on which Antora could be installed.
+This dependency (deep-freeze-node) was removed and replaced with an internal implementation (which turned out to be 5 lines of code).
+It should now be possible to install Antora on any platform on which Node runs.</p>
+</div>
+<div class="paragraph">
+<p>The general policy of Antora is to avoid dependencies wherever possible.
+This change is not only consistent with that policy, but provides a concrete example for why we follow it.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="robots-txt-generated-when-site-url-is-a-pathname"><a class="anchor" href="#robots-txt-generated-when-site-url-is-a-pathname"></a>robots.txt generated when site URL is a pathname</h3>
+<div class="paragraph">
+<p>If the <a href="playbook/site-url.html" class="xref page">site URL</a> is a pathname (e.g., <em>/</em>) rather than an absolute URL (e.g., <em>https://example.org</em>), the <a href="playbook/site-robots.html" class="xref page">robots exclusion file</a> (i.e., <em class="path">robots.txt</em>) will still be generated.
+The <em class="path">robots.txt</em> doesn&#8217;t require an absolute URL.
+Thus, it&#8217;s enough for the site URL to be set to any allowable value to serve as a hint that the file should be generated.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="documentation-changes"><a class="anchor" href="#documentation-changes"></a>Documentation changes</h3>
+<div class="paragraph">
+<p>The site URL, which is defined by the playbook, implicitly controls whether or not certain functionality in Antora is enabled.
+The relationship between this setting and the functionality is now more clear.
+Specifically, the documentation explains what impact setting the site URL has and lists all the ways it&#8217;s used.
+It also explains the difference between using an absolute URL and a pathname, which functionality requires the former, and when and how a pathname is required in either case.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="playbook/site-url.html" class="xref page">Site URL</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Several updates have also been made to the default UI which impact the appearance of the documentation.
+In particular, hyphenation has been disabled for monospaced phrases.
+This change will avoid confusion by removing erroneous hyphens in the option names shown on the <a href="cli/options.html" class="xref page">CLI Options</a> page.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="resolved-issues-4"><a class="anchor" href="#resolved-issues-4"></a>Resolved issues</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="changed-2"><a class="anchor" href="#changed-2"></a>Changed</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/623" target="_blank" rel="noopener">#623</a></dt>
+<dd>
+<p>Set <code>page.next</code> in UI model for component version start page to first page in navigation tree if start page not found in navigation tree.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/623" target="_blank" rel="noopener">#623</a></dt>
+<dd>
+<p>Set <code>page.previous</code> in UI model for first page in navigation tree to component version start page.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="fixed-4"><a class="anchor" href="#fixed-4"></a>Fixed</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/622" target="_blank" rel="noopener">#622</a></dt>
+<dd>
+<p>Skip over references to current page when computing <code>page.next</code> property for UI model.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/624" target="_blank" rel="noopener">#624</a></dt>
+<dd>
+<p>Skip over references to fragments of previous page when computing <code>page.previous</code> property for UI model.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/625" target="_blank" rel="noopener">#625</a></dt>
+<dd>
+<p>Generate robots exclusion file (<em class="path">robots.txt</em>) if site URL is set to any allowable value.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/621" target="_blank" rel="noopener">#621</a></dt>
+<dd>
+<p>Remove deep-freeze-node dependency (which was limiting that platforms on which Antora could be installed) and replace with internal implementation.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="thanks-2-3-1"><a class="anchor" href="#thanks-2-3-1"></a>Thanks</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Most important of all, a huge <strong>thank you!</strong> to all the folks who helped make Antora even better.</p>
+</div>
+<div class="paragraph">
+<p>We want to call out the following people for making contributions to this release:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Ewan Edwards (<a href="https://gitlab.com/eedwards" target="_blank" rel="noopener">@eedwards</a>)</dt>
+<dd>
+<p>For submitting the MR for the SEO pagination links in the head and providing inspiration for the design of the pagination widget.</p>
+</dd>
+<dt class="hdlist1">Daniel Mulholland (<a href="https://gitlab.com/danyill" target="_blank" rel="noopener">@danyill</a>)</dt>
+<dd>
+<p>For providing feedback and critique about the previous and next values for pages and for testing the navigation widget.</p>
+</dd>
+<dt class="hdlist1">gotwf (<a href="https://gitlab.com/gotwf" target="_blank" rel="noopener">@gotwf</a>)</dt>
+<dd>
+<p>For rediscovering the compatibility problem with deep-freeze-node and reminding us to replace it.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<h1 id="antora-2-3-0" class="sect0"><a class="anchor" href="#antora-2-3-0"></a>Antora 2.3.0</h1>
+<div class="openblock partintro">
+<div class="content">
+<em><strong>Release date:</strong> 2020.04.23 | <strong>Issue label:</strong> <a href="https://gitlab.com/antora/antora/issues?scope=all&amp;state=closed&amp;label_name%5B%5D=%5BVersion%5D%202.3.0" target="_blank" rel="noopener">2.3.0</a></em>
+</div>
+</div>
+<div class="sect1">
+<h2 id="highlights-3"><a class="anchor" href="#highlights-3"></a>Highlights</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="declare-attributes-per-component-version"><a class="anchor" href="#declare-attributes-per-component-version"></a>Declare attributes per component version</h3>
+<div class="paragraph">
+<p>You can now set or unset attributes on all pages in a single component version by defining them in the <em class="path">antora.yml</em> file for that component version.
+Component version attributes can be <a href="page/attributes.html" class="xref page">built-in, custom, or page attributes</a>.
+These attributes are applied (either available or, if unset, unavailable) on all of a component version&#8217;s pages according to the <a href="component-attributes.html#precedence-rules" class="xref page">attribute precedence rules</a>.
+Here&#8217;s an example to give you an idea of how this looks:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 1. antora.yml that defines AsciiDoc document attributes for a component version</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">name: light
+title: Data Light
+version: '2.3'
+asciidoc:
+  attributes:
+    listing-caption: false
+    table-caption: Data Set@
+    hide-uri-scheme: ''
+    toc: ~
+    page-level: Advanced
+    page-category: 'Statistics, Cloud Infrastructure'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since attributes can now be defined at multiple levels, Antora 2.3 adds the ability to soft set and unset <a href="playbook/asciidoc-attributes.html" class="xref page">site attributes</a> as well as <a href="component-attributes.html" class="xref page">component version attributes</a>.</p>
+</div>
+<div class="paragraph">
+<p>With this improved scoping and tuning, page attributes are now more versatile.
+One of the primary roles of page attributes is to pass metadata about the page to the UI template via the UI model.
+The UI template can <a href="page/page-attributes.html#access-attributes-from-ui-template" class="xref page">use the information provided by the page attributes</a> in a variety of ways, from populating metadata in the published page to toggling or configuring behavior in the UI.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="component-attributes.html" class="xref page">Assign Attributes to a Component Version</a>, <a href="playbook/asciidoc-attributes.html" class="xref page">Assign Attributes to a Site</a>, and
+<a href="page/page-attributes.html" class="xref page">Page Attributes</a> to learn more.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="the-new-start_paths-playbook-key-for-content-sources"><a class="anchor" href="#the-new-start_paths-playbook-key-for-content-sources"></a>The new start_paths playbook key for content sources</h3>
+<div class="paragraph">
+<p>The new <code>start_paths</code> key allows you to specify multiple content source roots per reference (branch or tag) of a content source.
+In other words, you can put multiple components or component versions&#8212;&#8203;each with its own <em class="path">antora.yml</em> file&#8212;&#8203;in a single branch or tag of a repository, and define them using a single content source entry in your playbook.</p>
+</div>
+<div class="paragraph">
+<p>In addition to exact paths, the <code>start_paths</code> supports discovery by accepting <a href="playbook/content-source-start-paths.html#path-globbing" class="xref page">glob patterns</a>, including wildcards, braces, and negated patterns.
+See <a href="playbook/content-source-start-paths.html" class="xref page">Multiple Start Paths</a> to learn more.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="page-aliases-work-in-xrefs"><a class="anchor" href="#page-aliases-work-in-xrefs"></a>Page aliases work in xrefs</h3>
+<div class="paragraph">
+<p>The target of an xref macro can now be a page alias, which is then transparently resolved to its corresponding page.
+Page aliases, which are expressed using the same syntax as a page ID, are defined using the <code>page-aliases</code> attribute in the document header.
+See <a href="page/page-aliases.html" class="xref page">Set Up URL Redirects with page-aliases</a> to learn more.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="default-xref-link-text-for-pages-and-navigation-files"><a class="anchor" href="#default-xref-link-text-for-pages-and-navigation-files"></a>Default xref link text for pages and navigation files</h3>
+<div class="paragraph">
+<p>Antora now uses the <a href="page/reftext-and-navtitle.html" class="xref page">target page&#8217;s reftext</a> when the link text in an xref macro isn&#8217;t specified.
+For instance, the following xref example doesn&#8217;t have any link text specified.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">See xref:component-prerelease.adoc[].</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>But notice in the output below that Antora automatically used the target page&#8217;s title to fill in the link text when it generated the site.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>See <a href="component-prerelease.html" class="xref page">Identify a Prerelease Version</a>.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>By default, the <code>reftext</code> attribute is assigned the page&#8217;s title as its value.
+You can also assign a page a <a href="page/reftext-and-navtitle.html" class="xref page">custom reftext value</a> using an attribute entry.</p>
+</div>
+<div class="paragraph">
+<p>Xrefs in navigation files behave the same way with one additional feature.
+Navigation files first look for the value of the <a href="page/reftext-and-navtitle.html#navtitle" class="xref page">navtitle attribute</a> of the target page to populate the link text.
+If the <code>navtitle</code> attribute isn&#8217;t set, then the page&#8217;s <code>reftext</code> value is used instead.
+You never have to explicitly set <code>reftext</code> or <code>navtitle</code> unless you want to customize the default xref link text used in a page or navigation file.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="xrefs-can-target-non-asciidoc-based-pages"><a class="anchor" href="#xrefs-can-target-non-asciidoc-based-pages"></a>xrefs can target non-AsciiDoc-based pages</h3>
+<div class="paragraph">
+<p>If you&#8217;re using a custom generator to register non-AsciiDoc page files (such as HTML files), you can now use the xref macro to link to these pages.
+The syntax looks just like an xref to an AsciiDoc-based page, except the target must end in <code>.html#</code> instead of <code>.adoc</code> (e.g., <code>xref:the-page.html#[The Page]</code>).
+This feature is mostly forward looking for when Antora supports importing and processing prepared content, but can be useful to have now if you&#8217;re building on top of Antora.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="on-this-page-widget"><a class="anchor" href="#on-this-page-widget"></a>On this page widget</h3>
+<div class="paragraph">
+<p>The default UI now offers an &#8220;on this page&#8221; widget (aka TOC).
+You can see it on this page.
+The TOC lists all the section titles on the page down to the specified level and features a scroll spy that shows which section is currently active.
+When the page is not wide enough (such as on a mobile screen), the TOC is shown below the page title instead of in the sidebar.</p>
+</div>
+<div class="paragraph">
+<p>The TOC is enabled by default.
+You do not need to set the <code>toc::[]</code> macro on each page for the widget to appear.
+Here are ways you can configure the sidebar TOC:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Configure the text of the heading shown above the TOC using the page attribute named <code>page-toctitle</code> (default: "Contents")</p>
+</li>
+<li>
+<p>Set the number of levels tracked by the TOC using the page attribute named <code>page-toclevels</code> (0 - 3) (default: 2)</p>
+</li>
+<li>
+<p>Disable the TOC per page (or side-wide) by setting the page attribute named <code>page-toclevels</code> to -1</p>
+</li>
+<li>
+<p>Alternately, disable the TOC by adding the <code>-toc</code> class to the <code>&lt;body&gt;</code> element in the HTML template</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can also control where the embedded TOC is inserted by adding the class <code>is-before-toc</code> to an element after the doctitle (selector: <code>h1.page</code>).
+The embedded TOC is <strong>not</strong> added if an element is found with the ID <code>toc</code>.</p>
+</div>
+<div class="paragraph">
+<p>If you want to add the TOC to your own UI, feel free to grab the MPL-2.0-licensed <a href="https://gitlab.com/antora/antora-ui-default/-/blob/master/src/js/02-on-this-page.js">02-on-this-page.js</a> script and customize it to suit your needs pursuant to the license terms.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="resolved-issues-5"><a class="anchor" href="#resolved-issues-5"></a>Resolved issues</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="added"><a class="anchor" href="#added"></a>Added</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/251" target="_blank" rel="noopener">#251</a></dt>
+<dd>
+<p>Allow attributes to be scoped per component version.
+Add support for attributes to be set and defined in the component version descriptor (<em class="path">antora.yml</em>).</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/310" target="_blank" rel="noopener">#310</a></dt>
+<dd>
+<p>Add function for extracting metadata from the AsciiDoc header.
+Use automatic reference text (i.e., <code>reftext</code>) if contents of page xref is empty in a page or resource file.
+Use automatic reference text (i.e., <code>navtitle</code> attribute or <code>reftext</code>) if contents of page xref in navigation file is empty.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/328" target="_blank" rel="noopener">#328</a></dt>
+<dd>
+<p>Expose the content catalog&#8217;s public API to the UI model as the <code>contentCatalog</code> template variable.
+Add the built-in helpers <code>resolvePage</code> and <code>resolvePageUrl</code> to resolve pages and their publish URLs in UI templates.
+<code>resolvePage</code> can resolve virtual file by setting <code>model=false</code>.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/495" target="_blank" rel="noopener">#495</a></dt>
+<dd>
+<p>Add the <code>start_paths</code> playbook key that allows a content source (url + branch/tag) to map to more than one content source root.
+Allow <code>start_paths</code> key to support glob patterns (wildcards and brace expressions).
+Implement scan + filter logic for glob patterns specified in <code>start_paths</code> key for both git tree and filesystem worktree.
+(<a href="https://gitlab.com/djencks" target="_blank" rel="noopener">@djencks</a>)</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/330" target="_blank" rel="noopener">#330</a></dt>
+<dd>
+<p>Add support for <code>xref</code> attribute on image macros to reference an internal anchor or page.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/379" target="_blank" rel="noopener">#379</a></dt>
+<dd>
+<p>Register alias to start page from index page of component version if index page is missing.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/486" target="_blank" rel="noopener">#486</a></dt>
+<dd>
+<p>Add <code>--key</code> option to <code>generate</code> command to define entries for the schemaless <code>site.keys</code>.
+The option can be specified multiple times.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/537" target="_blank" rel="noopener">#537</a></dt>
+<dd>
+<p>Add <code>getPages()</code> method to content catalog to retrieve all pages, which accepts an optional filter function.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/543" target="_blank" rel="noopener">#543</a></dt>
+<dd>
+<p>Map <code>asciidoc</code> property on component to <code>asciidoc</code> property on latest version of component.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/555" target="_blank" rel="noopener">#555</a></dt>
+<dd>
+<p>Add <code>relativize</code> as built-in UI helper.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/568" target="_blank" rel="noopener">#568</a></dt>
+<dd>
+<p>Assign value of family-relative path of page to <code>relativeSrcPath</code> property on page UI model and <code>page-relative-src-path</code> attribute on AsciiDoc document.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/578" target="_blank" rel="noopener">#578</a></dt>
+<dd>
+<p>Assign the SHA-1 commit hash for the content source ref (branch or tag) to the <code>page-origin-refhash</code> attribute on document unless page is taken from worktree.
+Assign the SHA-1 commit hash for the content source ref (branch or tag) to the <code>src.origin.refhash</code> property on the virtual file unless file is taken from worktree.
+Make <code>refhash</code> available as a template variable in the edit URL pattern.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/586" target="_blank" rel="noopener">#586</a></dt>
+<dd>
+<p>Allow the target of an xref to be a page alias.
+Load the AsciiDoc header for all pages before any page is converted so xref can reference page alias.
+If <code>ContentCatalog#resolvePage</code> cannot locate page, look for an alias and dereference if found.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/593" target="_blank" rel="noopener">#593</a></dt>
+<dd>
+<p>Map <code>title</code> property on file to AsciiDoc doctitle.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/594" target="_blank" rel="noopener">#594</a></dt>
+<dd>
+<p>Use target page ID as fallback content for unresolved or invalid xref.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/192" target="_blank" rel="noopener">#192</a></dt>
+<dd>
+<p>Add Apache <code>httpd</code> redirect facility.
+(<a href="https://gitlab.com/djencks" target="_blank" rel="noopener">@djencks</a>)</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/437" target="_blank" rel="noopener">#437</a></dt>
+<dd>
+<p>Map role on AsciiDoc document to <code>page.role</code> in UI model.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="fixed-5"><a class="anchor" href="#fixed-5"></a>Fixed</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/524" target="_blank" rel="noopener">#524</a></dt>
+<dd>
+<p>Restrict <code>start_page</code> value to a page that belongs to that component version.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/556" target="_blank" rel="noopener">#556</a></dt>
+<dd>
+<p>Use state file to verify repository in cache is valid; reclone repository if file is missing (i.e., corrupt).</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/517" target="_blank" rel="noopener">#517</a></dt>
+<dd>
+<p>Verify downloaded UI bundle is a valid zip file before caching.
+Throw an error if invalid.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/565" target="_blank" rel="noopener">#565</a></dt>
+<dd>
+<p>Prevent latest page version from being newer than latest component version in UI model.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/613" target="_blank" rel="noopener">#613</a></dt>
+<dd>
+<p>Declare the opal-runtime package as a direct dependency (to satisfy Yarn 2).</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="changed-3"><a class="anchor" href="#changed-3"></a>Changed</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/121" target="_blank" rel="noopener">#121</a></dt>
+<dd>
+<p>Don&#8217;t sort component version entries in the content aggregate; leave them in the order they&#8217;re discovered.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/494" target="_blank" rel="noopener">#494</a></dt>
+<dd>
+<p>Add trailing newline to all generated files.
+(<a href="https://gitlab.com/djencks" target="_blank" rel="noopener">@djencks</a>)</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/251" target="_blank" rel="noopener">#251</a></dt>
+<dd>
+<p>Apply camelCase transformation to keys in the component version descriptor file, excluding the <code>asciidoc</code> key.
+Pass the site-wide AsciiDoc config to the <code>classifyContent</code> function.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/486" target="_blank" rel="noopener">#486</a></dt>
+<dd>
+<p>Make <code>site.keys</code> map in playbook schemaless and ensure the values are primitive.
+The option can be specified multiple times.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/495" target="_blank" rel="noopener">#495</a></dt>
+<dd>
+<p>Condense repeating slashes in <code>start_path</code> value(s).</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/516" target="_blank" rel="noopener">#516</a></dt>
+<dd>
+<p>Preserve stack from got (HTTP client) error when downloading UI.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/517" target="_blank" rel="noopener">#517</a></dt>
+<dd>
+<p>Report clearer error when local or cached UI bundle is not valid or cannot otherwise be read.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/531" target="_blank" rel="noopener">#531</a></dt>
+<dd>
+<p>Add start path to error message thrown while aggregating files.
+Consistently enclose details in error message in round brackets.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/532" target="_blank" rel="noopener">#532</a></dt>
+<dd>
+<p>Report clearer error if component version descriptor file cannot be parsed.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/538" target="_blank" rel="noopener">#538</a></dt>
+<dd>
+<p>Rename <code>getFiles()</code> method on content catalog and UI catalog to <code>getAll()</code>; retain <code>getFiles()</code> as deprecated method.
+Call <code>getAll()</code> method on catalog if available, otherwise <code>getFiles()</code>.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/551" target="_blank" rel="noopener">#551</a></dt>
+<dd>
+<p>Upgrade Handlebars to fix performance regression.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/616" target="_blank" rel="noopener">#616</a></dt>
+<dd>
+<p>Add template path and cause to Handlebars error.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/561" target="_blank" rel="noopener">#561</a></dt>
+<dd>
+<p>Modify <code>ContentCatalog#registerComponentVersion</code> to return component version added.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/562" target="_blank" rel="noopener">#562</a></dt>
+<dd>
+<p>Modify <code>ContentCatalog#addFile</code> to return file added.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/563" target="_blank" rel="noopener">#563</a></dt>
+<dd>
+<p>Don&#8217;t assign <code>out</code> property when adding a file to the content catalog if <code>out</code> property has falsy value.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/564" target="_blank" rel="noopener">#564</a></dt>
+<dd>
+<p>Don&#8217;t relativize absolute <code>pub</code> URL.
+Don&#8217;t prepend site URL to absolute canonical URL.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/581" target="_blank" rel="noopener">#581</a></dt>
+<dd>
+<p>Ignore dot (hidden) folders when matching start paths unless pattern itself begins with a dot.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/595" target="_blank" rel="noopener">#595</a></dt>
+<dd>
+<p>Modify netlify redirects to be forced as recommended by Netlify.</p>
+</dd>
+<dt class="hdlist1">Issue <a href="https://gitlab.com/antora/antora/issues/597" target="_blank" rel="noopener">#597</a></dt>
+<dd>
+<p>Change <code>ContentCatalog#resolvePage</code> to delegate to <code>ContentCatalog#resolveResource</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="thanks-2-3-0"><a class="anchor" href="#thanks-2-3-0"></a>Thanks</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Most important of all, a huge <strong>thank you!</strong> to all the folks who helped make Antora even better.</p>
+</div>
+<div class="paragraph">
+<p>We want to call out the following people for making contributions to this release:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Antonio (<a href="https://gitlab.com/bandantonio" target="_blank" rel="noopener">@bandantonio</a>)</dt>
+<dd>
+<p>For writing the <a href="install-and-run-quickstart.html" class="xref page">Install and Run Antora Quickstart</a> guide and assisting Matthew Setter with the redirect facility documentation.
+<a href="https://gitlab.com/antora/antora/issues/299" target="_blank" rel="noopener">#299</a></p>
+</dd>
+<dt class="hdlist1">Rob Donnelly (<a href="https://gitlab.com/rfdonnelly" target="_blank" rel="noopener">@rfdonnelly</a>)</dt>
+<dd>
+<p>For fixing typos in the Run Antora in a Container page.
+<a href="https://gitlab.com/antora/antora/merge_requests/434" target="_blank" rel="noopener">!434</a></p>
+</dd>
+<dt class="hdlist1">James Elliott (<a href="https://gitlab.com/DeepSymmetry" target="_blank" rel="noopener">@DeepSymmetry</a>)</dt>
+<dd>
+<p>For reviewing the new attributes pages and fixing typos.
+<a href="https://gitlab.com/antora/antora/merge_requests/513" target="_blank" rel="noopener">!513</a></p>
+</dd>
+<dt class="hdlist1">Guillaume Grossetie (<a href="https://gitlab.com/g.grossetie" target="_blank" rel="noopener">@g.grossetie</a>)</dt>
+<dd>
+<p>For redoing the UI loader tests to dynamically construct UI bundles and test them (<a href="https://gitlab.com/antora/antora/issues/553" target="_blank" rel="noopener">#553</a>), and for fixing the nvm installation link on the Linux and macOS Requirements pages (<a href="https://gitlab.com/antora/antora/merge_requests/405" target="_blank" rel="noopener">!405</a>).</p>
+</dd>
+<dt class="hdlist1">David Jencks (<a href="https://gitlab.com/djencks" target="_blank" rel="noopener">@djencks</a>)</dt>
+<dd>
+<p>For making numerous improvements to Antora&#8217;s documentation, including (but not limited to) clarifying component version sort order and distributed component versions, providing tips for the <code>start_path</code> key and component and version names, and adding filtering by line numbering information.</p>
+<div class="paragraph">
+<p>For implementing trailing newlines on generated files (<a href="https://gitlab.com/antora/antora/issues/494" target="_blank" rel="noopener">#494</a>), the <code>start_paths</code> playbook key (<a href="https://gitlab.com/antora/antora/issues/495" target="_blank" rel="noopener">#495</a>), and the Apache <code>httpd</code> redirect facility (<a href="https://gitlab.com/antora/antora/issues/192" target="_blank" rel="noopener">#192</a>).</p>
+</div>
+<div class="paragraph">
+<p>For documenting the <code>page-aliases</code> attribute.
+<a href="https://gitlab.com/antora/antora/issues/509" target="_blank" rel="noopener">#509</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Jared Morgan (<a href="https://gitlab.com/jaredmorgs" target="_blank" rel="noopener">@jaredmorgs</a>)</dt>
+<dd>
+<p>For taking on the herculean task of documenting the <code>start_paths</code> feature.
+<a href="https://gitlab.com/antora/antora/issues/576" target="_blank" rel="noopener">#576</a></p>
+</dd>
+<dt class="hdlist1">Daniel Mulholland (<a href="https://gitlab.com/danyill" target="_blank" rel="noopener">@danyill</a>)</dt>
+<dd>
+<p>For adding documentation about <a href="https://gitlab.com/antora/antora/-/blob/main/contributing.adoc#user-content-develop-with-docker">developing Antora with Docker</a> and Gulp test errors to the contributing guide.
+<a href="https://gitlab.com/antora/antora/issues/388" target="_blank" rel="noopener">#388</a></p>
+</dd>
+<dt class="hdlist1">Andreas Offenhaeuser</dt>
+<dd>
+<p>For documenting how to include navigation content.
+<a href="https://gitlab.com/antora/antora/merge_requests/325" target="_blank" rel="noopener">!325</a></p>
+</dd>
+<dt class="hdlist1">Alexander Schwartz (<a href="https://gitlab.com/ahus1" target="_blank" rel="noopener">@ahus1</a>)</dt>
+<dd>
+<p>For fixing broken anchors in the documentation.
+<a href="https://gitlab.com/antora/antora/merge_requests/489" target="_blank" rel="noopener">!489</a></p>
+</dd>
+<dt class="hdlist1">Matthew Setter</dt>
+<dd>
+<p>For documenting the redirect facility and assisting Antonio with the Antora quickstart guide.
+<a href="https://gitlab.com/antora/antora/merge_requests/281" target="_blank" rel="noopener">!281</a></p>
+</dd>
+<dt class="hdlist1">Ben Walding (<a href="https://gitlab.com/bwalding" target="_blank" rel="noopener">@bwalding</a>)</dt>
+<dd>
+<p>For documenting the component version descriptor <code>prerelease</code> key.
+<a href="https://gitlab.com/antora/antora/-/commit/ad7e039ede287605da345f7fa36350e2745cb84f" target="_blank" rel="noopener">Commit ad7e039e</a></p>
+</dd>
+<dt class="hdlist1">Anthony Vanelverdinghe (<a href="https://gitlab.com/anthonyv.be" target="_blank" rel="noopener">@anthonyv.be</a>)</dt>
+<dd>
+<p>For editing the How Antora Can Help page.
+<a href="https://gitlab.com/antora/antora/issues/518" target="_blank" rel="noopener">#518</a></p>
+</dd>
+<dt class="hdlist1">Yoginth</dt>
+<dd>
+<p>For fixing typos in the package comments, test cases, and releasing guide.
+<a href="https://gitlab.com/antora/antora/merge_requests/433" target="_blank" rel="noopener">!433</a></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="deprecation"><a class="anchor" href="#deprecation"></a>Deprecations scheduled for removal in Antora 3.0</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Per the normal <a href="install/supported-platforms.html" class="xref page">supported platforms policy</a>, support for Node 8, and likely Node 10 as well, will be dropped.</p>
+</div>
+<div class="paragraph">
+<p>The ability to use parent references in the target of the AsciiDoc image macro (e.g., <code>image::../../../module-b/_images/image-filename.png[]</code>) will be removed in Antora 3.0.
+You should begin replacing any such image targets with resource IDs.</p>
+</div>
+<div class="paragraph">
+<p>Antora has added the <em>.adoc</em> file extension to a <a href="page/page-id.html#id-coordinates" class="xref page">page coordinate</a> in page aliases and xrefs whenever it wasn&#8217;t specified by the writer.
+This fallback mechanism will be deprecated in Antora 3.0 to make way for using non-AsciiDoc pages in the xref facility.
+You should review the page IDs in your xrefs and <code>page-aliases</code> attributes to ensure the <em>.adoc</em> extension is specified.</p>
+</div>
+<div class="paragraph">
+<p>The intrinsic page attribute <code>page-relative</code> has been renamed to <code>page-relative-src-path</code>.
+The old <code>page-relative</code> attribute still remains, but will be removed in Antora 3.0.
+You should update pages that rely on this attribute to use <code>page-relative-src-path</code> instead.</p>
+</div>
+<div class="paragraph">
+<p>The <code>classifyContent</code> function will expect the site-wide AsciiDoc config as the third argument.</p>
+</div>
+<div class="paragraph">
+<p>The following deprecated methods will be removed from the <code>ContentCatalog</code>: <code>getComponentMap</code>, <code>getComponentMapSortedBy</code>, and <code>getFiles</code>.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="index.html">Antora</a></span>
+  <span class="next"><a href="features.html">How Antora Can Help</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright © <a href="https://opendevise.com">OpenDevise Inc.</a> and individual contributors to <a href="https://antora.org">Antora</a>.</p>
+  <p>Except where otherwise noted, docs.antora.org, Antora, and the Antora UI, are licensed under the <a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License Version 2.0</a> (MPL-2.0).</p>
+  <p>AsciiDoc® is a trademark of the Eclipse Foundation, Inc.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
